@@ -16,18 +16,6 @@ ee_districts <- districts |>
   select(codigo) |> 
   sf_as_ee(quiet = TRUE) 
 
-ee_hydro_ana <- hydro_ana |> 
-  select(hydroname) |> 
-  sf_as_ee(quiet = TRUE)
-
-ee_hydro_06  <- hydro_06  |> 
-  select(hydroname) |> 
-  sf_as_ee(quiet = TRUE)
-
-ee_hydro_07  <- hydro_07  |> 
-  select(hydroname) |> 
-  sf_as_ee(quiet = TRUE)
-
 ## 2.1 Parameters
 start_date <- 2009
 end_date <- 2022
