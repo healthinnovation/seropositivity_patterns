@@ -94,6 +94,11 @@ ffi_hh_ind_seropos <- read_csv("./data/mid/ffi_hh_ind_seropos.csv") %>%
     ),
   Zika_Pos = if_else(
     Zika.NS1_pos == 1, "Positivo", "Negativo"
+    ),
+   malaria_status = if_else(
+       pv_exposure == "Positive" |
+         pf_exposure == "Positive",
+      "Positive", "Negative"
     )
   )
 ```
@@ -117,7 +122,8 @@ ffi_hh_ind_seropos %>%
     Chikungunya_Pos,
     Zika_Pos,
     pv_exposure,
-    pf_exposure
+    pf_exposure,
+    distance_to_rh_hf_sampl
   ) %>%
   tbl_summary(by = ffi_is_district, missing = "no") %>%
   add_overall() %>%
@@ -126,107 +132,21 @@ ffi_hh_ind_seropos %>%
 
 ```
 
-```{r}
-library(gtsummary)
-library(dplyr)
-
-ffi_hh_ind_seropos %>%
-  select(
-    ffi_is_district,
-    gender_label,
-    age_oms,
-    time_resi_cat2,
-    education_summary,
-    sympt_constitucional,
-    sympt_osteomuscular,
-    sympt_gastrointestinal,
-    sympt_neurologico,
-    Schistosomiasis,
-    Virus_COVID_Pos,
-    Chikungunya_Pos,
-    Zika_Pos,
-    distance_to_rh_ht_sampl
-  ) %>%
-  tbl_summary(by = ffi_is_district, missing = "ifany") %>%
-  add_overall() %>%
-  add_p() %>%
-  bold_labels()
-
-```
-
-```{r}
-tabla <- table(ffi_hh_ind_seropos$sympt_constitucional, ffi_hh_ind_seropos$ffi_is_district)
-print(tabla)
-test_chi <- chisq.test(tabla)
-
-# Mostrar resultado completo
-print(test_chi)
-
-# Mostrar solo p-value
-cat("P-value:", test_chi$p.value, "\n")
-```
-
-```{r}
-library(janitor)
-library(dplyr)
-
-# Tabla con conteos y porcentajes por fila y columna
-tabla <- table(ffi_hh_ind_seropos$sympt_constitucional, ffi_hh_ind_seropos$ffi_is_district)
-
-# Mostrar tabla con conteos
-print(tabla)
-
-# Porcentajes por fila (de cada categoría de sympt_constitucional)
-prop_fila <- prop.table(tabla, margin = 1) * 100
-cat("Porcentajes por fila (%)\n")
-print(round(prop_fila, 1))
-
-# Porcentajes por columna (de cada distrito)
-prop_col <- prop.table(tabla, margin = 2) * 100
-cat("Porcentajes por columna (%)\n")
-print(round(prop_col, 1))
-
-# Test chi-cuadrado
-test_chi <- chisq.test(tabla)
-cat("Chi-squared test p-value:", test_chi$p.value, "\n")
-
-```
-
-```{r}
-library(labelled)
-library(dplyr)
-library(janitor)
-
-ffi_hh_ind_seropos <- ffi_hh_ind_seropos %>%
-  mutate(distance_to_rh_hf_sampl_label = as_factor(distance_to_rh_hf_sampl))
-
-ffi_hh_ind_seropos %>%
-  tabyl(distance_to_rh_hf_sampl_label) %>%
-  adorn_totals("row") %>%
-  adorn_pct_formatting()
-
-ffi_is_trip_month
-ffi_hh_ind_seropos <- ffi_hh_ind_seropos %>%
-  mutate(ffi_is_trip_month_label = as_factor(ffi_is_trip_month))
-
-ffi_hh_ind_seropos %>%
-  tabyl(ffi_is_trip_month_label) %>%
-  adorn_totals("row") %>%
-  adorn_pct_formatting()
-```
-
 # Tabla 2
 
-Tabla de Schistosoma
-
 ```{r}
+
+#Paquetes estadisticos
+
 library(dplyr)
 library(gtsummary)
+
+#Tabla de Schistosoma
 
 ffi_hh_ind_seropos %>%
   select(
     ffi_is_district,
-    gender_label,
+    gender,
     age_oms,
     time_resi_cat2,
     education_summary,
@@ -243,7 +163,7 @@ ffi_hh_ind_seropos %>%
     missing = "ifany",
     label = list(
       ffi_is_district ~ "District",
-      gender_label ~ "Gender",
+      gender ~ "Gender",
       age_oms ~ "Age group",
       time_resi_cat2 ~ "Residence time",
       education_summary ~ "Education level",
@@ -261,15 +181,11 @@ ffi_hh_ind_seropos %>%
   modify_header(label = "**Variable**") %>%
   modify_spanning_header(c("stat_1", "stat_2") ~ "**Schistosomiasis status**")
 
-```
-
-Tabla de Zika
-
-```{r}
+#Tabla de Zika
 ffi_hh_ind_seropos %>%
   select(
     ffi_is_district,
-    gender_label,
+    gender,
     age_oms,
     time_resi_cat2,
     education_summary,
@@ -286,7 +202,7 @@ ffi_hh_ind_seropos %>%
     missing = "ifany",
     label = list(
       ffi_is_district ~ "District",
-      gender_label ~ "Gender",
+      gender ~ "Gender",
       age_oms ~ "Age group",
       time_resi_cat2 ~ "Residence time",
       education_summary ~ "Education level",
@@ -304,15 +220,11 @@ ffi_hh_ind_seropos %>%
   modify_header(label = "**Variable**") %>%
   modify_spanning_header(c("stat_1", "stat_2") ~ "**Zika status**")
 
-```
-
-Tabla de Chikungunya
-
-```{r}
+#Tabla de Chikungunya
 ffi_hh_ind_seropos %>%
   select(
     ffi_is_district,
-    gender_label,
+    gender,
     age_oms,
     time_resi_cat2,
     education_summary,
@@ -329,7 +241,7 @@ ffi_hh_ind_seropos %>%
     missing = "ifany",
     label = list(
       ffi_is_district ~ "District",
-      gender_label ~ "Gender",
+      gender ~ "Gender",
       age_oms ~ "Age group",
       time_resi_cat2 ~ "Residence time",
       education_summary ~ "Education level",
@@ -347,15 +259,12 @@ ffi_hh_ind_seropos %>%
   modify_header(label = "**Variable**") %>%
   modify_spanning_header(c("stat_1", "stat_2") ~ "**Chikungunya status**")
 
-```
+#Tabla de COVID-19
 
-Tabla de COVID-19
-
-```{r}
 ffi_hh_ind_seropos %>%
   select(
     ffi_is_district,
-    gender_label,
+    gender,
     age_oms,
     time_resi_cat2,
     education_summary,
@@ -372,7 +281,7 @@ ffi_hh_ind_seropos %>%
     missing = "ifany",
     label = list(
       ffi_is_district ~ "District",
-      gender_label ~ "Gender",
+      gender ~ "Gender",
       age_oms ~ "Age group",
       time_resi_cat2 ~ "Residence time",
       education_summary ~ "Education level",
@@ -390,25 +299,43 @@ ffi_hh_ind_seropos %>%
   modify_header(label = "**Variable**") %>%
   modify_spanning_header(c("stat_1", "stat_2") ~ "**COVID-19 status**")
 
-```
-
-Sintomas constitucionales
-
-```{r}
-library(dplyr)
-
-diseases <- c("Schistosomiasis", "Virus_COVID_Pos", "Chikungunya_Pos", "Zika_Pos")
-
-for (disease in diseases) {
-  cat("\n--- Cross-tabulation of sympt_constitucional vs", disease, "---\n")
-  tbl <- table(ffi_hh_ind_seropos$sympt_constitucional, ffi_hh_ind_seropos[[disease]])
-  print(tbl)
-  
-  test <- chisq.test(tbl)
-  print(test)
-  
-  cat("P-value:", test$p.value, "\n")
-}
-
+#Tabla de Malaria
+ffi_hh_ind_seropos %>%
+  select(
+    malaria_status,
+    ffi_is_district,
+    gender,
+    age_oms,
+    time_resi_cat2,
+    education_summary,
+    sympt_constitucional,
+    sympt_osteomuscular,
+    sympt_gastrointestinal,
+    sympt_neurologico,
+    distance_to_rh_hf_sampl,
+    ffi_is_trip_month
+  ) %>%
+  tbl_summary(
+    by = malaria_status,
+    missing = "ifany",
+    label = list(
+      ffi_is_district ~ "District",
+      gender ~ "Gender",
+      age_oms ~ "Age group",
+      time_resi_cat2 ~ "Residence time",
+      education_summary ~ "Education level",
+      sympt_constitucional ~ "Constitutional symptoms",
+      sympt_osteomuscular ~ "Osteomuscular symptoms",
+      sympt_gastrointestinal ~ "Gastrointestinal symptoms",
+      sympt_neurologico ~ "Neurological symptoms",
+      distance_to_rh_hf_sampl ~ "Distance to Health Facility (sample)",
+      ffi_is_trip_month ~ "Travel in last month"
+    )
+  ) %>%
+  add_overall() %>%
+  add_p() %>%
+  bold_labels() %>%
+  modify_header(label = "**Variable**") %>%
+  modify_spanning_header(c("stat_1", "stat_2") ~ "**Malaria status**")
 
 ```
