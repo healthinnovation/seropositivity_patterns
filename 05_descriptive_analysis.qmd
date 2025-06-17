@@ -16,7 +16,6 @@ knitr::opts_chunk$set(
 )
 ```
 
-
 Paso 1: Subir paquetes estadisticos + subir base de datos
 
 ```{r}
@@ -126,13 +125,6 @@ ffi_hh_ind_seropos %>%
   bold_labels()
 
 ```
-
-
-
-
-
-
-
 
 ```{r}
 library(gtsummary)
