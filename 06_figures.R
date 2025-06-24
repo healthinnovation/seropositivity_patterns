@@ -4,6 +4,7 @@ library(sf)
 library(sfdep)
 library(ggspatial)
 library(patchwork)
+library(prettymapr)
 
 ffi <- read_csv("./data/mid/ffi_hh_ind_seropos.csv")
 
@@ -172,27 +173,38 @@ crop_coordinates <- Peru %>%
          distr %in% c("INDIANA",
                       "BELEN"))
 
+local_m_schisto_rot <- local_m_schisto |> 
+  st_transform('+proj=omerc +lat_0=40 +lonc=-74 +gamma=-40')
+crop_coordinates_rot <- crop_coordinates |> 
+  st_transform('+proj=omerc +lat_0=40 +lonc=-74 +gamma=-40')
 
-map_schisto <- local_m_schisto %>% 
+bbox_crop <- st_bbox(c(xmin = -3179322 , xmax = 3199161,
+                       ymin = -3696615 , ymax = -3603883),
+                     crs = st_crs(local_m_schisto_rot2))
+
+local_m_schisto_crop <- st_crop(local_m_schisto_rot, bbox_crop)
+crop_coordinates_crop <- st_crop(crop_coordinates_rot, bbox_crop)
+
+map_schisto <- local_m_schisto_crop %>%
   mutate(mean_cat = if_else(p_folded_sim <= 0.1, as.character(mean),
                             "Not Significant"),
          mean_cat = factor(mean_cat,
                            levels = c(
-                             "High-High",
-                             "Low-High",
-                             "High-Low",
-                             "Low-Low",
+                             "High-High", 
+                             "Low-High", 
+                             "High-Low", 
+                             "Low-Low", 
                              "Not Significant"
-                           ))) %>% 
+                           ))) %>%
   arrange(mean_cat != "Not Significant") %>% 
   ggplot(aes(geometry = geometry, colour = mean_cat)) +
   annotation_map_tile(type = "cartolight", zoom = 12) +
-  geom_sf(data = crop_coordinates,
+  geom_sf(data = crop_coordinates_crop,
           fill = NA,
           color = "black",
           linetype = "dashed",
           linewidth = 0.6) +
-  geom_sf(size = 3, alpha = 0.9) +
+  geom_sf(size = 3, alpha = 0.8) +
   scale_colour_manual(
     values = c(
       "Not Significant" = "grey40",
@@ -202,12 +214,14 @@ map_schisto <- local_m_schisto %>%
       "High-High" = "#e2634b"
     )
   ) +
-  annotation_scale() +
-  annotation_north_arrow(location = "tl", style = north_arrow_nautical) +
+  annotation_scale(location = "bl") +
+  annotation_north_arrow(location = "tl", style = north_arrow_nautical, rotation = +40) +
   theme_bw() +
   labs(
     colour = "Cluster"
-  ) 
+    ) + theme(
+      legend.position = "none"
+    )
 
 
 # Spatial: Malaria
@@ -217,9 +231,18 @@ local_m_malaria <- df_n %>%
   ) %>% 
   unnest(lm_malaria)
 
+local_m_malaria_rot <- local_m_malaria |> 
+  st_transform('+proj=omerc +lat_0=40 +lonc=-74 +gamma=-40')
+
+bbox_crop <- st_bbox(c(xmin = -3179322 , xmax = 3199161,
+                       ymin = -3696615 , ymax = -3603883),
+                     crs = st_crs(local_m_malaria_rot))
+
+local_m_malaria_crop <- st_crop(local_m_malaria_rot, bbox_crop)
+
 # Mapa
 
-map_malaria <- local_m_malaria %>% 
+map_malaria <- local_m_malaria_crop %>% 
   mutate(mean_cat = if_else(p_folded_sim <= 0.1, as.character(mean),
                             "Not Significant"),
          mean_cat = factor(mean_cat,
@@ -233,12 +256,12 @@ map_malaria <- local_m_malaria %>%
   arrange(mean_cat != "Not Significant") %>% 
   ggplot(aes(geometry = geometry, colour = mean_cat)) +
   annotation_map_tile(type = "cartolight", zoom = 12) +
-  geom_sf(data = crop_coordinates,
+  geom_sf(data = crop_coordinates_crop,
           fill = NA,
           color = "black",
           linetype = "dashed",
           linewidth = 0.6) +
-  geom_sf(size = 3, alpha = 0.9) +
+  geom_sf(size = 3, alpha = 0.8) +
   scale_colour_manual(
     values = c(
       "Not Significant" = "grey40",
@@ -248,37 +271,14 @@ map_malaria <- local_m_malaria %>%
       "High-High" = "#e2634b"
     )
   ) +
-  annotation_scale() +
-  annotation_north_arrow(location = "tl", style = north_arrow_nautical) +
+  annotation_scale(location = "bl") +
+  annotation_north_arrow(location = "tl", style = north_arrow_nautical, rotation = +40) +
   theme_bw() +
   labs(
     colour = "Cluster"
-  ) +
-  theme(
+  ) + theme(
     legend.position = "none"
   )
-
-
-mal_schisto <- (map_malaria + map_schisto) +
-  plot_annotation(
-    tag_levels = c("a", "b"),
-    tag_suffix = ")",
-    theme = theme(
-      plot.tag = element_text(
-        size = 16, face = "bold"
-      ),
-      plot.tag.position = c(0.02, 0.98)
-    )
-  )
-
-ggsave("output/spatial_malaria_schisto.png",
-       mal_schisto,
-       dpi = 600,
-       width = 11,
-       height = 6,
-       device = grDevices::png)
-
-
 
 
 # Spatial: Zika
@@ -288,9 +288,18 @@ local_m_zika <- df_n %>%
   ) %>% 
   unnest(lm_zika)
 
+local_m_zika_rot <- local_m_zika |> 
+  st_transform('+proj=omerc +lat_0=40 +lonc=-74 +gamma=-40')
+
+bbox_crop <- st_bbox(c(xmin = -3179322 , xmax = 3199161,
+                       ymin = -3696615 , ymax = -3603883),
+                     crs = st_crs(local_m_zika_rot))
+
+local_m_zika_crop <- st_crop(local_m_zika_rot, bbox_crop)
+
 # Mapa
 
-map_zika <- local_m_zika %>% 
+map_zika <- local_m_zika_crop %>% 
   mutate(mean_cat = if_else(p_folded_sim <= 0.1, as.character(mean),
                             "Not Significant"),
          mean_cat = factor(mean_cat,
@@ -304,12 +313,12 @@ map_zika <- local_m_zika %>%
   arrange(mean_cat != "Not Significant") %>%
   ggplot(aes(geometry = geometry, colour = mean_cat)) +
   annotation_map_tile(type = "cartolight", zoom = 12) +
-  geom_sf(data = crop_coordinates,
+  geom_sf(data = crop_coordinates_crop,
           fill = NA,
           color = "black",
           linetype = "dashed",
           linewidth = 0.6) +
-  geom_sf(size = 3, alpha = 0.9) +
+  geom_sf(size = 3, alpha = 0.8) +
   scale_colour_manual(
     values = c(
       "Not Significant" = "grey40",
@@ -319,8 +328,8 @@ map_zika <- local_m_zika %>%
       "High-High" = "#e2634b"
     )
   ) +
-  annotation_scale() +
-  annotation_north_arrow(location = "tl", style = north_arrow_nautical) +
+  annotation_scale(location = "bl") +
+  annotation_north_arrow(location = "tl", style = north_arrow_nautical, rotation = +40) +
   theme_bw() +
   labs(
     colour = "Cluster"
@@ -335,9 +344,18 @@ local_m_chik <- df_n %>%
   ) %>% 
   unnest(lm_chik)
 
+local_m_chik_rot <- local_m_chik |> 
+  st_transform('+proj=omerc +lat_0=40 +lonc=-74 +gamma=-40')
+
+bbox_crop <- st_bbox(c(xmin = -3179322 , xmax = 3199161,
+                       ymin = -3696615 , ymax = -3603883),
+                     crs = st_crs(local_m_chik_rot))
+
+local_m_chik_crop <- st_crop(local_m_chik_rot, bbox_crop)
+
 # Mapa
 
-map_chik <- local_m_chik %>% 
+map_chik <- local_m_chik_crop %>% 
   mutate(mean_cat = if_else(p_folded_sim <= 0.1, as.character(mean),
                             "Not Significant"),
          mean_cat = factor(mean_cat,
@@ -351,12 +369,12 @@ map_chik <- local_m_chik %>%
   arrange(mean_cat != "Not Significant") %>%
   ggplot(aes(geometry = geometry, colour = mean)) +
   annotation_map_tile(type = "cartolight", zoom = 12) +
-  geom_sf(data = crop_coordinates,
+  geom_sf(data = crop_coordinates_crop,
           fill = NA,
           color = "black",
           linetype = "dashed",
           linewidth = 0.6) +
-  geom_sf(size = 3, alpha = 0.9) +
+  geom_sf(size = 3, alpha = 0.8) +
   scale_colour_manual(
     values = c(
       "Not Significant" = "grey40",
@@ -366,37 +384,14 @@ map_chik <- local_m_chik %>%
       "High-High" = "#e2634b"
     )
   ) +
-  annotation_scale() +
-  annotation_north_arrow(location = "tl", style = north_arrow_nautical) +
+  annotation_scale(location = "bl") +
+  annotation_north_arrow(location = "tl", style = north_arrow_nautical, rotation = +40) +
   theme_bw() +
   labs(
     colour = "Cluster"
-  ) +
-  theme(
+  ) + theme(
     legend.position = "none"
   )
-
-zik_chik <- map_chik + map_zika + 
-  plot_annotation(
-    tag_levels = "a",
-    tag_suffix = ")",
-    theme = theme(
-      plot.tag = element_text(
-        size = 16, face = "bold"
-      ),
-      plot.tag.position = c(0.02, 0.98)
-    )
-  ) 
-
-zik_chik
-
-ggsave("output/spatial_zik_chik.png",
-       zik_chik,
-       dpi = 600,
-       width = 11,
-       height = 6,
-       device = grDevices::png)
-
 
 # Spatial: Covid
 local_m_covid <- df_n %>% 
@@ -405,8 +400,17 @@ local_m_covid <- df_n %>%
   ) %>% 
   unnest(lm_covid)
 
+local_m_covid_rot <- local_m_covid |> 
+  st_transform('+proj=omerc +lat_0=40 +lonc=-74 +gamma=-40')
+
+bbox_crop <- st_bbox(c(xmin = -3179322 , xmax = 3199161,
+                       ymin = -3696615 , ymax = -3603883),
+                     crs = st_crs(local_m_covid_rot))
+
+local_m_covid_crop <- st_crop(local_m_covid_rot, bbox_crop)
+
 # Mapa
-map_covid <- local_m_covid %>% 
+map_covid <- local_m_covid_crop %>% 
   mutate(mean_cat = if_else(p_folded_sim <= 0.1, as.character(mean),
                             "Not Significant"),
          mean_cat = factor(mean_cat,
@@ -420,12 +424,12 @@ map_covid <- local_m_covid %>%
   arrange(mean_cat != "Not Significant") %>%
   ggplot(aes(geometry = geometry, colour = mean_cat)) +
   annotation_map_tile(type = "cartolight", zoom = 12) +
-  geom_sf(data = crop_coordinates,
+  geom_sf(data = crop_coordinates_crop,
           fill = NA,
           color = "black",
           linetype = "dashed",
           linewidth = 0.6) +
-  geom_sf(size = 3, alpha = 0.9) +
+  geom_sf(size = 3, alpha = 0.8) +
   scale_colour_manual(
     values = c(
       "Not Significant" = "grey40",
@@ -435,16 +439,33 @@ map_covid <- local_m_covid %>%
       "High-High" = "#e2634b"
     )
   ) +
-  annotation_scale() +
-  annotation_north_arrow(location = "tl", style = north_arrow_nautical) +
+  annotation_scale(location = "bl") +
+  annotation_north_arrow(location = "tl", style = north_arrow_nautical, rotation = +40) +
   theme_bw() +
   labs(
     colour = "Cluster"
+  ) + theme(
+    legend.position = "none"
   )
 
-ggsave("output/spatial_covid.png",
-       map_covid,
+map_five_join <- map_schisto + map_covid + map_malaria + map_chik + map_zika +
+  plot_layout(
+    ncol = 5
+  ) +
+  plot_annotation(
+    tag_levels = "a",
+    tag_suffix = ")",
+    theme = theme(
+      plot.tag = element_text(
+        size=16, face = "bold"
+      ),
+      plot.tag.position = c(0.02, 0.98)
+    )
+  )
+
+ggsave("output/spatial_combine_five.png",
+       map_five_join,
        dpi = 600,
-       width = 8,
-       height = 7,
+       width = 14,
+       height = 7.5,
        device = grDevices::png)
