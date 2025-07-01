@@ -183,7 +183,6 @@ bbox_crop <- st_bbox(c(xmin = -3179322 , xmax = 3199161,
                      crs = st_crs(local_m_schisto_rot2))
 
 local_m_schisto_crop <- st_crop(local_m_schisto_rot, bbox_crop)
-crop_coordinates_crop <- st_crop(crop_coordinates_rot, bbox_crop)
 
 map_schisto <- local_m_schisto_crop %>%
   mutate(mean_cat = if_else(p_folded_sim <= 0.1, as.character(mean),
@@ -199,7 +198,7 @@ map_schisto <- local_m_schisto_crop %>%
   arrange(mean_cat != "Not Significant") %>% 
   ggplot(aes(geometry = geometry, colour = mean_cat)) +
   annotation_map_tile(type = "cartolight", zoom = 12) +
-  geom_sf(data = crop_coordinates_crop,
+  geom_sf(data = crop_coordinates,
           fill = NA,
           color = "black",
           linetype = "dashed",
@@ -221,7 +220,11 @@ map_schisto <- local_m_schisto_crop %>%
     colour = "Cluster"
     ) + theme(
       legend.position = "none"
-    )
+    ) +
+  coord_sf(
+    xlim = c(3172322, 3199761),
+    ylim = c(-3698615, -3603883)
+  )
 
 
 # Spatial: Malaria
@@ -256,7 +259,7 @@ map_malaria <- local_m_malaria_crop %>%
   arrange(mean_cat != "Not Significant") %>% 
   ggplot(aes(geometry = geometry, colour = mean_cat)) +
   annotation_map_tile(type = "cartolight", zoom = 12) +
-  geom_sf(data = crop_coordinates_crop,
+  geom_sf(data = crop_coordinates,
           fill = NA,
           color = "black",
           linetype = "dashed",
@@ -278,6 +281,10 @@ map_malaria <- local_m_malaria_crop %>%
     colour = "Cluster"
   ) + theme(
     legend.position = "none"
+  ) +
+  coord_sf(
+    xlim = c(3172322, 3199761),
+    ylim = c(-3698615, -3603883)
   )
 
 
@@ -313,7 +320,7 @@ map_zika <- local_m_zika_crop %>%
   arrange(mean_cat != "Not Significant") %>%
   ggplot(aes(geometry = geometry, colour = mean_cat)) +
   annotation_map_tile(type = "cartolight", zoom = 12) +
-  geom_sf(data = crop_coordinates_crop,
+  geom_sf(data = crop_coordinates,
           fill = NA,
           color = "black",
           linetype = "dashed",
@@ -333,6 +340,10 @@ map_zika <- local_m_zika_crop %>%
   theme_bw() +
   labs(
     colour = "Cluster"
+  ) +
+  coord_sf(
+    xlim = c(3172322, 3199761),
+    ylim = c(-3698615, -3603883)
   )
 
 
@@ -369,7 +380,7 @@ map_chik <- local_m_chik_crop %>%
   arrange(mean_cat != "Not Significant") %>%
   ggplot(aes(geometry = geometry, colour = mean)) +
   annotation_map_tile(type = "cartolight", zoom = 12) +
-  geom_sf(data = crop_coordinates_crop,
+  geom_sf(data = crop_coordinates,
           fill = NA,
           color = "black",
           linetype = "dashed",
@@ -391,6 +402,10 @@ map_chik <- local_m_chik_crop %>%
     colour = "Cluster"
   ) + theme(
     legend.position = "none"
+  ) +
+  coord_sf(
+    xlim = c(3172322, 3199761),
+    ylim = c(-3698615, -3603883)
   )
 
 # Spatial: Covid
@@ -424,7 +439,7 @@ map_covid <- local_m_covid_crop %>%
   arrange(mean_cat != "Not Significant") %>%
   ggplot(aes(geometry = geometry, colour = mean_cat)) +
   annotation_map_tile(type = "cartolight", zoom = 12) +
-  geom_sf(data = crop_coordinates_crop,
+  geom_sf(data = crop_coordinates,
           fill = NA,
           color = "black",
           linetype = "dashed",
@@ -446,6 +461,10 @@ map_covid <- local_m_covid_crop %>%
     colour = "Cluster"
   ) + theme(
     legend.position = "none"
+  ) +
+  coord_sf(
+    xlim = c(3172322, 3199761),
+    ylim = c(-3698615, -3603883)
   )
 
 map_five_join <- map_schisto + map_covid + map_malaria + map_chik + map_zika +
