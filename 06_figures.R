@@ -39,32 +39,23 @@ df_bin <- ffi %>%
       1,
       0
     )
-  )%>% 
-  select(ffi_is_code, Schistosomiasis, Covid, Chik, Zika,
-         Malaria) %>% 
+  ) %>% 
+  select(ffi_is_code, Schistosomiasis, Covid, Chik, Zika, Malaria) %>% 
   drop_na()
 
-
 # Plot
-
 upset_plot <- ComplexUpset::upset(
   df_bin,
-  intersect = c(
-    "Schistosomiasis",
-    "Covid",
-    "Chik",
-    "Zika",
-    "Malaria"
-  ),
+  intersect = c("Schistosomiasis", "Covid", "Chik", "Zika", "Malaria"),
   name = "Exposure Profile",
   base_annotations = list(
     'Count' = intersection_size(
       mapping = aes(fill = after_stat(y))
     ) +
-      scale_fill_gradient(
-        low = "#a1cca5",
-        high = "#415d43",
-        guide = "none") +
+      scale_fill_gradientn(
+        colours = c("#ABDB79", "#88C564", "#6AAC57", "#579837", "#3C8200"),  # Escala verde amplia
+        guide = "none"
+      ) +
       theme(
         panel.grid.major.x = element_blank(),
         panel.grid.minor.x = element_blank(),
@@ -73,11 +64,11 @@ upset_plot <- ComplexUpset::upset(
       )
   ),
   queries = list(
-    upset_query(set = "Covid", fill = "#344e41"),
-    upset_query(set = "Zika", fill = "#3a5a40"),
-    upset_query(set = "Chik", fill = "#588157"),
-    upset_query(set = "Schistosomiasis", fill = "#a3b18a"),
-    upset_query(set = "Malaria", fill = "#dad7cd")
+    upset_query(set = "Covid", fill = "#1A7332"),
+    upset_query(set = "Zika", fill = "#2A873D"),
+    upset_query(set = "Chik", fill = "#469A4D"),
+    upset_query(set = "Schistosomiasis", fill = "#6FAA66"),
+    upset_query(set = "Malaria", fill = "#BCCFB4")
   ),
   set_sizes = upset_set_size() +
     theme(
@@ -89,8 +80,10 @@ upset_plot <- ComplexUpset::upset(
     ylab("Set")
 )
 
+# Mostrar el gráfico
 upset_plot
 
+# Guardar como imagen
 ggsave("output/upset_plot.png",
        upset_plot,
        dpi = 1200,
