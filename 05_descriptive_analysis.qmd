@@ -41,14 +41,10 @@ ffi_hh_ind_seropos <- read_csv("./data/mid/ffi_hh_ind_seropos.csv") %>%
     TRUE ~ NA_character_
   ),
   time_resi_cat2 = case_when(
-    ffi_is_time_resi_years < 1 ~ "< 1 año",
-    ffi_is_time_resi_years >= 1 & ffi_is_time_resi_years <= 3 ~ "1-3 años",
-    ffi_is_time_resi_years > 3 & ffi_is_time_resi_years <= 6 ~ "4-6 años",
-    ffi_is_time_resi_years > 6 & ffi_is_time_resi_years <= 10 ~ "7-10 años",
-    ffi_is_time_resi_years > 10 & ffi_is_time_resi_years <= 20 ~ "11-20 años",
-    ffi_is_time_resi_years > 20 & ffi_is_time_resi_years <= 30 ~ "21-30 años",
-    ffi_is_time_resi_years > 30 ~ "> 30 años",
-    TRUE ~ NA_character_
+  ffi_is_time_resi_years < 5 ~ "< 5 años",
+  ffi_is_time_resi_years >= 5 & ffi_is_time_resi_years <= 20 ~ "5-20 años",
+  ffi_is_time_resi_years > 20 ~ "> 20 años",
+  TRUE ~ NA_character_
   ),
   education_summary = case_when(
     ffi_is_inst_level == 0 ~ "Sin escolaridad",
