@@ -19,11 +19,6 @@ df_bin <- ffi %>%
       1,
       0
     ),
-    Covid = if_else(
-      MERSP.NP_pos == 1 | SARS.NP.WT_pos == 1 | SARS.RBP.WT_pos == 1,
-      1,
-      0
-    ),
     Chik = if_else(
       Chik.E1_pos == 1, 
       1, 
@@ -40,13 +35,13 @@ df_bin <- ffi %>%
       0
     )
   ) %>% 
-  select(ffi_is_code, Schistosomiasis, Covid, Chik, Zika, Malaria) %>% 
+  select(ffi_is_code, Schistosomiasis, Chik, Zika, Malaria) %>% 
   drop_na()
 
 # Plot
 upset_plot <- ComplexUpset::upset(
   df_bin,
-  intersect = c("Schistosomiasis", "Covid", "Chik", "Zika", "Malaria"),
+  intersect = c("Schistosomiasis", "Chik", "Zika", "Malaria"),
   name = "Exposure Profile",
   base_annotations = list(
     'Count' = intersection_size(
@@ -64,8 +59,7 @@ upset_plot <- ComplexUpset::upset(
       )
   ),
   queries = list(
-    upset_query(set = "Covid", fill = "#1A7332"),
-    upset_query(set = "Zika", fill = "#2A873D"),
+    upset_query(set = "Zika", fill = "#1A7332"),
     upset_query(set = "Chik", fill = "#469A4D"),
     upset_query(set = "Schistosomiasis", fill = "#6FAA66"),
     upset_query(set = "Malaria", fill = "#BCCFB4")
