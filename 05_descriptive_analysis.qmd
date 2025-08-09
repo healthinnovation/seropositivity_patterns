@@ -80,11 +80,6 @@ ffi_hh_ind_seropos <- read_csv("./data/mid/ffi_hh_ind_seropos.csv") %>%
       ffi_is_symp_month_dizz == 1,
       "Sí", "No"
     ),
-  Virus_COVID_Pos = if_else(
-      MERSP.NP_pos == 1 | SARS.NP.WT_pos == 1 | SARS.RBP.WT_pos == 1,
-      "Positivo",
-      "Negativo"
-    ),
   Chikungunya_Pos = if_else(
     Chik.E1_pos == 1, "Positivo", "Negativo"
     ),
@@ -114,7 +109,6 @@ ffi_hh_ind_seropos %>%
     sympt_gastrointestinal,
     sympt_neurologico,
     Schistosomiasis,
-    Virus_COVID_Pos,
     Chikungunya_Pos,
     Zika_Pos,
     pv_exposure,
@@ -255,45 +249,6 @@ ffi_hh_ind_seropos %>%
   modify_header(label = "**Variable**") %>%
   modify_spanning_header(c("stat_1", "stat_2") ~ "**Chikungunya status**")
 
-#Tabla de COVID-19
-
-ffi_hh_ind_seropos %>%
-  select(
-    ffi_is_district,
-    gender,
-    age_oms,
-    time_resi_cat2,
-    education_summary,
-    sympt_constitucional,
-    sympt_osteomuscular,
-    sympt_gastrointestinal,
-    sympt_neurologico,
-    distance_to_rh_hf_sampl,
-    ffi_is_trip_month,
-    Virus_COVID_Pos
-  ) %>%
-  tbl_summary(
-    by = Virus_COVID_Pos,
-    missing = "ifany",
-    label = list(
-      ffi_is_district ~ "District",
-      gender ~ "Gender",
-      age_oms ~ "Age group",
-      time_resi_cat2 ~ "Residence time",
-      education_summary ~ "Education level",
-      sympt_constitucional ~ "Constitutional symptoms",
-      sympt_osteomuscular ~ "Osteomuscular symptoms",
-      sympt_gastrointestinal ~ "Gastrointestinal symptoms",
-      sympt_neurologico ~ "Neurological symptoms",
-      distance_to_rh_hf_sampl ~ "Distance to Health Facility (sample)",
-      ffi_is_trip_month ~ "Travel in last month"
-    )
-  ) %>%
-  add_overall() %>%
-  add_p() %>%
-  bold_labels() %>%
-  modify_header(label = "**Variable**") %>%
-  modify_spanning_header(c("stat_1", "stat_2") ~ "**COVID-19 status**")
 
 #Tabla de Malaria
 ffi_hh_ind_seropos %>%
