@@ -7,7 +7,15 @@ library(patchwork)
 library(prettymapr)
 library(osmdata)
 
-ffi <- read_csv("./data/mid/ffi_hh_ind_seropos.csv")
+ffi <- read_csv("./data/mid/ffi_hh_ind_seropos.csv") %>% 
+  mutate(age_oms = case_when(
+    age_cat %in% c("[0-10)", "[10-20)") ~ "Children and adolescent",
+    age_cat %in% c("[20-30)", "[30-40)") ~ "Young adult",
+    age_cat %in% c("[40-50)", "[50-60)") ~ "Middle-aged adult",
+    age_cat %in% c("[60-70)", "[70+)")   ~ "Older adult",
+    TRUE ~ NA_character_
+    )
+    )
 
 
 # Upset Plot --------------------------------------------------------------
@@ -30,27 +38,34 @@ df_bin <- ffi %>%
       1,
       0
     ),
-    Malaria = if_else(
-      pv_exposure == "Positive" | pf_exposure == "Positive",
+    Pvivax = if_else(
+      pv_exposure == "Positive",
+      1,
+      0
+    ),
+    Pfalciparum = if_else(
+      pf_exposure == "Positive",
       1,
       0
     )
   ) %>% 
-  select(ffi_is_code, Schistosomiasis, Chik, Zika, Malaria) %>% 
+  select(ffi_is_code, Schistosomiasis, Chik, Zika, Pvivax,
+         Pfalciparum, age_oms) %>% 
   drop_na()
 
 # Plot
 upset_plot <- ComplexUpset::upset(
   df_bin,
-  intersect = c("Schistosomiasis", "Chik", "Zika", "Malaria"),
+  intersect = c("Schistosomiasis", "Chik", "Zika", "Pvivax",
+                "Pfalciparum"),
   name = "Exposure Profile",
   base_annotations = list(
     'Count' = intersection_size(
       mapping = aes(fill = after_stat(y))
     ) +
       scale_fill_gradient(
-        low = "#67a9cf",
-        high = "#67a9cf",
+        low = "#a2d2c7",
+        high = "#7abfaf",
         guide = "none"
       ) +
       theme(
@@ -61,30 +76,117 @@ upset_plot <- ComplexUpset::upset(
       )
   ),
   queries = list(
-    upset_query(set = "Zika", fill = "#67a9cf"),
-    upset_query(set = "Chik", fill = "#67a9cf"),
-    upset_query(set = "Schistosomiasis", fill = "#67a9cf"),
-    upset_query(set = "Malaria", fill = "#67a9cf")
+    upset_query(set = "Zika", fill = "#7abfaf"),
+    upset_query(set = "Chik", fill = "#7abfaf"),
+    upset_query(set = "Schistosomiasis", fill = "#a2d2c7"),
+    upset_query(set = "Pfalciparum", fill = "#a2d2c7"),
+    upset_query(set = "Pvivax", fill = "#a2d2c7")
   ),
-  set_sizes = upset_set_size() +
-    theme(
-      panel.grid.major.x = element_blank(),
-      panel.grid.minor.x = element_blank(),
-      panel.grid.major.y = element_blank(),
-      panel.grid.minor.y = element_blank()
-    ) +
-    ylab("Set")
-)
+  set_sizes = FALSE,
+  matrix = intersection_matrix(
+    geom = geom_point(size = 3),
+    segment = geom_segment(size = 1)
+  )
+  # set_sizes = upset_set_size() +
+  #   theme(
+  #     panel.grid.major.x = element_blank(),
+  #     panel.grid.minor.x = element_blank(),
+  #     panel.grid.major.y = element_blank(),
+  #     panel.grid.minor.y = element_blank()
+  #   ) +
+  #   ylab("Set")
+) +
+  ggtitle("Overall") +
+  theme(
+    plot.title.position = "plot",
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor.y = element_blank()
+  )
 
 # Mostrar el gráfico
-upset_plot
+upset_plot 
+
+
+
+# Upset Plot by age groups ------------------------------------------------
+
+make_upset <- function(data, group_label) {
+  ComplexUpset::upset(
+    data,
+    intersect = c(
+      "Schistosomiasis",
+      "Chik",
+      "Zika",
+      "Pvivax",
+      "Pfalciparum"
+    ),
+    name = "Climate Perception Profiles",
+    base_annotations = list(
+      'Count' = intersection_size(mapping = aes(fill = after_stat(y)),
+                                  text = list(size = 2.5)) +
+        labs(y = "") +
+        scale_fill_gradient(low = "#a2d2c7",
+                            high = "#7abfaf",
+                            guide = "none") +
+        theme(
+          panel.grid.major.x = element_blank(),
+          panel.grid.minor.x = element_blank(),
+          panel.grid.major.y = element_blank(),
+          panel.grid.minor.y = element_blank()
+        )
+    ),
+    set_sizes = FALSE,
+    matrix = intersection_matrix(
+      geom = geom_point(size = 2.5),
+      segment = geom_segment(size = 0.5)
+    )
+  ) + ggtitle(group_label) +
+    theme(
+      plot.title.position = "plot",
+      plot.title = element_text(hjust = 0.5, face = "bold"),
+      #axis.text.y = element_text(size = 6.5),
+      axis.title.y = element_blank() 
+    )
+}
+
+upset_by_age <- split(df_bin, df_bin$age_oms) %>% 
+  imap(~ make_upset(.x, .y))
+
+p1 <- upset_by_age[["Children and adolescent"]] +
+  labs(x = "")
+
+p2 <- upset_by_age[["Young adult"]] +
+  labs (x = "")
+p3 <- upset_by_age[["Middle-aged adult"]] 
+
+p4 <- upset_by_age[["Older adult"]]
+
+
+fig_2b <- wrap_plots(
+  list(p1, p2, p3, p4),
+  ncol = 2,
+  nrow = 2,
+  guides = "collect"
+) 
+
+
+fig2 <- wrap_plots(
+  list(upset_plot, fig_2b),
+  ncol = 2,
+  nrow = 1
+) 
+
+fig2
 
 # Guardar como imagen
-ggsave("output/upset_plot.png",
-       upset_plot,
-       dpi = 1200,
-       width = 13,
-       height = 8)
+ggsave("output/fig2_upset_plots.png",
+       fig2,
+       dpi = 600,
+       width = 19,
+       height = 10)
 
 
 # Spatial Analysis --------------------------------------------------------
@@ -112,23 +214,30 @@ df_spat <- ffi %>%
       1,
       0
     ),
-    malaria = if_else(
-      pv_exposure == "Positive" | pf_exposure == "Positive",
+    Pvivax = if_else(
+      pv_exposure == "Positive",
+      1,
+      0
+    ),
+    Pfalciparum = if_else(
+      pf_exposure == "Positive",
       1,
       0
     )
   ) %>% 
   select(ffi_h_code, ffi_is_code,
          schistosomiasis, covid,
-         chik, zika, malaria,
+         chik, zika,
+         Pvivax, Pfalciparum,
          ffi_gps_lat, ffi_gps_long) %>% 
   group_by(ffi_h_code) %>%
   summarise(
     prev_schisto  = sum(schistosomiasis, na.rm = TRUE) / n(),   
-    prev_covid    = sum(covid,            na.rm = TRUE) / n(),
-    prev_chik     = sum(chik,             na.rm = TRUE) / n(),
-    prev_zika     = sum(zika,             na.rm = TRUE) / n(),
-    prev_malaria  = sum(malaria,          na.rm = TRUE) / n(),
+    prev_covid    = sum(covid, na.rm = TRUE) / n(),
+    prev_chik     = sum(chik, na.rm = TRUE) / n(),
+    prev_zika     = sum(zika, na.rm = TRUE) / n(),
+    prev_pvivax  = sum(Pvivax, na.rm = TRUE) / n(),
+    prev_pfalciparum = sum(Pfalciparum, na.rm = TRUE) / n(),
     lat  = first(ffi_gps_lat),
     long = first(ffi_gps_long)
   ) %>% 
@@ -185,7 +294,7 @@ map_schisto <- local_m_schisto_crop %>%
                            ))) %>%
   arrange(mean_cat != "Not Significant") %>% 
   ggplot(aes(geometry = geometry, colour = mean_cat)) +
-  annotation_map_tile(type = "osm", zoom = 11) +
+  annotation_map_tile(type = "cartolight", zoom = 11) +
   geom_sf(data = crop_coordinates,
           fill = NA,
           color = "black",
@@ -215,14 +324,14 @@ map_schisto <- local_m_schisto_crop %>%
   )
 
 
-# Spatial: Malaria
-local_m_malaria <- df_n %>% 
+# Spatial: P. falciparum
+local_m_falciparum <- df_n %>% 
   mutate(
-    lm_malaria = local_moran(prev_malaria, nb, wt)
+    lm_malaria = local_moran(prev_pfalciparum, nb, wt)
   ) %>% 
   unnest(lm_malaria)
 
-local_m_malaria_rot <- local_m_malaria |> 
+local_m_malaria_rot <- local_m_falciparum |> 
   st_transform('+proj=omerc +lat_0=40 +lonc=-74 +gamma=-40')
 
 bbox_crop <- st_bbox(c(xmin = -3179322 , xmax = 3199161,
@@ -233,7 +342,7 @@ local_m_malaria_crop <- st_crop(local_m_malaria_rot, bbox_crop)
 
 # Mapa
 
-map_malaria <- local_m_malaria_crop %>% 
+map_falciparum <- local_m_malaria_crop %>% 
   mutate(mean_cat = if_else(p_folded_sim <= 0.1, as.character(mean),
                             "Not Significant"),
          mean_cat = factor(mean_cat,
@@ -246,7 +355,68 @@ map_malaria <- local_m_malaria_crop %>%
                            ))) %>% 
   arrange(mean_cat != "Not Significant") %>% 
   ggplot(aes(geometry = geometry, colour = mean_cat)) +
-  annotation_map_tile(type = "osm", zoom = 11) +
+  annotation_map_tile(type = "cartolight", zoom = 11) +
+  geom_sf(data = crop_coordinates,
+          fill = NA,
+          color = "black",
+          linetype = "dashed",
+          linewidth = 0.6) +
+  geom_sf(size = 3, alpha = 0.8) +
+  scale_colour_manual(
+    values = c(
+      "Not Significant" = "grey40",
+      "Low-Low" = "#2166ac",
+      "High-Low" = "#67a9cf",
+      "Low-High" = "#ef8a62",
+      "High-High" = "#b2182b"
+    )
+  ) +
+  annotation_scale(location = "bl") +
+  annotation_north_arrow(location = "tl", style = north_arrow_nautical, rotation = +40) +
+  theme_bw() +
+  labs(
+    colour = "Cluster"
+  ) + theme(
+    legend.position = "none"
+  ) +
+  coord_sf(
+    xlim = c(3172322, 3199761),
+    ylim = c(-3698615, -3603883)
+  )
+
+
+# Spatial: vivax
+local_m_vivax <- df_n %>% 
+  mutate(
+    lm_vivax = local_moran(prev_pvivax, nb, wt)
+  ) %>% 
+  unnest(lm_vivax)
+
+local_m_vivax_rot <- local_m_vivax |> 
+  st_transform('+proj=omerc +lat_0=40 +lonc=-74 +gamma=-40')
+
+bbox_crop <- st_bbox(c(xmin = -3179322 , xmax = 3199161,
+                       ymin = -3696615 , ymax = -3603883),
+                     crs = st_crs(local_m_vivax_rot))
+
+local_m_vivax_crop <- st_crop(local_m_vivax_rot, bbox_crop)
+
+# Mapa
+
+map_vivax <- local_m_vivax_crop %>% 
+  mutate(mean_cat = if_else(p_folded_sim <= 0.1, as.character(mean),
+                            "Not Significant"),
+         mean_cat = factor(mean_cat,
+                           levels = c(
+                             "High-High",
+                             "Low-High",
+                             "High-Low",
+                             "Low-Low",
+                             "Not Significant"
+                           ))) %>% 
+  arrange(mean_cat != "Not Significant") %>% 
+  ggplot(aes(geometry = geometry, colour = mean_cat)) +
+  annotation_map_tile(type = "cartolight", zoom = 11) +
   geom_sf(data = crop_coordinates,
           fill = NA,
           color = "black",
@@ -307,7 +477,7 @@ map_zika <- local_m_zika_crop %>%
                            ))) %>% 
   arrange(mean_cat != "Not Significant") %>%
   ggplot(aes(geometry = geometry, colour = mean_cat)) +
-  annotation_map_tile(type = "osm", zoom = 11) +
+  annotation_map_tile(type = "cartolight", zoom = 11) +
   geom_sf(data = crop_coordinates,
           fill = NA,
           color = "black",
@@ -367,7 +537,7 @@ map_chik <- local_m_chik_crop %>%
                            ))) %>% 
   arrange(mean_cat != "Not Significant") %>%
   ggplot(aes(geometry = geometry, colour = mean)) +
-  annotation_map_tile(type = "osm", zoom = 11) +
+  annotation_map_tile(type = "cartolight", zoom = 11) +
   geom_sf(data = crop_coordinates,
           fill = NA,
           color = "black",
@@ -398,9 +568,9 @@ map_chik <- local_m_chik_crop %>%
 
 # Joining maps
 
-map_four_join <- map_schisto + map_malaria + map_chik + map_zika +
+map_five_join <- map_schisto + map_falciparum + map_vivax + map_chik + map_zika +
   plot_layout(
-    ncol = 4
+    ncol = 5
   ) +
   plot_annotation(
     tag_levels = "a",
@@ -413,12 +583,11 @@ map_four_join <- map_schisto + map_malaria + map_chik + map_zika +
     )
   )
 
-ggsave("output/spatial_combine_four.png",
-       map_four_join,
+ggsave("output/five_maps_spatial.png",
+       map_five_join,
        dpi = 600,
-       width = 14,
-       height = 7.5,
-       device = grDevices::png)
+       width = 15,
+       height = 10)
 
 
 
