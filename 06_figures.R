@@ -6,6 +6,9 @@ library(ggspatial)
 library(patchwork)
 library(prettymapr)
 library(osmdata)
+library(basemaps)
+library(innovar)
+library(scales)
 
 ffi <- read_csv("./data/mid/ffi_hh_ind_seropos.csv") %>% 
   mutate(age_oms = case_when(
@@ -16,6 +19,298 @@ ffi <- read_csv("./data/mid/ffi_hh_ind_seropos.csv") %>%
     TRUE ~ NA_character_
     )
     )
+
+# Spatial: Data Preparation 
+df_spat <- ffi %>% 
+  mutate(
+    schistosomiasis = if_else(
+      SEA_pos == 1 | X229.E.NP_pos == 1,
+      1,
+      0
+    ),
+    covid = if_else(
+      MERSP.NP_pos == 1 | SARS.NP.WT_pos == 1 | SARS.RBP.WT_pos == 1,
+      1,
+      0
+    ),
+    chik = if_else(
+      Chik.E1_pos == 1, 
+      1, 
+      0
+    ),
+    zika = if_else(
+      Zika.NS1_pos == 1,
+      1,
+      0
+    ),
+    Pvivax = if_else(
+      pv_exposure == "Positive",
+      1,
+      0
+    ),
+    Pfalciparum = if_else(
+      pf_exposure == "Positive",
+      1,
+      0
+    )
+  ) %>% 
+  select(ffi_h_code, ffi_is_code,
+         schistosomiasis, covid,
+         chik, zika,
+         Pvivax, Pfalciparum,
+         ffi_gps_lat, ffi_gps_long) %>% 
+  group_by(ffi_h_code) %>%
+  summarise(
+    prev_schisto  = sum(schistosomiasis, na.rm = TRUE) / n(),   
+    prev_covid    = sum(covid, na.rm = TRUE) / n(),
+    prev_chik     = sum(chik, na.rm = TRUE) / n(),
+    prev_zika     = sum(zika, na.rm = TRUE) / n(),
+    prev_pvivax  = sum(Pvivax, na.rm = TRUE) / n(),
+    prev_pfalciparum = sum(Pfalciparum, na.rm = TRUE) / n(),
+    lat  = first(ffi_gps_lat),
+    long = first(ffi_gps_long)
+  ) %>% 
+  st_as_sf(
+    coords = c("long", "lat"),
+    crs = 4326
+  )
+
+# Figure 1 -------------------------------------------------------------------------------------
+
+set_defaults(map_service = "carto",
+             map_type = "light_no_labels")
+
+
+# Changing projection
+pts_3857 <- st_transform(df_spat, 3857) %>% 
+  arrange(is.na(prev_schisto), prev_schisto)
+
+# Adjusting buffer
+bbox_3857 <- st_as_sfc(st_bbox(pts_3857), crs = 3857)
+buffer_3857 <- st_buffer(bbox_3857, dist = 11000) 
+
+# Map schisto
+prev_schisto <- ggplot() +
+  basemap_gglayer(buffer_3857) +
+  coord_sf(expand = F) +
+  scale_fill_identity() +
+  geom_sf(data = pts_3857,
+          aes(color = prev_schisto),
+          size = 2.5, alpha = 0.9) +
+  scale_color_innova(palette = "npr", discrete = FALSE) +
+  coord_sf(expand = F) +
+  annotation_north_arrow(location = "tl", style = north_arrow_nautical) +
+  coord_sf(expand = F) +
+  annotation_scale(location = "br") +
+  coord_sf(expand = F) +
+  scale_x_continuous(
+    breaks = seq(-73.55, -72.50, by = 0.2),  # cada 0.1°
+    labels = label_number(suffix = "°W", accuracy = 0.2)
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    panel.background = element_rect(fill = "white", colour = "grey85"),
+    panel.border     = element_rect(fill = NA, colour = "grey85"),
+    legend.position  = "none"
+  ) +
+  labs(x = "",
+       y = "",
+       color = "Schistomiasis seroprevalence") +
+  guides(color = guide_colorbar(title.position = "top",
+                              title.hjust = 0.5)
+         )
+
+prev_schisto
+
+# Maps P. falciparum
+pts_falciparum <- pts_3857 %>% 
+  arrange(is.na(prev_pfalciparum), prev_pfalciparum)
+
+prev_falciparum <- ggplot() +
+  basemap_gglayer(buffer_3857) +
+  coord_sf(expand = F) +
+  scale_fill_identity() +
+  geom_sf(data = pts_falciparum,
+          aes(color = prev_pfalciparum),
+          size = 2.5, alpha = 0.9) +
+  scale_color_innova(palette = "npr", discrete = FALSE,
+                     name = expression(atop(italic("P. falciparum"), "Household seroprevalence"))) +
+  coord_sf(expand = F) +
+  annotation_north_arrow(location = "tl", style = north_arrow_nautical) +
+  coord_sf(expand = F) +
+  annotation_scale(location = "br") +
+  coord_sf(expand = F) +
+  scale_x_continuous(
+    breaks = seq(-73.55, -72.50, by = 0.2),  # cada 0.1°
+    labels = label_number(suffix = "°W", accuracy = 0.2)
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    panel.background = element_rect(fill = "white", colour = "grey85"),
+    panel.border     = element_rect(fill = NA, colour = "grey85"),
+    legend.position  = "none"
+  ) +
+  labs(x = "",
+       y = "") +
+  guides(color = guide_colorbar(title.position = "top",
+                                title.hjust = 0.5)
+  )
+
+
+prev_falciparum
+
+# Maps P. vivax
+pts_vivax <- pts_3857 %>% 
+  arrange(is.na(prev_pvivax), prev_pvivax)
+
+prev_vivax <- ggplot() +
+  basemap_gglayer(buffer_3857) +
+  coord_sf(expand = F) +
+  scale_fill_identity() +
+  geom_sf(data = pts_vivax,
+          aes(color = prev_pvivax),
+          size = 2.5, alpha = 0.9) +
+  scale_color_innova(palette = "npr", discrete = FALSE,
+                     name = expression(atop(italic("P. vivax"), "Household seroprevalence"))) +
+  coord_sf(expand = F) +
+  annotation_north_arrow(location = "tl", style = north_arrow_nautical) +
+  coord_sf(expand = F) +
+  annotation_scale(location = "br") +
+  coord_sf(expand = F) +
+  scale_x_continuous(
+    breaks = seq(-73.55, -72.50, by = 0.2),  # cada 0.1°
+    labels = label_number(suffix = "°W", accuracy = 0.2)
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    panel.background = element_rect(fill = "white", colour = "grey85"),
+    panel.border     = element_rect(fill = NA, colour = "grey85"),
+    legend.position  = "none"
+  ) +
+  labs(x = "",
+       y = "") +
+  guides(color = guide_colorbar(title.position = "top",
+                                title.hjust = 0.5)
+  )
+
+
+prev_vivax
+
+
+# Map chik
+
+pts_chik <- pts_3857 %>% 
+  arrange(is.na(prev_chik), prev_chik)
+
+prev_chik <- ggplot() +
+  basemap_gglayer(buffer_3857) +
+  coord_sf(expand = F) +
+  scale_fill_identity() +
+  geom_sf(data = pts_chik,
+          aes(color = prev_chik),
+          size = 2.5, alpha = 0.9) +
+  scale_color_innova(palette = "npr", discrete = FALSE) +
+  coord_sf(expand = F) +
+  annotation_north_arrow(location = "tl", style = north_arrow_nautical) +
+  coord_sf(expand = F) +
+  annotation_scale(location = "br") +
+  coord_sf(expand = F) +
+  scale_x_continuous(
+    breaks = seq(-73.55, -72.50, by = 0.2),  # cada 0.1°
+    labels = label_number(suffix = "°W", accuracy = 0.2)
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    panel.background = element_rect(fill = "white", colour = "grey85"),
+    panel.border     = element_rect(fill = NA, colour = "grey85"),
+    legend.position  = "none"
+  ) +
+  labs(x = "",
+       y = "",
+       color = "Chikungunya \nHousehold seroprevalence") +
+  guides(color = guide_colorbar(title.position = "top",
+                                title.hjust = 0.5)
+  )
+
+
+prev_chik
+
+# Map Zika
+
+pts_zika <- pts_3857 %>% 
+  arrange(is.na(prev_zika), prev_zika)
+
+prev_zika <- ggplot() +
+  basemap_gglayer(buffer_3857) +
+  coord_sf(expand = F) +
+  scale_fill_identity() +
+  geom_sf(data = pts_zika,
+          aes(color = prev_zika),
+          size = 2.5, alpha = 0.9) +
+  scale_color_innova(palette = "npr", discrete = FALSE) +
+  coord_sf(expand = F) +
+  annotation_north_arrow(location = "tl", style = north_arrow_nautical) +
+  coord_sf(expand = F) +
+  annotation_scale(location = "br") +
+  coord_sf(expand = F) +
+  scale_x_continuous(
+    breaks = seq(-73.55, -72.50, by = 0.2),  # cada 0.1°
+    labels = label_number(suffix = "°W", accuracy = 0.2)
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    panel.background = element_rect(fill = "white", colour = "grey85"),
+    panel.border     = element_rect(fill = NA, colour = "grey85"),
+    legend.position  = "right"
+  ) +
+  labs(x = "",
+       y = "",
+       color = "Household \nSeropositivity rate") +
+  guides(color = guide_colorbar(title.position = "top",
+                                title.hjust = 0.5)
+  )
+
+
+prev_zika
+
+
+legend_grob_zik <- cowplot::get_legend(prev_zika)
+legend_zik <- cowplot::ggdraw(legend_grob_zik)
+# Quita el tag SOLO para la leyenda
+legend_zik <- legend_zik & theme(plot.tag = element_blank())
+
+prev_zika_nl <- prev_zika + theme(
+  legend.position = "none"
+)
+
+# Combining plots
+
+fig1 <- prev_schisto + prev_falciparum + prev_vivax + prev_chik + prev_zika_nl + legend_zik +
+  plot_layout(
+    ncol = 3,
+    nrow = 2
+  ) +
+  plot_annotation(
+    tag_levels = "a",
+    tag_suffix = ")",
+    theme = theme(
+      plot.tag = element_text(
+        size=16, face = "bold"
+      ),
+      plot.tag.position = c(0.02, 0.98)
+    )
+  )
+
+fig1
+
+
+ggsave(
+  filename = "./output/figure1.png",
+  plot = fig1,
+  width = 15,
+  height = 9,
+  dpi = 1200
+)
 
 
 # Upset Plot --------------------------------------------------------------
@@ -194,62 +489,6 @@ ggsave("output/fig2_upset_plots.png",
 
 
 # Spatial Analysis --------------------------------------------------------
-
-# Data Preparation 
-df_spat <- ffi %>% 
-  mutate(
-    schistosomiasis = if_else(
-      SEA_pos == 1 | X229.E.NP_pos == 1,
-      1,
-      0
-    ),
-    covid = if_else(
-      MERSP.NP_pos == 1 | SARS.NP.WT_pos == 1 | SARS.RBP.WT_pos == 1,
-      1,
-      0
-    ),
-    chik = if_else(
-      Chik.E1_pos == 1, 
-      1, 
-      0
-    ),
-    zika = if_else(
-      Zika.NS1_pos == 1,
-      1,
-      0
-    ),
-    Pvivax = if_else(
-      pv_exposure == "Positive",
-      1,
-      0
-    ),
-    Pfalciparum = if_else(
-      pf_exposure == "Positive",
-      1,
-      0
-    )
-  ) %>% 
-  select(ffi_h_code, ffi_is_code,
-         schistosomiasis, covid,
-         chik, zika,
-         Pvivax, Pfalciparum,
-         ffi_gps_lat, ffi_gps_long) %>% 
-  group_by(ffi_h_code) %>%
-  summarise(
-    prev_schisto  = sum(schistosomiasis, na.rm = TRUE) / n(),   
-    prev_covid    = sum(covid, na.rm = TRUE) / n(),
-    prev_chik     = sum(chik, na.rm = TRUE) / n(),
-    prev_zika     = sum(zika, na.rm = TRUE) / n(),
-    prev_pvivax  = sum(Pvivax, na.rm = TRUE) / n(),
-    prev_pfalciparum = sum(Pfalciparum, na.rm = TRUE) / n(),
-    lat  = first(ffi_gps_lat),
-    long = first(ffi_gps_long)
-  ) %>% 
-  st_as_sf(
-    coords = c("long", "lat"),
-    crs = 4326
-  )
-
 
 
 # K = 1 ----------------------------------------------------------------------------------------
