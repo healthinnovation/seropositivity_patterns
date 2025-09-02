@@ -509,7 +509,7 @@ map_zika1 <- local_m_zika_crop1 %>%
     colour = "Cluster"
   ) +
   theme(
-    legend.position = "none"
+    legend.position = "right"
   ) +
   coord_sf(
     xlim = c(3172322, 3199761),
@@ -571,6 +571,9 @@ map_chik1 <- local_m_chik_crop1 %>%
   labs(
     colour = "Cluster"
   ) +
+  theme(
+    legend.position = "none"
+  ) +
   coord_sf(
     xlim = c(3172322, 3199761),
     ylim = c(-3698615, -3603883)
@@ -580,7 +583,7 @@ map_chik1
 
 # Joining maps
 
-map_five_join <- map_schisto1 + map_zika1 + map_falciparum1 + map_vivax1 + map_chik1 +
+map_five_join <- map_schisto1 + map_falciparum1 + map_vivax1 + map_chik1 + map_zika1 +
   plot_layout(
     ncol = 5
   ) +
@@ -853,7 +856,7 @@ map_zika2 <- local_m_zika_crop2 %>%
     colour = "Cluster"
   ) +
   theme(
-    legend.position = "none"
+    legend.position = "right"
   ) +
   coord_sf(
     xlim = c(3172322, 3199761),
@@ -915,7 +918,7 @@ map_chik2 <- local_m_chik_crop2 %>%
   labs(
     colour = "Cluster"
   ) + theme(
-    legend.position = "right"
+    legend.position = "none"
   ) +
   coord_sf(
     xlim = c(3172322, 3199761),
@@ -926,7 +929,7 @@ map_chik2
 
 # Joining maps
 
-map_five_join2 <- map_schisto2 + map_zika2 + map_falciparum2 + map_vivax2 + map_chik2 +
+map_five_join2 <- map_schisto2 + map_falciparum2 + map_vivax2 + map_chik2 + map_zika2 +
   plot_layout(
     ncol = 5
   ) +
@@ -967,8 +970,6 @@ local_m_schisto3 <- df_n3 %>%
   unnest(lm_schisto)
 
 # Mapa
-
-
 local_m_schisto_rot3 <- local_m_schisto3 |> 
   st_transform('+proj=omerc +lat_0=40 +lonc=-74 +gamma=-40')
 
@@ -1023,24 +1024,24 @@ map_schisto3 <- local_m_schisto_crop3 %>%
 map_schisto3
 
 # Spatial: P. falciparum
-local_m_falciparum <- df_n %>% 
+local_m_falciparum3 <- df_n3 %>% 
   mutate(
     lm_malaria = local_moran(prev_pfalciparum, nb, wt)
   ) %>% 
   unnest(lm_malaria)
 
-local_m_malaria_rot <- local_m_falciparum |> 
+local_m_malaria_rot3 <- local_m_falciparum3 |> 
   st_transform('+proj=omerc +lat_0=40 +lonc=-74 +gamma=-40')
 
-bbox_crop <- st_bbox(c(xmin = -3179322 , xmax = 3199161,
+bbox_crop3 <- st_bbox(c(xmin = -3179322 , xmax = 3199161,
                        ymin = -3696615 , ymax = -3603883),
-                     crs = st_crs(local_m_malaria_rot))
+                     crs = st_crs(local_m_malaria_rot3))
 
-local_m_malaria_crop <- st_crop(local_m_malaria_rot, bbox_crop)
+local_m_malaria_crop3 <- st_crop(local_m_malaria_rot3, bbox_crop3)
 
 # Mapa
 
-map_falciparum <- local_m_malaria_crop %>% 
+map_falciparum3 <- local_m_malaria_crop3 %>% 
   mutate(mean_cat = if_else(p_folded_sim <= 0.1, as.character(mean),
                             "Not Significant"),
          mean_cat = factor(mean_cat,
@@ -1082,26 +1083,27 @@ map_falciparum <- local_m_malaria_crop %>%
     ylim = c(-3698615, -3603883)
   )
 
+map_falciparum3
 
 # Spatial: vivax
-local_m_vivax <- df_n %>% 
+local_m_vivax3 <- df_n3 %>% 
   mutate(
     lm_vivax = local_moran(prev_pvivax, nb, wt)
   ) %>% 
   unnest(lm_vivax)
 
-local_m_vivax_rot <- local_m_vivax |> 
+local_m_vivax_rot3 <- local_m_vivax3 |> 
   st_transform('+proj=omerc +lat_0=40 +lonc=-74 +gamma=-40')
 
-bbox_crop <- st_bbox(c(xmin = -3179322 , xmax = 3199161,
+bbox_crop3 <- st_bbox(c(xmin = -3179322 , xmax = 3199161,
                        ymin = -3696615 , ymax = -3603883),
-                     crs = st_crs(local_m_vivax_rot))
+                     crs = st_crs(local_m_vivax_rot3))
 
-local_m_vivax_crop <- st_crop(local_m_vivax_rot, bbox_crop)
+local_m_vivax_crop3 <- st_crop(local_m_vivax_rot3, bbox_crop3)
 
 # Mapa
 
-map_vivax <- local_m_vivax_crop %>% 
+map_vivax3 <- local_m_vivax_crop3 %>% 
   mutate(mean_cat = if_else(p_folded_sim <= 0.1, as.character(mean),
                             "Not Significant"),
          mean_cat = factor(mean_cat,
@@ -1143,26 +1145,27 @@ map_vivax <- local_m_vivax_crop %>%
     ylim = c(-3698615, -3603883)
   )
 
+map_vivax3
 
 # Spatial: Zika
-local_m_zika <- df_n %>% 
+local_m_zika3 <- df_n3 %>% 
   mutate(
     lm_zika = local_moran(prev_zika, nb, wt)
   ) %>% 
   unnest(lm_zika)
 
-local_m_zika_rot <- local_m_zika |> 
+local_m_zika_rot3 <- local_m_zika3 |> 
   st_transform('+proj=omerc +lat_0=40 +lonc=-74 +gamma=-40')
 
-bbox_crop <- st_bbox(c(xmin = -3179322 , xmax = 3199161,
+bbox_crop3 <- st_bbox(c(xmin = -3179322 , xmax = 3199161,
                        ymin = -3696615 , ymax = -3603883),
-                     crs = st_crs(local_m_zika_rot))
+                     crs = st_crs(local_m_zika_rot3))
 
-local_m_zika_crop <- st_crop(local_m_zika_rot, bbox_crop)
+local_m_zika_crop3 <- st_crop(local_m_zika_rot3, bbox_crop3)
 
 # Mapa
 
-map_zika <- local_m_zika_crop %>% 
+map_zika3 <- local_m_zika_crop3 %>% 
   mutate(mean_cat = if_else(p_folded_sim <= 0.1, as.character(mean),
                             "Not Significant"),
          mean_cat = factor(mean_cat,
@@ -1202,27 +1205,27 @@ map_zika <- local_m_zika_crop %>%
     ylim = c(-3698615, -3603883)
   )
 
-
+map_zika3
 
 # Spatial: Chik
-local_m_chik <- df_n %>% 
+local_m_chik3 <- df_n3 %>% 
   mutate(
     lm_chik = local_moran(prev_chik, nb, wt)
   ) %>% 
   unnest(lm_chik)
 
-local_m_chik_rot <- local_m_chik |> 
+local_m_chik_rot3 <- local_m_chik3 |> 
   st_transform('+proj=omerc +lat_0=40 +lonc=-74 +gamma=-40')
 
-bbox_crop <- st_bbox(c(xmin = -3179322 , xmax = 3199161,
+bbox_crop3 <- st_bbox(c(xmin = -3179322 , xmax = 3199161,
                        ymin = -3696615 , ymax = -3603883),
-                     crs = st_crs(local_m_chik_rot))
+                     crs = st_crs(local_m_chik_rot3))
 
-local_m_chik_crop <- st_crop(local_m_chik_rot, bbox_crop)
+local_m_chik_crop3 <- st_crop(local_m_chik_rot3, bbox_crop3)
 
 # Mapa
 
-map_chik <- local_m_chik_crop %>% 
+map_chik3 <- local_m_chik_crop3 %>% 
   mutate(mean_cat = if_else(p_folded_sim <= 0.1, as.character(mean),
                             "Not Significant"),
          mean_cat = factor(mean_cat,
@@ -1264,9 +1267,11 @@ map_chik <- local_m_chik_crop %>%
     ylim = c(-3698615, -3603883)
   )
 
+map_chik3
+
 # Joining maps
 
-map_five_join <- map_schisto + map_falciparum + map_vivax + map_chik + map_zika +
+map_five_join3 <- map_schisto3 + map_falciparum3 + map_vivax3 + map_chik3 + map_zika3 +
   plot_layout(
     ncol = 5
   ) +
@@ -1281,11 +1286,356 @@ map_five_join <- map_schisto + map_falciparum + map_vivax + map_chik + map_zika 
     )
   )
 
-ggsave("output/five_maps_spatial.png",
-       map_five_join,
+ggsave("output/five_maps_spatial_k3.png",
+       map_five_join3,
        dpi = 600,
        width = 15,
        height = 10)
+
+
+
+# k = 4 -------------------------------------------------------------------
+
+# Neighbours and spatial weights 
+df_n4 <- df_spat %>% 
+  mutate(
+    nb = st_knn(geometry, k = 4),
+    wt = st_weights(nb)
+  )
+
+
+# Spatial: Schistosomiasis
+local_m_schisto4 <- df_n4 %>% 
+  mutate(
+    lm_schisto = local_moran(prev_schisto, nb, wt)
+  ) %>% 
+  unnest(lm_schisto)
+
+# Mapa
+
+local_m_schisto_rot4 <- local_m_schisto4 |> 
+  st_transform('+proj=omerc +lat_0=40 +lonc=-74 +gamma=-40')
+
+bbox_crop4 <- st_bbox(c(xmin = -3179322 , xmax = 3199161,
+                       ymin = -3696615 , ymax = -3603883),
+                     crs = st_crs(local_m_schisto_rot4))
+
+local_m_schisto_crop4 <- st_crop(local_m_schisto_rot4, bbox_crop4)
+
+map_schisto4 <- local_m_schisto_crop4 %>%
+  mutate(mean_cat = if_else(p_folded_sim <= 0.1, as.character(mean),
+                            "Not Significant"),
+         mean_cat = factor(mean_cat,
+                           levels = c(
+                             "High-High", 
+                             "Low-High", 
+                             "High-Low", 
+                             "Low-Low", 
+                             "Not Significant"
+                           ))) %>%
+  arrange(mean_cat != "Not Significant") %>% 
+  ggplot(aes(geometry = geometry, colour = mean_cat)) +
+  annotation_map_tile(type = "cartolight", zoom = 11) +
+  geom_sf(data = crop_coordinates,
+          fill = NA,
+          color = "black",
+          linetype = "dashed",
+          linewidth = 0.6) +
+  geom_sf(size = 3, alpha = 0.8) +
+  scale_colour_manual(
+    values = c(
+      "Not Significant" = "grey40",
+      "Low-Low" = "#2166ac",
+      "High-Low" = "#67a9cf",
+      "Low-High" = "#ef8a62",
+      "High-High" = "#b2182b"
+    )
+  ) +
+  annotation_scale(location = "bl") +
+  annotation_north_arrow(location = "tl", style = north_arrow_nautical, rotation = +40) +
+  theme_bw() +
+  labs(
+    colour = "Cluster"
+  ) + theme(
+    legend.position = "none"
+  ) +
+  coord_sf(
+    xlim = c(3172322, 3199761),
+    ylim = c(-3698615, -3603883)
+  )
+
+map_schisto4
+
+# Spatial: P. falciparum
+local_m_falciparum4 <- df_n4 %>% 
+  mutate(
+    lm_malaria = local_moran(prev_pfalciparum, nb, wt)
+  ) %>% 
+  unnest(lm_malaria)
+
+local_m_malaria_rot4 <- local_m_falciparum4 |> 
+  st_transform('+proj=omerc +lat_0=40 +lonc=-74 +gamma=-40')
+
+bbox_crop4 <- st_bbox(c(xmin = -3179322 , xmax = 3199161,
+                       ymin = -3696615 , ymax = -3603883),
+                     crs = st_crs(local_m_malaria_rot4))
+
+local_m_malaria_crop4 <- st_crop(local_m_malaria_rot4, bbox_crop4)
+
+# Mapa
+
+map_falciparum4 <- local_m_malaria_crop4 %>% 
+  mutate(mean_cat = if_else(p_folded_sim <= 0.1, as.character(mean),
+                            "Not Significant"),
+         mean_cat = factor(mean_cat,
+                           levels = c(
+                             "High-High",
+                             "Low-High",
+                             "High-Low",
+                             "Low-Low",
+                             "Not Significant"
+                           ))) %>% 
+  arrange(mean_cat != "Not Significant") %>% 
+  ggplot(aes(geometry = geometry, colour = mean_cat)) +
+  annotation_map_tile(type = "cartolight", zoom = 11) +
+  geom_sf(data = crop_coordinates,
+          fill = NA,
+          color = "black",
+          linetype = "dashed",
+          linewidth = 0.6) +
+  geom_sf(size = 3, alpha = 0.8) +
+  scale_colour_manual(
+    values = c(
+      "Not Significant" = "grey40",
+      "Low-Low" = "#2166ac",
+      "High-Low" = "#67a9cf",
+      "Low-High" = "#ef8a62",
+      "High-High" = "#b2182b"
+    )
+  ) +
+  annotation_scale(location = "bl") +
+  annotation_north_arrow(location = "tl", style = north_arrow_nautical, rotation = +40) +
+  theme_bw() +
+  labs(
+    colour = "Cluster"
+  ) + theme(
+    legend.position = "none"
+  ) +
+  coord_sf(
+    xlim = c(3172322, 3199761),
+    ylim = c(-3698615, -3603883)
+  )
+
+map_falciparum4
+
+# Spatial: vivax
+local_m_vivax4 <- df_n4 %>% 
+  mutate(
+    lm_vivax = local_moran(prev_pvivax, nb, wt)
+  ) %>% 
+  unnest(lm_vivax)
+
+local_m_vivax_rot4 <- local_m_vivax4 |> 
+  st_transform('+proj=omerc +lat_0=40 +lonc=-74 +gamma=-40')
+
+bbox_crop4 <- st_bbox(c(xmin = -3179322 , xmax = 3199161,
+                       ymin = -3696615 , ymax = -3603883),
+                     crs = st_crs(local_m_vivax_rot4))
+
+local_m_vivax_crop4 <- st_crop(local_m_vivax_rot4, bbox_crop4)
+
+# Mapa
+
+map_vivax4 <- local_m_vivax_crop4 %>% 
+  mutate(mean_cat = if_else(p_folded_sim <= 0.1, as.character(mean),
+                            "Not Significant"),
+         mean_cat = factor(mean_cat,
+                           levels = c(
+                             "High-High",
+                             "Low-High",
+                             "High-Low",
+                             "Low-Low",
+                             "Not Significant"
+                           ))) %>% 
+  arrange(mean_cat != "Not Significant") %>% 
+  ggplot(aes(geometry = geometry, colour = mean_cat)) +
+  annotation_map_tile(type = "cartolight", zoom = 11) +
+  geom_sf(data = crop_coordinates,
+          fill = NA,
+          color = "black",
+          linetype = "dashed",
+          linewidth = 0.6) +
+  geom_sf(size = 3, alpha = 0.8) +
+  scale_colour_manual(
+    values = c(
+      "Not Significant" = "grey40",
+      "Low-Low" = "#2166ac",
+      "High-Low" = "#67a9cf",
+      "Low-High" = "#ef8a62",
+      "High-High" = "#b2182b"
+    )
+  ) +
+  annotation_scale(location = "bl") +
+  annotation_north_arrow(location = "tl", style = north_arrow_nautical, rotation = +40) +
+  theme_bw() +
+  labs(
+    colour = "Cluster"
+  ) + theme(
+    legend.position = "none"
+  ) +
+  coord_sf(
+    xlim = c(3172322, 3199761),
+    ylim = c(-3698615, -3603883)
+  )
+
+map_vivax4
+
+# Spatial: Zika
+local_m_zika4 <- df_n4 %>% 
+  mutate(
+    lm_zika = local_moran(prev_zika, nb, wt)
+  ) %>% 
+  unnest(lm_zika)
+
+local_m_zika_rot4 <- local_m_zika4 |> 
+  st_transform('+proj=omerc +lat_0=40 +lonc=-74 +gamma=-40')
+
+bbox_crop4 <- st_bbox(c(xmin = -3179322 , xmax = 3199161,
+                       ymin = -3696615 , ymax = -3603883),
+                     crs = st_crs(local_m_zika_rot4))
+
+local_m_zika_crop4 <- st_crop(local_m_zika_rot4, bbox_crop4)
+
+# Mapa
+
+map_zika4 <- local_m_zika_crop4 %>% 
+  mutate(mean_cat = if_else(p_folded_sim <= 0.1, as.character(mean),
+                            "Not Significant"),
+         mean_cat = factor(mean_cat,
+                           levels = c(
+                             "High-High",
+                             "Low-High",
+                             "High-Low",
+                             "Low-Low",
+                             "Not Significant"
+                           ))) %>% 
+  arrange(mean_cat != "Not Significant") %>%
+  ggplot(aes(geometry = geometry, colour = mean_cat)) +
+  annotation_map_tile(type = "cartolight", zoom = 11) +
+  geom_sf(data = crop_coordinates,
+          fill = NA,
+          color = "black",
+          linetype = "dashed",
+          linewidth = 0.6) +
+  geom_sf(size = 3, alpha = 0.8) +
+  scale_colour_manual(
+    values = c(
+      "Not Significant" = "grey40",
+      "Low-Low" = "#2166ac",
+      "High-Low" = "#67a9cf",
+      "Low-High" = "#ef8a62",
+      "High-High" = "#b2182b"
+    )
+  ) +
+  annotation_scale(location = "bl") +
+  annotation_north_arrow(location = "tl", style = north_arrow_nautical, rotation = +40) +
+  theme_bw() +
+  labs(
+    colour = "Cluster"
+  ) +
+  coord_sf(
+    xlim = c(3172322, 3199761),
+    ylim = c(-3698615, -3603883)
+  )
+
+map_zika4
+
+# Spatial: Chik
+local_m_chik4 <- df_n4 %>% 
+  mutate(
+    lm_chik = local_moran(prev_chik, nb, wt)
+  ) %>% 
+  unnest(lm_chik)
+
+local_m_chik_rot4 <- local_m_chik4 |> 
+  st_transform('+proj=omerc +lat_0=40 +lonc=-74 +gamma=-40')
+
+bbox_crop4 <- st_bbox(c(xmin = -3179322 , xmax = 3199161,
+                       ymin = -3696615 , ymax = -3603883),
+                     crs = st_crs(local_m_chik_rot4))
+
+local_m_chik_crop4 <- st_crop(local_m_chik_rot4, bbox_crop4)
+
+# Mapa
+
+map_chik4 <- local_m_chik_crop4 %>% 
+  mutate(mean_cat = if_else(p_folded_sim <= 0.1, as.character(mean),
+                            "Not Significant"),
+         mean_cat = factor(mean_cat,
+                           levels = c(
+                             "High-High",
+                             "Low-High",
+                             "High-Low",
+                             "Low-Low",
+                             "Not Significant"
+                           ))) %>% 
+  arrange(mean_cat != "Not Significant") %>%
+  ggplot(aes(geometry = geometry, colour = mean)) +
+  annotation_map_tile(type = "cartolight", zoom = 11) +
+  geom_sf(data = crop_coordinates,
+          fill = NA,
+          color = "black",
+          linetype = "dashed",
+          linewidth = 0.6) +
+  geom_sf(size = 3, alpha = 0.8) +
+  scale_colour_manual(
+    values = c(
+      "Not Significant" = "grey40",
+      "Low-Low" = "#2166ac",
+      "High-Low" = "#67a9cf",
+      "Low-High" = "#ef8a62",
+      "High-High" = "#b2182b"
+    )
+  ) +
+  annotation_scale(location = "bl") +
+  annotation_north_arrow(location = "tl", style = north_arrow_nautical, rotation = +40) +
+  theme_bw() +
+  labs(
+    colour = "Cluster"
+  ) + theme(
+    legend.position = "none"
+  ) +
+  coord_sf(
+    xlim = c(3172322, 3199761),
+    ylim = c(-3698615, -3603883)
+  )
+
+map_chik4
+
+# Joining maps
+
+map_five_join4 <- map_schisto4 + map_falciparum4 + map_vivax4 + map_chik4 + map_zika4 +
+  plot_layout(
+    ncol = 5
+  ) +
+  plot_annotation(
+    tag_levels = "a",
+    tag_suffix = ")",
+    theme = theme(
+      plot.tag = element_text(
+        size=16, face = "bold"
+      ),
+      plot.tag.position = c(0.02, 0.98)
+    )
+  )
+
+ggsave("output/five_maps_spatial_k4.png",
+       map_five_join4,
+       dpi = 600,
+       width = 15,
+       height = 10)
+
+
 
 
 
