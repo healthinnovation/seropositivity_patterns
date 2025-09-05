@@ -354,13 +354,15 @@ upset_plot <- ComplexUpset::upset(
   intersect = c("Schistosomiasis", "Chik", "Zika", "Pvivax",
                 "Pfalciparum"),
   name = "Co-exposure Profile",
+  min_size = 1,
+  min_degree = 1,
   base_annotations = list(
     'Count' = intersection_size(
       mapping = aes(fill = after_stat(y))
     ) +
       scale_fill_gradient(
-        low = "#8980BEFF",
-        high = "#620A5DFF",
+        low = "#78B1D3",
+        high = "#3F8BBA",
         guide = "none"
       ) +
       theme(
@@ -419,12 +421,13 @@ make_upset <- function(data, group_label) {
       "Pfalciparum"
     ),
     name = "Co-exposure Profiles",
+    min_degree = 1,
     base_annotations = list(
       'Count' = intersection_size(mapping = aes(fill = after_stat(y)),
                                   text = list(size = 2.5)) +
         labs(y = "") +
-        scale_fill_gradient(low = "#8980BEFF",
-                            high = "#620A5DFF",
+        scale_fill_gradient(low = "#78B1D3",
+                            high = "#3F8BBA",
                             guide = "none") +
         theme(
           panel.grid.major.x = element_blank(),
