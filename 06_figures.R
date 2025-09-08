@@ -5,7 +5,6 @@ library(sfdep)
 library(ggspatial)
 library(patchwork)
 library(prettymapr)
-library(osmdata)
 library(basemaps)
 library(innovar)
 library(scales)
@@ -21,7 +20,7 @@ ffi <- read_csv("./data/mid/ffi_hh_ind_seropos.csv") %>%
     )
 
 # Spatial: Data Preparation 
-df_spat <- ffi %>% 
+ffi2 <- ffi %>% 
   mutate(
     schistosomiasis = if_else(
       SEA_pos == 1 | X229.E.NP_pos == 1,
@@ -52,13 +51,24 @@ df_spat <- ffi %>%
       pf_exposure == "Positive",
       1,
       0
-    )
+    ),
+    coexposure = rowSums(
+      across(
+        c(
+          schistosomiasis,
+          covid,
+          chik,
+          zika,
+          Pvivax,
+          Pfalciparum)
+        ), na.rm = T
+      )
   ) %>% 
   select(ffi_h_code, ffi_is_code,
          schistosomiasis, covid,
          chik, zika,
-         Pvivax, Pfalciparum,
-         ffi_gps_lat, ffi_gps_long) %>% 
+         Pvivax, Pfalciparum, coexposure,
+         ffi_gps_lat, ffi_gps_long) %>%
   group_by(ffi_h_code) %>%
   summarise(
     prev_schisto  = sum(schistosomiasis, na.rm = TRUE) / n(),   
@@ -67,9 +77,13 @@ df_spat <- ffi %>%
     prev_zika     = sum(zika, na.rm = TRUE) / n(),
     prev_pvivax  = sum(Pvivax, na.rm = TRUE) / n(),
     prev_pfalciparum = sum(Pfalciparum, na.rm = TRUE) / n(),
+    coexposure_tot = sum(coexposure, na.rm = TRUE),
     lat  = first(ffi_gps_lat),
     long = first(ffi_gps_long)
-  ) %>% 
+  ) 
+
+
+df_spat <- ffi2 %>% 
   st_as_sf(
     coords = c("long", "lat"),
     crs = 4326
@@ -77,232 +91,286 @@ df_spat <- ffi %>%
 
 # Figure 1 -------------------------------------------------------------------------------------
 
+
 set_defaults(map_service = "carto",
              map_type = "light_no_labels")
 
 
 # Changing projection
 pts_3857 <- st_transform(df_spat, 3857) %>% 
-  arrange(is.na(prev_schisto), prev_schisto)
+  arrange(is.na(coexposure_tot), coexposure_tot)
 
 # Adjusting buffer
 bbox_3857 <- st_as_sfc(st_bbox(pts_3857), crs = 3857)
-buffer_3857 <- st_buffer(bbox_3857, dist = 11000) 
-
-# Map schisto
-prev_schisto <- ggplot() +
-  basemap_gglayer(buffer_3857) +
-  coord_sf(expand = F) +
-  scale_fill_identity() +
-  geom_sf(data = pts_3857,
-          aes(color = prev_schisto),
-          size = 2.5, alpha = 0.9) +
-  scale_color_innova(palette = "npr", discrete = FALSE) +
-  coord_sf(expand = F) +
-  annotation_north_arrow(location = "tl", style = north_arrow_nautical) +
-  coord_sf(expand = F) +
-  annotation_scale(location = "br") +
-  coord_sf(expand = F) +
-  scale_x_continuous(
-    breaks = seq(-73.55, -72.50, by = 0.2),  # cada 0.1°
-    labels = label_number(suffix = "°W", accuracy = 0.2)
-  ) +
-  theme_minimal(base_size = 11) +
-  theme(
-    panel.background = element_rect(fill = "white", colour = "grey85"),
-    panel.border     = element_rect(fill = NA, colour = "grey85"),
-    legend.position  = "none"
-  ) +
-  labs(x = "",
-       y = "",
-       color = "Schistomiasis seroprevalence") +
-  guides(color = guide_colorbar(title.position = "top",
-                              title.hjust = 0.5)
-         )
-
-prev_schisto
-
-# Maps P. falciparum
-pts_falciparum <- pts_3857 %>% 
-  arrange(is.na(prev_pfalciparum), prev_pfalciparum)
-
-prev_falciparum <- ggplot() +
-  basemap_gglayer(buffer_3857) +
-  coord_sf(expand = F) +
-  scale_fill_identity() +
-  geom_sf(data = pts_falciparum,
-          aes(color = prev_pfalciparum),
-          size = 2.5, alpha = 0.9) +
-  scale_color_innova(palette = "npr", discrete = FALSE,
-                     name = expression(atop(italic("P. falciparum"), "Household seroprevalence"))) +
-  coord_sf(expand = F) +
-  annotation_north_arrow(location = "tl", style = north_arrow_nautical) +
-  coord_sf(expand = F) +
-  annotation_scale(location = "br") +
-  coord_sf(expand = F) +
-  scale_x_continuous(
-    breaks = seq(-73.55, -72.50, by = 0.2),  # cada 0.1°
-    labels = label_number(suffix = "°W", accuracy = 0.2)
-  ) +
-  theme_minimal(base_size = 11) +
-  theme(
-    panel.background = element_rect(fill = "white", colour = "grey85"),
-    panel.border     = element_rect(fill = NA, colour = "grey85"),
-    legend.position  = "none"
-  ) +
-  labs(x = "",
-       y = "") +
-  guides(color = guide_colorbar(title.position = "top",
-                                title.hjust = 0.5)
-  )
+buffer_3857 <- st_buffer(bbox_3857, dist = 9000) 
 
 
-prev_falciparum
+# Adding adminsitrative limits
+data("Peru", package = "innovar")
 
-# Maps P. vivax
-pts_vivax <- pts_3857 %>% 
-  arrange(is.na(prev_pvivax), prev_pvivax)
+crop_coordinates <- Peru %>% 
+  filter(dep == "LORETO",
+         distr %in% c("INDIANA","BELEN")) %>% 
+  st_transform(3857)
 
-prev_vivax <- ggplot() +
-  basemap_gglayer(buffer_3857) +
-  coord_sf(expand = F) +
-  scale_fill_identity() +
-  geom_sf(data = pts_vivax,
-          aes(color = prev_pvivax),
-          size = 2.5, alpha = 0.9) +
-  scale_color_innova(palette = "npr", discrete = FALSE,
-                     name = expression(atop(italic("P. vivax"), "Household seroprevalence"))) +
-  coord_sf(expand = F) +
-  annotation_north_arrow(location = "tl", style = north_arrow_nautical) +
-  coord_sf(expand = F) +
-  annotation_scale(location = "br") +
-  coord_sf(expand = F) +
-  scale_x_continuous(
-    breaks = seq(-73.55, -72.50, by = 0.2),  # cada 0.1°
-    labels = label_number(suffix = "°W", accuracy = 0.2)
-  ) +
-  theme_minimal(base_size = 11) +
-  theme(
-    panel.background = element_rect(fill = "white", colour = "grey85"),
-    panel.border     = element_rect(fill = NA, colour = "grey85"),
-    legend.position  = "none"
-  ) +
-  labs(x = "",
-       y = "") +
-  guides(color = guide_colorbar(title.position = "top",
-                                title.hjust = 0.5)
-  )
-
-
-prev_vivax
-
-
-# Map chik
-
-pts_chik <- pts_3857 %>% 
-  arrange(is.na(prev_chik), prev_chik)
-
-prev_chik <- ggplot() +
-  basemap_gglayer(buffer_3857) +
-  coord_sf(expand = F) +
-  scale_fill_identity() +
-  geom_sf(data = pts_chik,
-          aes(color = prev_chik),
-          size = 2.5, alpha = 0.9) +
-  scale_color_innova(palette = "npr", discrete = FALSE) +
-  coord_sf(expand = F) +
-  annotation_north_arrow(location = "tl", style = north_arrow_nautical) +
-  coord_sf(expand = F) +
-  annotation_scale(location = "br") +
-  coord_sf(expand = F) +
-  scale_x_continuous(
-    breaks = seq(-73.55, -72.50, by = 0.2),  # cada 0.1°
-    labels = label_number(suffix = "°W", accuracy = 0.2)
-  ) +
-  theme_minimal(base_size = 11) +
-  theme(
-    panel.background = element_rect(fill = "white", colour = "grey85"),
-    panel.border     = element_rect(fill = NA, colour = "grey85"),
-    legend.position  = "none"
-  ) +
-  labs(x = "",
-       y = "",
-       color = "Chikungunya \nHousehold seroprevalence") +
-  guides(color = guide_colorbar(title.position = "top",
-                                title.hjust = 0.5)
-  )
-
-
-prev_chik
-
-# Map Zika
-
-pts_zika <- pts_3857 %>% 
-  arrange(is.na(prev_zika), prev_zika)
-
-prev_zika <- ggplot() +
-  basemap_gglayer(buffer_3857) +
-  coord_sf(expand = F) +
-  scale_fill_identity() +
-  geom_sf(data = pts_zika,
-          aes(color = prev_zika),
-          size = 2.5, alpha = 0.9) +
-  scale_color_innova(palette = "npr", discrete = FALSE) +
-  coord_sf(expand = F) +
-  annotation_north_arrow(location = "tl", style = north_arrow_nautical) +
-  coord_sf(expand = F) +
-  annotation_scale(location = "br") +
-  coord_sf(expand = F) +
-  scale_x_continuous(
-    breaks = seq(-73.55, -72.50, by = 0.2),  # cada 0.1°
-    labels = label_number(suffix = "°W", accuracy = 0.2)
-  ) +
-  theme_minimal(base_size = 11) +
-  theme(
-    panel.background = element_rect(fill = "white", colour = "grey85"),
-    panel.border     = element_rect(fill = NA, colour = "grey85"),
-    legend.position  = "right"
-  ) +
-  labs(x = "",
-       y = "",
-       color = "Household \nSeropositivity rate") +
-  guides(color = guide_colorbar(title.position = "top",
-                                title.hjust = 0.5)
-  )
-
-
-prev_zika
-
-
-legend_grob_zik <- cowplot::get_legend(prev_zika)
-legend_zik <- cowplot::ggdraw(legend_grob_zik)
-# Quita el tag SOLO para la leyenda
-legend_zik <- legend_zik & theme(plot.tag = element_blank())
-
-prev_zika_nl <- prev_zika + theme(
-  legend.position = "none"
+crop_coordinates_clip <- st_intersection(
+  st_make_valid(crop_coordinates),
+  st_make_valid(buffer_3857)
 )
 
-# Combining plots
+# >>> BBOX EXACTO DEL RECORTE para basemap y límites
+bbox_clip <- st_bbox(crop_coordinates_clip)
+bbox_geom <- st_as_sfc(bbox_clip, crs = 3857)
 
-fig1 <- prev_schisto + prev_falciparum + prev_vivax + prev_chik + prev_zika_nl + legend_zik +
-  plot_layout(
-    ncol = 3,
-    nrow = 2
+clip_union <- st_union(st_make_valid(crop_coordinates_clip))
+mask_geom  <- st_make_valid(st_difference(bbox_geom, clip_union))
+
+
+# (B) ***Borde verdadero***: línea del límite administrativo recortada al buffer
+border_line_clip <- st_intersection(st_boundary(crop_coordinates), st_make_valid(buffer_3857))
+
+# Map schisto
+exposures <- ggplot() +
+  basemap_gglayer(bbox_geom) +
+  coord_sf(expand = F) +
+  scale_fill_identity() +
+  geom_sf(data = mask_geom, fill = "white", colour = NA) +
+  geom_sf(data = crop_coordinates_clip, #Para borde real -> border_line_clip
+          fill = NA,
+          color = "grey30",
+          #linetype = 22,
+          linewidth = 0.45) +
+  geom_sf(data = pts_3857,
+          aes(color = coexposure_tot),
+          size = 4, alpha = 0.9) +
+  scale_color_innova(palette = "npr", discrete = FALSE) +
+  # annotation_north_arrow(location = "tr", style = north_arrow_nautical) +
+  # coord_sf(expand = F) +
+  # annotation_scale(location = "bl") +
+  coord_sf(xlim = c(bbox_clip["xmin"], bbox_clip["xmax"]),
+           ylim = c(bbox_clip["ymin"], bbox_clip["ymax"]),
+           expand = FALSE) +
+  theme_void(base_size = 11) +
+  theme(
+    legend.position = "none",
+    panel.border = element_blank()
+  )
+  
+exposures 
+
+
+
+# Zona 1 --------------------------------------------------------------------------------
+
+# === Centro y CÍRCULO en 3857 ===
+center <- c(long = -72.90, lat = -3.50)
+
+circle_3857 <- tibble(lon = center["long"], lat = center["lat"]) %>%
+  st_as_sf(coords = c("lon","lat"), crs = 4326) %>%
+  st_transform(3857) %>%
+  st_buffer(dist = 15000)      # radio en METROS
+
+# === Datos al MISMO CRS (3857) y recortes ===
+pts_3857_ok <- st_transform(pts_3857, 3857)
+borde_3857  <- st_transform(crop_coordinates_clip, 3857)
+
+pts_in   <- st_filter(st_make_valid(pts_3857_ok), circle_3857)           # puntos dentro
+borde_in <- st_intersection(st_make_valid(borde_3857), st_make_valid(circle_3857))
+
+# === BBOX del zoom y MÁSCARA para recortar el basemap al círculo ===
+bbox_zoom <- st_as_sfc(st_bbox(circle_3857), crs = 3857)
+mask_zoom <- st_make_valid(st_difference(bbox_zoom, st_union(circle_3857)))
+bb        <- st_bbox(circle_3857)
+
+# Usa el mismo proveedor que en el mapa general
+set_defaults(map_service = "carto", map_type = "light_no_labels")
+
+# === Plot del zoom con basemap recortado ===
+zoom1 <- ggplot() +
+  basemap_gglayer(st_buffer(bbox_zoom, m)) +
+  scale_fill_identity() +
+  geom_sf(data = mask_zoom, fill = "white", colour = NA) +
+  geom_sf(data = borde_in, fill = NA, colour = "grey40",
+          linetype = "22", linewidth = 0.45) +
+  geom_sf(data = pts_in, aes(color = coexposure_tot),
+          size = 3.5, alpha = 0.9) +
+  geom_sf(data = st_boundary(circle_3857), colour = "black", linewidth = 0.4) +
+  scale_color_innova(palette = "npr", discrete = FALSE) +
+  coord_sf(xlim = c(bb["xmin"], bb["xmax"]),
+           ylim = c(bb["ymin"], bb["ymax"]),
+           expand = FALSE) +
+  theme_void() +
+  theme(legend.position = "none")
+
+zoom1
+
+# Zona 2 --------------------------------------------------------------------------------
+
+# === Centro y CÍRCULO en 3857 ===
+center2 <- c(long = -73.08, lat = -3.61)
+
+circle_2 <- tibble(lon = center2["long"], lat = center2["lat"]) %>%
+  st_as_sf(coords = c("lon","lat"), crs = 4326) %>%
+  st_transform(3857) %>%
+  st_buffer(dist = 4000)      # radio en METROS
+
+# === Datos al MISMO CRS (3857) y recortes ===
+pts_3857_ok2 <- st_transform(pts_3857, 3857)
+borde_38572  <- st_transform(crop_coordinates_clip, 3857)
+
+pts_in2   <- st_filter(st_make_valid(pts_3857_ok2), circle_2)           # puntos dentro
+borde_in2 <- st_intersection(st_make_valid(borde_38572), st_make_valid(circle_2))
+
+# === BBOX del zoom y MÁSCARA para recortar el basemap al círculo ===
+bbox_zoom2 <- st_as_sfc(st_bbox(circle_2), crs = 3857)
+mask_zoom2 <- st_make_valid(st_difference(bbox_zoom2, st_union(circle_2)))
+bb2        <- st_bbox(circle_2)
+
+# Usa el mismo proveedor que en el mapa general
+set_defaults(map_service = "carto", map_type = "light_no_labels")
+
+# === Plot del zoom con basemap recortado ===
+zoom2 <- ggplot() +
+  basemap_gglayer(bbox_zoom2) +
+  scale_fill_identity() +
+  geom_sf(data = mask_zoom2, fill = "white", colour = NA) +
+  geom_sf(data = borde_in2, fill = NA, colour = "grey40",
+          linetype = "22", linewidth = 0.45) +
+  geom_sf(data = pts_in2, aes(color = coexposure_tot),
+          size = 3.5, alpha = 0.9) +
+  geom_sf(data = st_boundary(circle_2), colour = "black", linewidth = 0.4) +
+  scale_color_innova(palette = "npr", discrete = FALSE) +
+  coord_sf(xlim = c(bb2["xmin"], bb2["xmax"]),
+           ylim = c(bb2["ymin"], bb2["ymax"]),
+           expand = FALSE) +
+  theme_void() +
+  theme(legend.position = "none")
+
+zoom2
+
+# Zona 3 --------------------------------------------------------------------------------
+
+# === Centro y CÍRCULO en 3857 ===
+center3 <- c(long = -73.25, lat = -3.77)
+
+circle_3 <- tibble(lon = center3["long"], lat = center3["lat"]) %>%
+  st_as_sf(coords = c("lon","lat"), crs = 4326) %>%
+  st_transform(3857) %>%
+  st_buffer(dist = 1500)      # radio en METROS
+
+# === Datos al MISMO CRS (3857) y recortes ===
+pts_3857_ok3 <- st_transform(pts_3857, 3857)
+borde_38573  <- st_transform(crop_coordinates_clip, 3857)
+
+pts_in3   <- st_filter(st_make_valid(pts_3857_ok3), circle_3)           # puntos dentro
+borde_in3 <- st_intersection(st_make_valid(borde_38573), st_make_valid(circle_3))
+
+# === BBOX del zoom y MÁSCARA para recortar el basemap al círculo ===
+bbox_zoom3 <- st_as_sfc(st_bbox(circle_3), crs = 3857)
+mask_zoom3 <- st_make_valid(st_difference(bbox_zoom3, st_union(circle_3)))
+bb3        <- st_bbox(circle_3)
+
+# Usa el mismo proveedor que en el mapa general
+set_defaults(map_service = "carto", map_type = "light_no_labels")
+
+# === Plot del zoom con basemap recortado ===
+zoom3 <- ggplot() +
+  basemap_gglayer(bbox_zoom3) +
+  scale_fill_identity() +
+  geom_sf(data = mask_zoom3, fill = "white", colour = NA) +
+  geom_sf(data = borde_in3, fill = NA, colour = "grey40",
+          linetype = "22", linewidth = 0.45) +
+  geom_sf(data = pts_in3, aes(color = coexposure_tot),
+          size = 3.5, alpha = 0.9) +
+  geom_sf(data = st_boundary(circle_3), colour = "black", linewidth = 0.4) +
+  scale_color_innova(palette = "npr", discrete = FALSE) +
+  coord_sf(xlim = c(bb3["xmin"], bb3["xmax"]),
+           ylim = c(bb3["ymin"], bb3["ymax"]),
+           expand = FALSE) +
+  theme_void() +
+  theme(legend.position = "none")
+
+zoom3
+
+
+# Zona 4 --------------------------------------------------------------------------------
+
+# === Centro y CÍRCULO en 3857 ===
+center4 <- c(long = -73.34, lat = -4.01)
+
+circle_4 <- tibble(lon = center4["long"], lat = center4["lat"]) %>%
+  st_as_sf(coords = c("lon","lat"), crs = 4326) %>%
+  st_transform(3857) %>%
+  st_buffer(dist = 10000)      # radio en METROS
+
+# === Datos al MISMO CRS (3857) y recortes ===
+pts_3857_ok4 <- st_transform(pts_3857, 3857)
+borde_38574  <- st_transform(crop_coordinates_clip, 3857)
+
+pts_in4   <- st_filter(st_make_valid(pts_3857_ok4), circle_4)           # puntos dentro
+borde_in4 <- st_intersection(st_make_valid(borde_38574), st_make_valid(circle_4))
+
+# === BBOX del zoom y MÁSCARA para recortar el basemap al círculo ===
+bbox_zoom4 <- st_as_sfc(st_bbox(circle_4), crs = 3857)
+mask_zoom4 <- st_make_valid(st_difference(bbox_zoom4, st_union(circle_4)))
+bb4        <- st_bbox(circle_4)
+
+# Usa el mismo proveedor que en el mapa general
+set_defaults(map_service = "carto", map_type = "light_no_labels")
+
+# === Plot del zoom con basemap recortado ===
+zoom4 <- ggplot() +
+  basemap_gglayer(bbox_zoom4) +
+  scale_fill_identity() +
+  geom_sf(data = mask_zoom4, fill = "white", colour = NA) +
+  geom_sf(data = borde_in4, fill = NA, colour = "grey40",
+          linetype = "22", linewidth = 0.45) +
+  geom_sf(data = pts_in4, aes(color = coexposure_tot),
+          size = 3.5, alpha = 0.9) +
+  geom_sf(data = st_boundary(circle_4), colour = "black", linewidth = 0.4) +
+  scale_color_innova(palette = "npr", discrete = FALSE) +
+  coord_sf(xlim = c(bb4["xmin"], bb4["xmax"]),
+           ylim = c(bb4["ymin"], bb4["ymax"]),
+           expand = FALSE) +
+  theme_void() +
+  theme(legend.position = "none")
+
+zoom4
+
+
+
+# Joining Maps ---------------------------------------------------------------------------------
+
+base <- exposures + theme(plot.margin = margin(t = 60, r = 260, b = 60, l = 260))
+
+# tamaño común (ancho y alto) en coordenadas 0–1
+w <- 0.5; h <- 0.34
+
+fig1 <- base +
+  # DERECHA (dos arriba)
+  inset_element(zoom1,
+                left = 1.3, right = 1.8,
+                bottom = 0.75, top = 1.09,
+                align_to = "plot", clip = FALSE
   ) +
-  plot_annotation(
-    tag_levels = "a",
-    tag_suffix = ")",
-    theme = theme(
-      plot.tag = element_text(
-        size=16, face = "bold"
-      ),
-      plot.tag.position = c(0.02, 0.98)
-    )
+  inset_element(zoom2,
+                left = 1.05, right = 1.55,
+                bottom = 0.4, top = 0.74,
+                align_to = "plot", clip = FALSE
+  ) +
+  # IZQUIERDA (dos abajo)
+  inset_element(zoom3,
+                left = -0.32, right = 0.12,
+                bottom = 0.6, top = 0.94,
+                align_to = "plot", clip = FALSE
+  ) +
+  inset_element(zoom4,
+                left = -0.62, right = -0.12,
+                bottom = 0.08, top = 0.42,
+                align_to = "plot", clip = FALSE
   )
 
 fig1
-
 
 ggsave(
   filename = "./output/figure1.png",
