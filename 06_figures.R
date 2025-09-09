@@ -56,7 +56,6 @@ ffi2 <- ffi %>%
       across(
         c(
           schistosomiasis,
-          covid,
           chik,
           zika,
           Pvivax,
@@ -65,19 +64,18 @@ ffi2 <- ffi %>%
       )
   ) %>% 
   select(ffi_h_code, ffi_is_code,
-         schistosomiasis, covid,
+         schistosomiasis,
          chik, zika,
          Pvivax, Pfalciparum, coexposure,
          ffi_gps_lat, ffi_gps_long) %>%
   group_by(ffi_h_code) %>%
   summarise(
-    prev_schisto  = sum(schistosomiasis, na.rm = TRUE) / n(),   
-    prev_covid    = sum(covid, na.rm = TRUE) / n(),
+    prev_schisto  = sum(schistosomiasis, na.rm = TRUE) / n(),
     prev_chik     = sum(chik, na.rm = TRUE) / n(),
     prev_zika     = sum(zika, na.rm = TRUE) / n(),
     prev_pvivax  = sum(Pvivax, na.rm = TRUE) / n(),
     prev_pfalciparum = sum(Pfalciparum, na.rm = TRUE) / n(),
-    coexposure_tot = sum(coexposure, na.rm = TRUE),
+    coexposure_tot = max(coexposure, na.rm = TRUE),
     lat  = first(ffi_gps_lat),
     long = first(ffi_gps_long)
   ) 
