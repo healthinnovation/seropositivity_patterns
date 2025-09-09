@@ -129,7 +129,7 @@ mask_geom  <- st_make_valid(st_difference(bbox_geom, clip_union))
 # (B) ***Borde verdadero***: línea del límite administrativo recortada al buffer
 border_line_clip <- st_intersection(st_boundary(crop_coordinates), st_make_valid(buffer_3857))
 
-# Map schisto
+# Map
 exposures <- ggplot() +
   basemap_gglayer(bbox_geom) +
   coord_sf(expand = F) +
@@ -143,7 +143,8 @@ exposures <- ggplot() +
   geom_sf(data = pts_3857,
           aes(color = coexposure_tot),
           size = 4, alpha = 0.9) +
-  scale_color_innova(palette = "npr", discrete = FALSE) +
+  scale_color_distiller(direction = 1,
+                        palette = "Blues") +
   # annotation_north_arrow(location = "tr", style = north_arrow_nautical) +
   # coord_sf(expand = F) +
   # annotation_scale(location = "bl") +
@@ -187,7 +188,7 @@ set_defaults(map_service = "carto", map_type = "light_no_labels")
 
 # === Plot del zoom con basemap recortado ===
 zoom1 <- ggplot() +
-  basemap_gglayer(st_buffer(bbox_zoom, m)) +
+  basemap_gglayer(bbox_zoom) +
   scale_fill_identity() +
   geom_sf(data = mask_zoom, fill = "white", colour = NA) +
   geom_sf(data = borde_in, fill = NA, colour = "grey40",
@@ -195,7 +196,8 @@ zoom1 <- ggplot() +
   geom_sf(data = pts_in, aes(color = coexposure_tot),
           size = 3.5, alpha = 0.9) +
   geom_sf(data = st_boundary(circle_3857), colour = "black", linewidth = 0.4) +
-  scale_color_innova(palette = "npr", discrete = FALSE) +
+  scale_color_distiller(direction = 1) +
+  #scale_color_innova(palette = "npr", discrete = FALSE) +
   coord_sf(xlim = c(bb["xmin"], bb["xmax"]),
            ylim = c(bb["ymin"], bb["ymax"]),
            expand = FALSE) +
@@ -239,7 +241,8 @@ zoom2 <- ggplot() +
   geom_sf(data = pts_in2, aes(color = coexposure_tot),
           size = 3.5, alpha = 0.9) +
   geom_sf(data = st_boundary(circle_2), colour = "black", linewidth = 0.4) +
-  scale_color_innova(palette = "npr", discrete = FALSE) +
+  scale_color_distiller(direction = 1) +
+  #scale_color_innova(palette = "npr", discrete = FALSE) +
   coord_sf(xlim = c(bb2["xmin"], bb2["xmax"]),
            ylim = c(bb2["ymin"], bb2["ymax"]),
            expand = FALSE) +
@@ -283,7 +286,8 @@ zoom3 <- ggplot() +
   geom_sf(data = pts_in3, aes(color = coexposure_tot),
           size = 3.5, alpha = 0.9) +
   geom_sf(data = st_boundary(circle_3), colour = "black", linewidth = 0.4) +
-  scale_color_innova(palette = "npr", discrete = FALSE) +
+  scale_color_distiller(direction = 1) +
+  #scale_color_innova(palette = "npr", discrete = FALSE) +
   coord_sf(xlim = c(bb3["xmin"], bb3["xmax"]),
            ylim = c(bb3["ymin"], bb3["ymax"]),
            expand = FALSE) +
@@ -328,7 +332,8 @@ zoom4 <- ggplot() +
   geom_sf(data = pts_in4, aes(color = coexposure_tot),
           size = 3.5, alpha = 0.9) +
   geom_sf(data = st_boundary(circle_4), colour = "black", linewidth = 0.4) +
-  scale_color_innova(palette = "npr", discrete = FALSE) +
+  scale_color_distiller(direction = 1) +
+  #scale_color_innova(palette = "npr", discrete = FALSE) +
   coord_sf(xlim = c(bb4["xmin"], bb4["xmax"]),
            ylim = c(bb4["ymin"], bb4["ymax"]),
            expand = FALSE) +
@@ -341,13 +346,9 @@ zoom4
 
 # Joining Maps ---------------------------------------------------------------------------------
 
-base <- exposures + theme(plot.margin = margin(t = 60, r = 260, b = 60, l = 260))
-
-# tamaño común (ancho y alto) en coordenadas 0–1
-w <- 0.5; h <- 0.34
+base <- exposures + theme(plot.margin = margin(t = 60, r = 260, b = 60, l = 240))
 
 fig1 <- base +
-  # DERECHA (dos arriba)
   inset_element(zoom1,
                 left = 1.3, right = 1.8,
                 bottom = 0.75, top = 1.09,
@@ -358,7 +359,6 @@ fig1 <- base +
                 bottom = 0.4, top = 0.74,
                 align_to = "plot", clip = FALSE
   ) +
-  # IZQUIERDA (dos abajo)
   inset_element(zoom3,
                 left = -0.32, right = 0.12,
                 bottom = 0.6, top = 0.94,
@@ -370,13 +370,76 @@ fig1 <- base +
                 align_to = "plot", clip = FALSE
   )
 
-fig1
+
+exposures_leg <- exposures +
+  scale_color_distiller(
+    direction = 1,
+    palette = "Blues",
+    name = "Number of \nco-exposures"   # título de la leyenda
+  ) +
+  guides(
+    colour = guide_colourbar(     # dale formato a la barra
+      ticks = FALSE,
+      barheight = unit(80, "pt"),
+      barwidth  = unit(6,  "pt")
+    )
+  ) +
+  theme(
+    legend.position = "right",
+    legend.title = element_text(size = 10, face = "bold"),
+    legend.text  = element_text(size = 9)
+  )
+
+
+# 2) Extraer la leyenda como grob y convertirla en un plot
+leg_grob <- cowplot::get_legend(exposures_leg)
+leg_plot <- cowplot::ggdraw(leg_grob)
+
+
+fig1_with_leg <- fig1 +
+  inset_element(
+    leg_plot,
+    left = 1.05, right = 1.55,   
+    bottom = 0.06, top = 0.38,   
+    align_to = "plot",
+    clip = FALSE
+  )
+
+
+
+library(grid)
+final <- cowplot::ggdraw(fig1_with_leg) +
+  geom_curve(
+    aes(x = 0.61, y = 0.73, xend = 0.76, yend = 0.8),
+    curvature = 0.2,
+    arrow = arrow(type = "closed", length = unit(3, "mm")),
+    size = 0.6, colour = "black"
+  ) +
+  geom_curve(
+    aes(x = 0.50, y = 0.66, xend = 0.68, yend = 0.55),
+    curvature = 0.2,
+    arrow = arrow(type = "closed", length = unit(3, "mm")),
+    size = 0.6, colour = "black"
+  ) +
+  geom_curve(
+    aes(x = 0.40, y = 0.53, xend = 0.36, yend = 0.61),
+    curvature = 0.2,
+    arrow = arrow(type = "closed", length = unit(3, "mm")),
+    size = 0.6, colour = "black"
+  ) +
+  geom_curve(
+    aes(x = 0.33, y = 0.31, xend = 0.28, yend = 0.35),
+    curvature = 0.2,
+    arrow = arrow(type = "closed", length = unit(3, "mm")),
+    size = 0.6, colour = "black"
+  )
+final 
 
 ggsave(
   filename = "./output/figure1.png",
-  plot = fig1,
-  width = 15,
-  height = 9,
+  plot = final,
+  width = 13,
+  height = 7,
   dpi = 1200
 )
 
