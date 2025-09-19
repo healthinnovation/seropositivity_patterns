@@ -63,30 +63,45 @@ ffi2 <- ffi %>%
         ), na.rm = T
       )
   ) %>% 
-  select(ffi_h_code, ffi_is_code,
+  select(ffi_is_community, ffi_h_code, ffi_is_code,
          schistosomiasis,
          chik, zika,
          Pvivax, Pfalciparum, coexposure,
-         ffi_gps_lat, ffi_gps_long) %>%
+         ffi_gps_lat, ffi_gps_long, distance_to_rh_hf_sampl_num,
+         distance_to_rh_hf_sampl) 
+
+ffi3 <- ffi2 %>%
   group_by(ffi_h_code) %>%
   summarise(
     lat  = first(ffi_gps_lat),
     long = first(ffi_gps_long),
+    distance_cat = first(distance_to_rh_hf_sampl),
+    distance_num = first(distance_to_rh_hf_sampl_num),
+    n_individuals = n(),
     across(schistosomiasis:Pfalciparum, ~ max(.x, na.rm = TRUE))
   ) %>% 
   rowwise() %>%
   mutate(n_pathogens = sum(c_across(schistosomiasis:Pfalciparum))) %>%
   ungroup()
 
-
-
-df_spat <- ffi2 %>% 
+df_spat <- ffi3 %>% 
   st_as_sf(
     coords = c("long", "lat"),
     crs = 4326
   )
 
-write_sf(df_spat, "./points.gpkg")
+curve_df <- ffi2 %>% 
+  group_by(ffi_is_community) %>% 
+  summarise(
+    distance_cat = first(distance_to_rh_hf_sampl),
+    distance_num = first(distance_to_rh_hf_sampl_num),
+    n_individuals = n(),
+    across(schistosomiasis:Pfalciparum, ~ max(.x, na.rm = TRUE))
+  ) %>% 
+  rowwise() %>%
+  mutate(n_pathogens = sum(c_across(schistosomiasis:Pfalciparum))) %>%
+  ungroup()
+
 
 # Figure 1 -------------------------------------------------------------------------------------
 
@@ -442,6 +457,48 @@ ggsave(
   height = 7,
   dpi = 1200
 )
+
+
+
+# Concentration Curve --------------------------------------------------------------------------
+
+db_eco <- curve_df %>% 
+  arrange(desc(distance_num)) 
+
+
+db_concentration <- db_eco %>% 
+  mutate(
+    pob_cum_fr = cumsum(n_individuals) / sum(n_individuals),
+    path_fr = cumsum(n_pathogens) / sum(n_pathogens)
+  )
+
+curve_concentration <- db_concentration %>% 
+  ggplot(aes(x = pob_cum_fr, y = path_fr)) +
+  geom_path(color = "#3F8BBA") +
+  geom_point(color = "#3F8BBA") +
+  geom_abline() +
+  geom_ribbon(aes(ymin = pob_cum_fr, ymax = path_fr),
+              fill = "#3F8BBA", alpha = 0.3) +
+  labs(x = "Cummulative proportion of population",
+       y = "Cummulative proportion of pathogens") +
+  theme_bw() +
+  annotate("text", x = 0.84, y = 0.55, label = "CI = -0.10",
+           hjust = 1, vjust = 0, size = 5, color = "black")
+
+
+curve_concentration
+
+
+ggsave(
+  filename = "./output/concetration_curve.png",
+  plot = curve_concentration,
+  width = 10,
+  height = 8,
+  dpi = 600
+)
+
+mu <- mean(db_concentration$n_pathogens)
+(CI <- ((2) * cov(db_concentration$n_pathogens, db_concentration$pob_cum_fr))/mu)
 
 
 # Upset Plot --------------------------------------------------------------
