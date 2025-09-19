@@ -70,15 +70,14 @@ ffi2 <- ffi %>%
          ffi_gps_lat, ffi_gps_long) %>%
   group_by(ffi_h_code) %>%
   summarise(
-    prev_schisto  = sum(schistosomiasis, na.rm = TRUE) / n(),
-    prev_chik     = sum(chik, na.rm = TRUE) / n(),
-    prev_zika     = sum(zika, na.rm = TRUE) / n(),
-    prev_pvivax  = sum(Pvivax, na.rm = TRUE) / n(),
-    prev_pfalciparum = sum(Pfalciparum, na.rm = TRUE) / n(),
-    coexposure_tot = max(coexposure, na.rm = TRUE),
     lat  = first(ffi_gps_lat),
-    long = first(ffi_gps_long)
-  ) 
+    long = first(ffi_gps_long),
+    across(schistosomiasis:Pfalciparum, ~ max(.x, na.rm = TRUE))
+  ) %>% 
+  rowwise() %>%
+  mutate(n_pathogens = sum(c_across(schistosomiasis:Pfalciparum))) %>%
+  ungroup()
+
 
 
 df_spat <- ffi2 %>% 
@@ -86,6 +85,8 @@ df_spat <- ffi2 %>%
     coords = c("long", "lat"),
     crs = 4326
   )
+
+write_sf(df_spat, "./points.gpkg")
 
 # Figure 1 -------------------------------------------------------------------------------------
 
@@ -96,7 +97,7 @@ set_defaults(map_service = "carto",
 
 # Changing projection
 pts_3857 <- st_transform(df_spat, 3857) %>% 
-  arrange(is.na(coexposure_tot), coexposure_tot)
+  arrange(is.na(n_pathogens), n_pathogens)
 
 # Adjusting buffer
 bbox_3857 <- st_as_sfc(st_bbox(pts_3857), crs = 3857)
@@ -139,10 +140,11 @@ exposures <- ggplot() +
           #linetype = 22,
           linewidth = 0.45) +
   geom_sf(data = pts_3857,
-          aes(color = coexposure_tot),
+          aes(color = n_pathogens),
           size = 4, alpha = 0.9) +
   scale_color_distiller(direction = 1,
                         palette = "Blues") +
+  #scale_color_viridis_c(option = "viridis") +
   # annotation_north_arrow(location = "tr", style = north_arrow_nautical) +
   # coord_sf(expand = F) +
   # annotation_scale(location = "bl") +
@@ -191,11 +193,11 @@ zoom1 <- ggplot() +
   geom_sf(data = mask_zoom, fill = "white", colour = NA) +
   geom_sf(data = borde_in, fill = NA, colour = "grey40",
           linetype = "22", linewidth = 0.45) +
-  geom_sf(data = pts_in, aes(color = coexposure_tot),
+  geom_sf(data = pts_in, aes(color = n_pathogens),
           size = 3.5, alpha = 0.9) +
   geom_sf(data = st_boundary(circle_3857), colour = "black", linewidth = 0.4) +
   scale_color_distiller(direction = 1) +
-  #scale_color_innova(palette = "npr", discrete = FALSE) +
+  #scale_color_innova(palette = "vermilion", discrete = FALSE) +
   coord_sf(xlim = c(bb["xmin"], bb["xmax"]),
            ylim = c(bb["ymin"], bb["ymax"]),
            expand = FALSE) +
@@ -236,11 +238,11 @@ zoom2 <- ggplot() +
   geom_sf(data = mask_zoom2, fill = "white", colour = NA) +
   geom_sf(data = borde_in2, fill = NA, colour = "grey40",
           linetype = "22", linewidth = 0.45) +
-  geom_sf(data = pts_in2, aes(color = coexposure_tot),
+  geom_sf(data = pts_in2, aes(color = n_pathogens),
           size = 3.5, alpha = 0.9) +
   geom_sf(data = st_boundary(circle_2), colour = "black", linewidth = 0.4) +
   scale_color_distiller(direction = 1) +
-  #scale_color_innova(palette = "npr", discrete = FALSE) +
+  #scale_color_innova(palette = "vermilion", discrete = FALSE) +
   coord_sf(xlim = c(bb2["xmin"], bb2["xmax"]),
            ylim = c(bb2["ymin"], bb2["ymax"]),
            expand = FALSE) +
@@ -281,11 +283,11 @@ zoom3 <- ggplot() +
   geom_sf(data = mask_zoom3, fill = "white", colour = NA) +
   geom_sf(data = borde_in3, fill = NA, colour = "grey40",
           linetype = "22", linewidth = 0.45) +
-  geom_sf(data = pts_in3, aes(color = coexposure_tot),
+  geom_sf(data = pts_in3, aes(color = n_pathogens),
           size = 3.5, alpha = 0.9) +
   geom_sf(data = st_boundary(circle_3), colour = "black", linewidth = 0.4) +
   scale_color_distiller(direction = 1) +
-  #scale_color_innova(palette = "npr", discrete = FALSE) +
+  #scale_color_innova(palette = "vermilion", discrete = FALSE) +
   coord_sf(xlim = c(bb3["xmin"], bb3["xmax"]),
            ylim = c(bb3["ymin"], bb3["ymax"]),
            expand = FALSE) +
@@ -327,7 +329,7 @@ zoom4 <- ggplot() +
   geom_sf(data = mask_zoom4, fill = "white", colour = NA) +
   geom_sf(data = borde_in4, fill = NA, colour = "grey40",
           linetype = "22", linewidth = 0.45) +
-  geom_sf(data = pts_in4, aes(color = coexposure_tot),
+  geom_sf(data = pts_in4, aes(color = n_pathogens),
           size = 3.5, alpha = 0.9) +
   geom_sf(data = st_boundary(circle_4), colour = "black", linewidth = 0.4) +
   scale_color_distiller(direction = 1) +
@@ -373,7 +375,7 @@ exposures_leg <- exposures +
   scale_color_distiller(
     direction = 1,
     palette = "Blues",
-    name = "Number of \nco-exposures"   # título de la leyenda
+    name = "Pathogens \nby households"   # título de la leyenda
   ) +
   guides(
     colour = guide_colourbar(     # dale formato a la barra
