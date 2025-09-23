@@ -90,6 +90,36 @@ ffi_hh_ind_seropos <- read_csv("./data/mid/ffi_hh_ind_seropos.csv") %>%
        pv_exposure == "Positive" |
          pf_exposure == "Positive",
       "Positive", "Negative"
+    ), 
+   economic_activities = factor(ffi_is_main_econ_act,
+                                 labels = c("None",
+                                            "Day labourer",
+                                            "Wood extractor",
+                                            "Fisherman",
+                                            "Livestock farmer",
+                                            "Farmer",
+                                            "Trader",
+                                            "Housewife",
+                                            "Student",
+                                            "Motorcycle taxi driver",
+                                            "Other")
+    ),
+   EconomicActivities_new = case_when(
+      economic_activities == "Fisherman" ~ "Fisherman",
+      economic_activities == "Farmer" ~ "Farmer",
+      economic_activities == "Housewife" ~ "Housewife",
+       economic_activities == "Student" ~ "Student",
+      economic_activities %in% c("Day labourer", "Trader", "Motorcycle taxi driver") ~ "Services/Commerce",
+      economic_activities %in% c("Other", "Wood extractor", "Livestock farmer") ~ "Other",
+      economic_activities == "None" ~ "None",
+      TRUE ~ "Other"
+    )
+  ) %>%
+  mutate(
+    EconomicActivities_new = factor(
+      EconomicActivities_new,
+      levels = c("Fisherman", "Farmer", "Housewife", "Student",
+                 "Services/Commerce", "Other", "None")
     )
   )
 ```
@@ -113,7 +143,9 @@ ffi_hh_ind_seropos %>%
     Zika_Pos,
     pv_exposure,
     pf_exposure,
-    distance_to_rh_hf_sampl
+    distance_to_rh_hf_sampl,
+    EconomicActivities_new,
+    economic_activities
   ) %>%
   tbl_summary(by = ffi_is_district, missing = "no") %>%
   add_overall() %>%
@@ -146,6 +178,7 @@ ffi_hh_ind_seropos %>%
     sympt_neurologico,
     distance_to_rh_hf_sampl,
     ffi_is_trip_month,
+    EconomicActivities_new,
     Schistosomiasis
   ) %>%
   tbl_summary(
@@ -185,6 +218,7 @@ ffi_hh_ind_seropos %>%
     sympt_neurologico,
     distance_to_rh_hf_sampl,
     ffi_is_trip_month,
+    EconomicActivities_new,
     Zika_Pos
   ) %>%
   tbl_summary(
@@ -224,6 +258,7 @@ ffi_hh_ind_seropos %>%
     sympt_neurologico,
     distance_to_rh_hf_sampl,
     ffi_is_trip_month,
+    EconomicActivities_new,
     Chikungunya_Pos
   ) %>%
   tbl_summary(
@@ -264,7 +299,8 @@ ffi_hh_ind_seropos %>%
     sympt_gastrointestinal,
     sympt_neurologico,
     distance_to_rh_hf_sampl,
-    ffi_is_trip_month
+    ffi_is_trip_month,
+    EconomicActivities_new
   ) %>%
   tbl_summary(
     by = malaria_status,
