@@ -127,9 +127,12 @@ ffi_hh_ind_seropos <- read_csv("./data/mid/ffi_hh_ind_seropos.csv") %>%
 Paso 2: Creacion de la tabla
 
 ```{r}
-ffi_hh_ind_seropos %>%
+individuals <- ffi_hh_ind_seropos %>%
   select(
     ffi_is_district,
+    ffi_is_health_facility_name,
+    ffi_is_community,
+    ffi_h_code,
     gender,
     age_oms,
     time_resi_cat2,
@@ -146,12 +149,31 @@ ffi_hh_ind_seropos %>%
     distance_to_rh_hf_sampl,
     EconomicActivities_new,
     economic_activities
-  ) %>%
+  ) 
+
+tab1_df <- individuals %>% 
+  select(-c(ffi_is_health_facility_name,
+    ffi_is_community,
+    ffi_h_code)
+    )
+
+df_multinivel <- individuals %>% 
+  select(-c(
+    Schistosomiasis,
+    Chikungunya_Pos,
+    Zika_Pos,
+    pv_exposure,
+    pf_exposure
+  )
+  )
+
+tab1_df %>%
   tbl_summary(by = ffi_is_district, missing = "no") %>%
   add_overall() %>%
   add_p() %>%
   bold_labels()
 
+#write_csv(df_multinivel, file = "./data/mid/individuals_multilevel_df.csv")
 ```
 
 # Tabla 2

@@ -91,7 +91,7 @@ df_spat <- ffi3 %>%
   )
 
 curve_df <- ffi2 %>% 
-  group_by(ffi_is_community) %>% 
+  group_by(ffi_h_code) %>% 
   summarise(
     distance_cat = first(distance_to_rh_hf_sampl),
     distance_num = first(distance_to_rh_hf_sampl_num),
@@ -157,8 +157,13 @@ exposures <- ggplot() +
   geom_sf(data = pts_3857,
           aes(color = n_pathogens),
           size = 4, alpha = 0.9) +
-  scale_color_distiller(direction = 1,
-                        palette = "Blues") +
+  scale_color_gradientn(
+    colours = c("red", RColorBrewer::brewer.pal(5, "Blues")),  # rojo para 0, azules de 1 a 5
+    values = scales::rescale(c(0, 1, 5)),  # ancla 0 en rojo, luego gradiente de 1 a 5
+    breaks = 0:5,
+    limits = c(0, 5)) +
+  # scale_color_distiller(direction = 1,
+  #                       palette = "Blues") +
   #scale_color_viridis_c(option = "viridis") +
   # annotation_north_arrow(location = "tr", style = north_arrow_nautical) +
   # coord_sf(expand = F) +
@@ -211,7 +216,13 @@ zoom1 <- ggplot() +
   geom_sf(data = pts_in, aes(color = n_pathogens),
           size = 3.5, alpha = 0.9) +
   geom_sf(data = st_boundary(circle_3857), colour = "black", linewidth = 0.4) +
-  scale_color_distiller(direction = 1) +
+  scale_color_gradientn(
+    colours = c("red", RColorBrewer::brewer.pal(5, "Blues")),  # rojo para 0, azules de 1 a 5
+    values = scales::rescale(c(0, 1, 5)),  # ancla 0 en rojo, luego gradiente de 1 a 5
+    breaks = 0:5,
+    limits = c(0, 5)
+  ) +
+  #scale_color_distiller(direction = 1) +
   #scale_color_innova(palette = "vermilion", discrete = FALSE) +
   coord_sf(xlim = c(bb["xmin"], bb["xmax"]),
            ylim = c(bb["ymin"], bb["ymax"]),
@@ -256,7 +267,13 @@ zoom2 <- ggplot() +
   geom_sf(data = pts_in2, aes(color = n_pathogens),
           size = 3.5, alpha = 0.9) +
   geom_sf(data = st_boundary(circle_2), colour = "black", linewidth = 0.4) +
-  scale_color_distiller(direction = 1) +
+  scale_color_gradientn(
+    colours = c("red", RColorBrewer::brewer.pal(5, "Blues")),  # rojo para 0, azules de 1 a 5
+    values = scales::rescale(c(0, 1, 5)),  # ancla 0 en rojo, luego gradiente de 1 a 5
+    breaks = 0:5,
+    limits = c(0, 5)
+  ) +
+  #scale_color_distiller(direction = 1) +
   #scale_color_innova(palette = "vermilion", discrete = FALSE) +
   coord_sf(xlim = c(bb2["xmin"], bb2["xmax"]),
            ylim = c(bb2["ymin"], bb2["ymax"]),
@@ -301,7 +318,13 @@ zoom3 <- ggplot() +
   geom_sf(data = pts_in3, aes(color = n_pathogens),
           size = 3.5, alpha = 0.9) +
   geom_sf(data = st_boundary(circle_3), colour = "black", linewidth = 0.4) +
-  scale_color_distiller(direction = 1) +
+  scale_color_gradientn(
+    colours = c("red", RColorBrewer::brewer.pal(5, "Blues")),  # rojo para 0, azules de 1 a 5
+    values = scales::rescale(c(0, 1, 5)),  # ancla 0 en rojo, luego gradiente de 1 a 5
+    breaks = 0:5,
+    limits = c(0, 5)
+  ) +
+  #scale_color_distiller(direction = 1) +
   #scale_color_innova(palette = "vermilion", discrete = FALSE) +
   coord_sf(xlim = c(bb3["xmin"], bb3["xmax"]),
            ylim = c(bb3["ymin"], bb3["ymax"]),
@@ -347,7 +370,13 @@ zoom4 <- ggplot() +
   geom_sf(data = pts_in4, aes(color = n_pathogens),
           size = 3.5, alpha = 0.9) +
   geom_sf(data = st_boundary(circle_4), colour = "black", linewidth = 0.4) +
-  scale_color_distiller(direction = 1) +
+  scale_color_gradientn(
+    colours = c("red", RColorBrewer::brewer.pal(5, "Blues")),  # rojo para 0, azules de 1 a 5
+    values = scales::rescale(c(0, 1, 5)),  # ancla 0 en rojo, luego gradiente de 1 a 5
+    breaks = 0:5,
+    limits = c(0, 5)
+  ) +
+  #scale_color_distiller(direction = 1) +
   #scale_color_innova(palette = "npr", discrete = FALSE) +
   coord_sf(xlim = c(bb4["xmin"], bb4["xmax"]),
            ylim = c(bb4["ymin"], bb4["ymax"]),
@@ -387,10 +416,12 @@ fig1 <- base +
 
 
 exposures_leg <- exposures +
-  scale_color_distiller(
-    direction = 1,
-    palette = "Blues",
-    name = "Pathogens \nby households"   # título de la leyenda
+  scale_color_gradientn(
+    colours = c("red", RColorBrewer::brewer.pal(5, "Blues")), # rojo para 0, azul de 1-5
+    values  = scales::rescale(c(0, 1, 5)),
+    limits  = c(0, 5),
+    breaks  = 0:5,
+    name    = "Pathogens \nby households"
   ) +
   guides(
     colour = guide_colourbar(     # dale formato a la barra
@@ -482,7 +513,7 @@ curve_concentration <- db_concentration %>%
   labs(x = "Cummulative proportion of population",
        y = "Cummulative proportion of pathogens") +
   theme_bw() +
-  annotate("text", x = 0.84, y = 0.55, label = "CI = -0.10",
+  annotate("text", x = 0.84, y = 0.55, label = "CI = -0.11",
            hjust = 1, vjust = 0, size = 5, color = "black")
 
 

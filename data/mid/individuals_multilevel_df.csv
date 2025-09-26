@@ -1,0 +1,1117 @@
+ffi_is_district,ffi_is_health_facility_name,ffi_is_community,ffi_h_code,gender,age_oms,time_resi_cat2,education_summary,sympt_constitucional,sympt_osteomuscular,sympt_gastrointestinal,sympt_neurologico,distance_to_rh_hf_sampl,EconomicActivities_new,economic_activities
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119003,Male,Adulto medio,> 20 años,Primaria,Sí,Sí,No,Sí,Moderate,Other,Wood extractor
+INDIANA,INDIANA,SAN LUIS,0109037,Male,Adulto mayor,> 20 años,Secundaria,Sí,No,No,No,Proximate,Farmer,Farmer
+INDIANA,INDIANA,SAN LUIS,0109037,Female,Adulto medio,> 20 años,Secundaria,No,No,No,Sí,Proximate,Farmer,Farmer
+INDIANA,INDIANA,SAN LUIS,0109037,Male,Adulto joven,< 5 años,Secundaria,No,No,No,No,Proximate,Other,Other
+INDIANA,INDIANA,SAN LUIS,0109037,Female,Adulto joven,> 20 años,Secundaria,No,No,No,No,Proximate,Housewife,Housewife
+INDIANA,INDIANA,SAN LUIS,0109038,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,INDIANA,SAN LUIS,0109038,Female,Adulto medio,> 20 años,Primaria,No,No,No,Sí,Proximate,Housewife,Housewife
+INDIANA,INDIANA,SAN LUIS,0109039,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,Sí,Proximate,Student,Student
+INDIANA,INDIANA,SAN LUIS,0109039,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,INDIANA,SAN LUIS,0109038,Female,Adulto joven,> 20 años,Secundaria,No,No,Sí,Sí,Proximate,Housewife,Housewife
+INDIANA,INDIANA,SAN LUIS,0109038,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,INDIANA,NUEVO UCHIZA,0105007,Male,Adulto joven,> 20 años,Primaria,No,No,Sí,No,Extra Distant,Farmer,Farmer
+INDIANA,INDIANA,NUEVO UCHIZA,0105007,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+INDIANA,INDIANA,NUEVO UCHIZA,0105007,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,INDIANA,NUEVO UCHIZA,0105007,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+INDIANA,INDIANA,NUEVO UCHIZA,0105007,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+INDIANA,INDIANA,NUEVO UCHIZA,0105008,Male,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+INDIANA,INDIANA,NUEVO UCHIZA,0105008,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+INDIANA,INDIANA,NUEVO UCHIZA,0105008,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,INDIANA,NUEVO UCHIZA,0105008,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,INDIANA,NUEVO UCHIZA,0105008,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,INDIANA,NUEVO UCHIZA,0105008,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+INDIANA,INDIANA,NUEVO UCHIZA,0105013,Male,Adulto medio,5-20 años,Primaria,No,No,Sí,No,Extra Distant,Farmer,Farmer
+INDIANA,INDIANA,NUEVO UCHIZA,0105013,Female,Adulto medio,5-20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+INDIANA,INDIANA,NUEVO UCHIZA,0105013,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,None,None
+INDIANA,INDIANA,NUEVO UCHIZA,0105013,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,None,None
+INDIANA,INDIANA,NUEVO UCHIZA,0105013,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,INDIANA,NUEVO UCHIZA,0105013,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,INDIANA,NUEVO UCHIZA,0105013,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+INDIANA,INDIANA,SANTA TERESA,0106022,Male,Adulto joven,> 20 años,Secundaria,Sí,No,No,Sí,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106022,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Moderate,Housewife,Housewife
+INDIANA,INDIANA,SANTA TERESA,0106022,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106023,Male,Adulto medio,< 5 años,Secundaria,No,No,No,No,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106037,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106037,Female,Adulto medio,> 20 años,Secundaria,No,No,No,No,Moderate,Housewife,Housewife
+INDIANA,INDIANA,SANTA TERESA,0106037,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106037,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106055,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106055,Female,Adulto medio,> 20 años,Primaria,No,No,No,Sí,Moderate,Housewife,Housewife
+INDIANA,INDIANA,SANTA TERESA,0106055,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106057,Male,Adulto joven,> 20 años,Primaria,No,No,No,No,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106057,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106057,Female,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+INDIANA,INDIANA,SANTA TERESA,0106062,Male,Adulto medio,> 20 años,Primaria,No,No,No,Sí,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106062,Female,Adulto medio,> 20 años,Secundaria,No,No,No,Sí,Moderate,Housewife,Housewife
+INDIANA,INDIANA,SANTA TERESA,0106062,Female,Adulto mayor,> 20 años,Sin escolaridad,Sí,No,No,Sí,Moderate,None,None
+INDIANA,INDIANA,SANTA TERESA,0106055,Male,Niño y adolescente,5-20 años,Primaria,No,No,Sí,Sí,Moderate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102033,Male,Adulto mayor,5-20 años,Primaria,No,Sí,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102033,Female,Adulto mayor,5-20 años,Primaria,No,Sí,No,No,Proximate,Housewife,Housewife
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102033,Male,Adulto joven,5-20 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102033,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Housewife,Housewife
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102033,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102033,Male,Adulto joven,< 5 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102033,Female,Adulto joven,5-20 años,Secundaria,No,No,No,No,Proximate,Housewife,Housewife
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102033,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102033,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102033,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102033,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102034,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Proximate,Fisherman,Fisherman
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102034,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Housewife,Housewife
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102034,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102034,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102035,Male,Adulto medio,5-20 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102035,Female,Adulto joven,> 20 años,Secundaria,No,No,No,No,Proximate,Housewife,Housewife
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102035,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102033,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102033,Female,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,VILLA MARIA,0112013,Male,Adulto medio,5-20 años,Secundaria,No,No,No,No,Distant,Farmer,Farmer
+INDIANA,MANITI I ZONA,VILLA MARIA,0112013,Female,Adulto mayor,5-20 años,Primaria,No,No,No,No,Distant,Housewife,Housewife
+INDIANA,MANITI I ZONA,VILLA MARIA,0112016,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Distant,Other,Wood extractor
+INDIANA,MANITI I ZONA,VILLA MARIA,0112016,Female,Adulto joven,5-20 años,Secundaria,No,No,No,No,Distant,Housewife,Housewife
+INDIANA,MANITI I ZONA,VILLA MARIA,0112016,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+INDIANA,MANITI I ZONA,VILLA MARIA,0112018,Male,Adulto mayor,< 5 años,Secundaria,No,No,No,Sí,Distant,Farmer,Farmer
+INDIANA,MANITI I ZONA,VILLA MARIA,0112031,Male,Adulto medio,5-20 años,Secundaria,No,No,No,No,Distant,Farmer,Farmer
+INDIANA,MANITI I ZONA,VILLA MARIA,0112031,Female,Adulto joven,5-20 años,Primaria,No,No,No,No,Distant,Housewife,Housewife
+INDIANA,MANITI I ZONA,VILLA MARIA,0112031,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+INDIANA,MANITI I ZONA,VILLA MARIA,0112031,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+INDIANA,MANITI I ZONA,VILLA MARIA,0112031,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+INDIANA,MANITI I ZONA,VILLA MARIA,0112041,Male,Adulto joven,> 20 años,Secundaria,No,No,No,Sí,Distant,Fisherman,Fisherman
+INDIANA,MANITI I ZONA,VILLA MARIA,0112041,Male,Adulto joven,> 20 años,Secundaria,No,No,No,Sí,Distant,Housewife,Housewife
+INDIANA,MANITI I ZONA,VILLA MARIA,0112043,Female,Adulto mayor,5-20 años,Primaria,No,No,No,No,Distant,Housewife,Housewife
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102049,Male,Adulto joven,< 5 años,Secundaria,No,No,No,No,Proximate,Fisherman,Fisherman
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102049,Female,Adulto joven,> 20 años,Secundaria,No,No,No,No,Proximate,Housewife,Housewife
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102049,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102056,Female,Adulto medio,> 20 años,Primaria,No,No,No,Sí,Proximate,Housewife,Housewife
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102056,Female,Niño y adolescente,5-20 años,Secundaria,No,No,Sí,Sí,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102056,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115018,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Proximate,Fisherman,Fisherman
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115018,Female,Adulto joven,< 5 años,Secundaria,No,No,Sí,Sí,Proximate,Housewife,Housewife
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115018,Female,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115018,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115018,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115004,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115004,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115004,Male,Niño y adolescente,< 5 años,Sin escolaridad,Sí,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115004,Male,Adulto joven,> 20 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115004,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Proximate,Housewife,Housewife
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115011,Male,Adulto medio,< 5 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115011,Female,Adulto joven,< 5 años,Primaria,No,No,No,No,Proximate,Housewife,Housewife
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115011,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,Sí,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115011,Female,Niño y adolescente,< 5 años,Primaria,No,No,No,Sí,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115011,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115011,Female,Niño y adolescente,< 5 años,Sin escolaridad,Sí,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115011,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117028,Male,Adulto medio,< 5 años,Educación superior,No,No,No,No,Proximate,Other,Other
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117028,Female,Adulto medio,5-20 años,Educación superior,No,No,No,No,Proximate,Other,Other
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117006,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117006,Female,Adulto medio,> 20 años,Primaria,No,No,No,No,Proximate,Housewife,Housewife
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117006,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117006,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117006,Female,Adulto joven,> 20 años,Secundaria,No,No,Sí,No,Proximate,Housewife,Housewife
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117006,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117015,Male,Adulto medio,> 20 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117015,Female,Adulto joven,> 20 años,Secundaria,Sí,No,No,No,Proximate,Housewife,Housewife
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117015,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,Sí,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117015,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,Sí,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117030,Female,Adulto joven,> 20 años,Secundaria,No,No,No,No,Proximate,Housewife,Housewife
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117030,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117030,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117030,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117026,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,Sí,Proximate,Housewife,Housewife
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117026,Male,Adulto joven,< 5 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117027,Male,Adulto medio,> 20 años,Primaria,No,No,No,Sí,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117027,Female,Adulto joven,> 20 años,Primaria,No,No,No,Sí,Proximate,Housewife,Housewife
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117027,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117027,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117027,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117027,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117015,Male,Adulto joven,5-20 años,Educación superior,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117004,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113002,Male,Adulto mayor,> 20 años,Primaria,No,No,No,Sí,Extra Distant,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113005,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113005,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,Sí,Extra Distant,Student,Student
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113005,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113007,Female,Adulto mayor,> 20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113007,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113007,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103005,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Moderate,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103005,Female,Adulto medio,> 20 años,Primaria,No,Sí,No,No,Moderate,Housewife,Housewife
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103005,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,Sí,Moderate,Student,Student
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103005,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,Sí,Moderate,Student,Student
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103005,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103004,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Student,Student
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103006,Male,Adulto joven,> 20 años,Primaria,No,No,No,No,Moderate,Other,Other
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123001,Female,Adulto joven,> 20 años,Educación superior,No,No,No,No,Moderate,Housewife,Housewife
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123001,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123001,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123001,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123001,Male,Adulto joven,> 20 años,Primaria,No,No,No,No,Moderate,Farmer,Farmer
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123006,Female,Adulto medio,> 20 años,Primaria,No,No,No,No,Moderate,Housewife,Housewife
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123006,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123010,Male,Adulto mayor,> 20 años,Primaria,No,Sí,No,Sí,Moderate,Other,Other
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123010,Female,Adulto joven,> 20 años,Secundaria,No,No,No,Sí,Moderate,Housewife,Housewife
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123010,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123010,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123015,Male,Adulto mayor,< 5 años,Primaria,No,No,No,No,Moderate,Farmer,Farmer
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123015,Female,Adulto mayor,> 20 años,Primaria,No,No,No,No,Moderate,Housewife,Housewife
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123018,Female,Niño y adolescente,< 5 años,Secundaria,No,No,No,No,Moderate,Housewife,Housewife
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123018,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123018,Female,Adulto medio,> 20 años,Primaria,No,No,No,No,Moderate,Housewife,Housewife
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123018,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123018,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123036,Male,Adulto medio,< 5 años,Secundaria,Sí,Sí,No,No,Moderate,Services/Commerce,Day labourer
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123036,Female,Adulto medio,< 5 años,Primaria,No,No,Sí,Sí,Moderate,Housewife,Housewife
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123036,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123036,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123038,Female,Adulto medio,5-20 años,Primaria,Sí,No,No,Sí,Moderate,Services/Commerce,Trader
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123038,Female,Niño y adolescente,< 5 años,Secundaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123038,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,Sí,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123038,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123038,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123038,Female,Niño y adolescente,5-20 años,Primaria,Sí,No,No,Sí,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119003,Female,Adulto joven,> 20 años,Secundaria,Sí,No,Sí,Sí,Moderate,Housewife,Housewife
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119003,Male,Niño y adolescente,5-20 años,Secundaria,Sí,Sí,No,Sí,Moderate,Services/Commerce,Day labourer
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119003,Female,Niño y adolescente,5-20 años,Secundaria,Sí,Sí,Sí,Sí,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119003,Male,Niño y adolescente,5-20 años,Primaria,Sí,Sí,Sí,Sí,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119003,Male,Niño y adolescente,< 5 años,Sin escolaridad,Sí,Sí,Sí,Sí,Moderate,None,None
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119008,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Moderate,Fisherman,Fisherman
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119008,Female,Adulto medio,> 20 años,Secundaria,No,No,No,No,Moderate,Housewife,Housewife
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119008,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119008,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125035,Male,Adulto joven,> 20 años,Primaria,No,No,No,Sí,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125035,Female,Adulto joven,5-20 años,Primaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125035,Male,Adulto joven,5-20 años,Primaria,No,No,No,No,Distant,Other,Wood extractor
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125035,Female,Niño y adolescente,5-20 años,Secundaria,Sí,Sí,Sí,Sí,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125035,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,Sí,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125035,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125027,Female,Adulto medio,> 20 años,Primaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125027,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125027,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125027,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125021,Female,Adulto joven,< 5 años,Secundaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125021,Male,Niño y adolescente,< 5 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125021,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125021,Female,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125029,Female,Adulto medio,> 20 años,Secundaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125029,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125029,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125029,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125028,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125028,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125028,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125028,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125027,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125027,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125028,Female,Adulto medio,> 20 años,Secundaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125028,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125028,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125028,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125017,Female,Niño y adolescente,5-20 años,Sin escolaridad,No,Sí,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125017,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126001,Female,Adulto medio,5-20 años,Primaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126001,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126001,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126001,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126001,Female,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126001,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126008,Male,Adulto joven,> 20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126008,Female,Adulto medio,5-20 años,Primaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126008,Male,Adulto mayor,< 5 años,Primaria,No,No,No,Sí,Distant,None,None
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126008,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126008,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126009,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126009,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126007,Male,Adulto medio,> 20 años,Primaria,No,No,Sí,Sí,Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,3 DE OCTUBRE,0131017,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132002,Female,Adulto medio,< 5 años,Secundaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132006,Male,NA,5-20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132006,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132006,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132018,Male,Adulto joven,> 20 años,Primaria,No,No,No,Sí,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132018,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132018,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132017,Male,Adulto mayor,> 20 años,Primaria,Sí,No,No,Sí,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132018,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,Sí,Extra Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132018,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132018,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132018,Male,Adulto medio,> 20 años,Primaria,No,No,No,Sí,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132030,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132030,Female,Adulto medio,> 20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132030,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132030,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132015,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132015,Male,Adulto medio,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134003,Male,Adulto mayor,> 20 años,Primaria,No,Sí,No,No,Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134003,Female,Adulto mayor,> 20 años,Primaria,Sí,Sí,No,No,Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134003,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134008,Female,Adulto medio,5-20 años,Primaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134008,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134008,Male,Adulto joven,> 20 años,Educación superior,No,No,No,No,Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132002,Male,Adulto medio,< 5 años,Secundaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134022,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134022,Male,Niño y adolescente,< 5 años,Secundaria,No,No,No,No,Distant,Services/Commerce,Trader
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134022,Male,Niño y adolescente,< 5 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132022,Male,Adulto joven,> 20 años,Primaria,No,No,Sí,Sí,Extra Distant,Other,Wood extractor
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132022,Female,Adulto joven,5-20 años,Educación superior,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132022,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132022,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134019,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134019,Female,Adulto joven,> 20 años,Secundaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134019,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134031,Female,Adulto joven,< 5 años,Secundaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134031,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134031,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134031,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127012,Male,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127012,Female,Adulto joven,> 20 años,Primaria,No,No,No,Sí,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127012,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127012,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127013,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127013,Female,Adulto medio,> 20 años,Primaria,No,No,No,Sí,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127013,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127013,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127013,Female,Adulto joven,> 20 años,Primaria,No,No,No,Sí,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127013,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,Sí,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127013,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127010,Female,Adulto mayor,> 20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127010,Male,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127008,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Extra Distant,Fisherman,Fisherman
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127006,Male,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127006,Female,Adulto joven,> 20 años,Primaria,No,No,No,Sí,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127006,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127006,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127006,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127006,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127002,Male,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120005,Male,Adulto joven,< 5 años,Primaria,Sí,No,No,Sí,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120005,Female,Adulto joven,< 5 años,Secundaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120005,Female,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120005,Female,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120005,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120008,Male,Adulto joven,> 20 años,Primaria,Sí,No,No,Sí,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120008,Female,Adulto joven,> 20 años,Primaria,Sí,No,No,Sí,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120008,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120008,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120007,Male,Adulto mayor,5-20 años,Primaria,No,No,No,Sí,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120011,Male,Adulto medio,> 20 años,Primaria,No,No,No,Sí,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120007,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120007,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120007,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Extra Distant,Other,Other
+BELEN,BELEN DE VILLA BELEN,ULLPA CAÑO,0138015,Female,Adulto joven,5-20 años,Secundaria,No,No,No,No,Moderate,Housewife,Housewife
+BELEN,BELEN DE VILLA BELEN,ULLPA CAÑO,0138015,Male,Adulto medio,> 20 años,Secundaria,No,No,No,No,Moderate,Services/Commerce,Trader
+BELEN,BELEN DE VILLA BELEN,ULLPA CAÑO,0138015,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Moderate,Farmer,Farmer
+BELEN,BELEN DE VILLA BELEN,ULLPA CAÑO,0138015,Female,Adulto mayor,> 20 años,Primaria,No,No,No,No,Moderate,Housewife,Housewife
+BELEN,BELEN DE VILLA BELEN,ULLPA CAÑO,0138015,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Student,Student
+BELEN,BELEN DE VILLA BELEN,ULLPA CAÑO,0138015,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102051,Female,Adulto medio,< 5 años,Secundaria,Sí,Sí,No,Sí,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102051,Female,Adulto mayor,> 20 años,Primaria,Sí,Sí,No,No,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102051,Male,Adulto mayor,> 20 años,Primaria,No,Sí,No,No,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102054,Female,Adulto medio,> 20 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102054,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102054,Female,Adulto mayor,> 20 años,Primaria,Sí,No,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102054,Male,Adulto mayor,> 20 años,Primaria,No,Sí,No,No,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102054,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102054,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115023,Male,Adulto joven,< 5 años,Secundaria,No,Sí,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115023,Female,Adulto joven,< 5 años,Secundaria,No,No,No,Sí,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115023,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,Sí,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115023,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115024,Male,Adulto medio,5-20 años,Primaria,Sí,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115024,Female,Adulto medio,5-20 años,Primaria,No,Sí,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115024,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115024,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115009,Male,Adulto joven,< 5 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115009,Female,Adulto joven,< 5 años,Primaria,Sí,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115009,Male,Adulto mayor,< 5 años,Primaria,No,No,No,Sí,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115009,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115009,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115009,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115009,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115009,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117004,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117004,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117004,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117004,Male,Adulto mayor,< 5 años,Primaria,No,Sí,No,Sí,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117005,Female,Adulto medio,5-20 años,Primaria,Sí,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117005,Male,Adulto mayor,5-20 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117005,Female,Adulto mayor,5-20 años,Primaria,Sí,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117005,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117005,Female,Niño y adolescente,< 5 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117005,Female,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117013,Male,Adulto mayor,> 20 años,Primaria,Sí,Sí,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117016,Male,Adulto mayor,> 20 años,Primaria,No,Sí,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117016,Female,Adulto mayor,> 20 años,Primaria,Sí,Sí,No,Sí,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117029,Female,Adulto mayor,5-20 años,Primaria,Sí,No,No,Sí,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117029,Female,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117029,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,Sí,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117019,Male,Adulto joven,> 20 años,Secundaria,No,No,No,Sí,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117019,Female,Adulto joven,5-20 años,Primaria,No,No,No,Sí,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117019,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117019,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117019,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117019,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117019,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117024,Male,Adulto mayor,> 20 años,Primaria,Sí,Sí,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117024,Female,Adulto mayor,> 20 años,Primaria,Sí,No,No,Sí,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117024,Male,Adulto joven,> 20 años,Secundaria,No,No,No,Sí,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117024,Female,Niño y adolescente,< 5 años,Secundaria,No,No,No,No,Proximate,Housewife,Housewife
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117024,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117004,Male,Adulto medio,> 20 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117005,Female,Adulto mayor,> 20 años,Primaria,No,Sí,No,No,Proximate,Housewife,Housewife
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117005,Male,Niño y adolescente,< 5 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117005,Female,Niño y adolescente,< 5 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117005,Female,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117005,Female,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117005,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113001,Male,Adulto mayor,5-20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113001,Female,Adulto mayor,> 20 años,Primaria,No,Sí,No,No,Extra Distant,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113006,Female,Adulto joven,5-20 años,Secundaria,Sí,No,No,Sí,Extra Distant,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113006,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113006,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113006,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113006,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113006,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113009,Female,Adulto mayor,> 20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113010,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113010,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113010,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113010,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113010,Male,Adulto medio,> 20 años,Secundaria,No,No,No,No,Extra Distant,Other,Livestock farmer
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103010,Male,Adulto medio,> 20 años,Primaria,No,No,No,Sí,Moderate,Fisherman,Fisherman
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103008,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Moderate,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103008,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Housewife,Housewife
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103008,Female,Adulto medio,> 20 años,Primaria,Sí,Sí,No,Sí,Moderate,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103008,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,Sí,Moderate,Student,Student
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103008,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103008,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103009,Female,Adulto joven,> 20 años,Primaria,Sí,Sí,No,No,Moderate,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103009,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103009,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123002,Female,Adulto joven,> 20 años,Educación superior,No,No,No,No,Moderate,Housewife,Housewife
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123005,Female,Adulto medio,> 20 años,Primaria,No,No,No,No,Moderate,Housewife,Housewife
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123005,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123005,Male,Niño y adolescente,< 5 años,Sin escolaridad,Sí,No,No,Sí,Moderate,None,None
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123008,Female,Adulto medio,> 20 años,Primaria,No,No,No,No,Moderate,Services/Commerce,Trader
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123008,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123011,Female,Adulto joven,> 20 años,Secundaria,Sí,No,No,Sí,Moderate,Housewife,Housewife
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123011,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123011,Female,Niño y adolescente,< 5 años,Sin escolaridad,Sí,No,No,Sí,Moderate,None,None
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123011,Male,Niño y adolescente,5-20 años,Secundaria,Sí,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123014,Female,Adulto joven,> 20 años,Primaria,No,No,No,Sí,Moderate,Services/Commerce,Trader
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123014,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123014,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123014,Female,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123014,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123021,Female,Adulto mayor,> 20 años,Primaria,Sí,No,No,Sí,Moderate,None,None
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123021,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Moderate,Services/Commerce,Trader
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123034,Female,Adulto joven,> 20 años,Secundaria,No,No,No,No,Moderate,Housewife,Housewife
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123034,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123034,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123037,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Moderate,Housewife,Housewife
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123037,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123037,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123037,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123037,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Moderate,Other,Other
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119002,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Moderate,Farmer,Farmer
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119002,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Moderate,Farmer,Farmer
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119002,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119005,Male,Adulto medio,> 20 años,Primaria,Sí,No,No,No,Moderate,Fisherman,Fisherman
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119005,Female,Adulto medio,5-20 años,Primaria,No,No,No,No,Moderate,Farmer,Farmer
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119005,Female,Niño y adolescente,5-20 años,Educación superior,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119005,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Farmer,Farmer
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119005,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119005,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119005,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125033,Female,Adulto medio,> 20 años,Primaria,Sí,No,No,No,Distant,Services/Commerce,Trader
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125033,Male,Adulto medio,> 20 años,Primaria,Sí,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125033,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125033,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125033,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125022,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125022,Male,Adulto joven,> 20 años,Secundaria,Sí,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125022,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125022,Female,Adulto mayor,> 20 años,Secundaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125022,Male,Adulto joven,> 20 años,Secundaria,No,No,No,Sí,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125022,Male,Adulto mayor,> 20 años,Sin escolaridad,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125022,Female,Niño y adolescente,5-20 años,Secundaria,Sí,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125022,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125022,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125032,Male,Adulto mayor,> 20 años,Primaria,Sí,No,No,Sí,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125024,Female,Adulto medio,> 20 años,Secundaria,Sí,No,No,Sí,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125018,Male,Adulto joven,5-20 años,Secundaria,No,No,No,No,Distant,Other,Other
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125018,Female,Adulto medio,> 20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125018,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126002,Male,Adulto medio,5-20 años,Primaria,No,No,No,No,Distant,Fisherman,Fisherman
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126002,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126004,Female,Adulto joven,5-20 años,Secundaria,Sí,No,No,Sí,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126004,Female,Niño y adolescente,5-20 años,Primaria,Sí,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126004,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126004,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126010,Female,Adulto medio,> 20 años,Secundaria,Sí,No,No,Sí,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126010,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126010,Male,Niño y adolescente,5-20 años,Secundaria,Sí,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126010,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,3 DE OCTUBRE,0131018,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,3 DE OCTUBRE,0131018,Female,Adulto joven,> 20 años,Secundaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,3 DE OCTUBRE,0131016,Female,Adulto mayor,> 20 años,Primaria,No,Sí,No,No,Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132008,Male,Adulto mayor,> 20 años,Primaria,Sí,No,No,Sí,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132008,Female,Adulto mayor,> 20 años,Primaria,Sí,No,No,Sí,Extra Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132012,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132012,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132016,Female,NA,> 20 años,Secundaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132016,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132016,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132016,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132025,Female,Adulto joven,5-20 años,Secundaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132025,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132025,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132025,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132025,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132007,Female,Adulto mayor,5-20 años,Sin escolaridad,No,No,No,Sí,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132031,Male,Adulto medio,> 20 años,Primaria,No,Sí,No,No,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132031,Female,Adulto medio,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132031,Male,Adulto joven,5-20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132031,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132031,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132031,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134001,Female,Adulto medio,> 20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134001,Female,Adulto mayor,> 20 años,Sin escolaridad,No,No,No,No,Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134006,Female,Adulto medio,> 20 años,Primaria,No,No,No,No,Distant,Services/Commerce,Trader
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134006,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,Sí,Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134006,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132016,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132014,Female,Adulto medio,> 20 años,Sin escolaridad,No,No,No,Sí,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132014,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132014,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132014,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132014,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134026,Female,Adulto medio,> 20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134026,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134025,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134025,Male,Adulto joven,5-20 años,Secundaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134025,Female,Adulto joven,5-20 años,Secundaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134025,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134001,Male,Adulto joven,5-20 años,Secundaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134001,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127014,Male,Adulto joven,5-20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127014,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127014,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127014,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127014,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127014,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127014,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127014,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127014,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127011,Male,Adulto medio,> 20 años,Primaria,Sí,Sí,Sí,Sí,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127011,Female,Adulto joven,> 20 años,Primaria,No,Sí,No,Sí,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127011,Female,Niño y adolescente,5-20 años,Primaria,Sí,No,No,Sí,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127011,Female,Niño y adolescente,< 5 años,Secundaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127009,Male,Adulto medio,> 20 años,Secundaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127009,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127009,Male,Adulto mayor,< 5 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127009,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127009,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127009,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127009,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127011,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120004,Female,Adulto joven,5-20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120004,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120004,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120004,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120007,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120007,Male,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120007,Male,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120007,Male,Niño y adolescente,5-20 años,Primaria,Sí,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120009,Male,Adulto mayor,> 20 años,Secundaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120009,Female,Adulto mayor,> 20 años,Primaria,Sí,Sí,No,Sí,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120009,Female,Adulto joven,5-20 años,Secundaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120009,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120009,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120009,Male,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126010,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+INDIANA,MANITI I ZONA,VILLA MARIA,0112040,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,Student,Student
+INDIANA,INDIANA,NUEVO UCHIZA,0105004,Female,Adulto joven,5-20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+INDIANA,INDIANA,NUEVO UCHIZA,0105004,Female,Adulto joven,5-20 años,Secundaria,No,No,No,No,Extra Distant,Housewife,Housewife
+INDIANA,INDIANA,NUEVO UCHIZA,0105004,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+INDIANA,INDIANA,NUEVO UCHIZA,0105005,Male,Adulto joven,< 5 años,Secundaria,No,No,No,No,Extra Distant,Farmer,Farmer
+INDIANA,INDIANA,NUEVO UCHIZA,0105005,Female,Adulto medio,< 5 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+INDIANA,INDIANA,NUEVO UCHIZA,0105005,Female,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,INDIANA,NUEVO UCHIZA,0105005,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+INDIANA,INDIANA,NUEVO UCHIZA,0105006,Male,Adulto joven,> 20 años,Educación superior,No,No,No,No,Extra Distant,Farmer,Farmer
+INDIANA,INDIANA,NUEVO UCHIZA,0105006,Female,Adulto joven,5-20 años,Secundaria,No,No,No,No,Extra Distant,Housewife,Housewife
+INDIANA,INDIANA,NUEVO UCHIZA,0105006,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,INDIANA,NUEVO UCHIZA,0105006,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,INDIANA,NUEVO UCHIZA,0105006,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,INDIANA,NUEVO UCHIZA,0105006,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,Sí,Extra Distant,None,None
+INDIANA,INDIANA,NUEVO UCHIZA,0105012,Male,Adulto mayor,> 20 años,Educación superior,Sí,No,No,Sí,Extra Distant,Other,Other
+INDIANA,INDIANA,NUEVO UCHIZA,0105012,Female,Adulto medio,5-20 años,Primaria,Sí,No,No,No,Extra Distant,Housewife,Housewife
+INDIANA,INDIANA,NUEVO UCHIZA,0105012,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,INDIANA,NUEVO UCHIZA,0105012,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106024,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106024,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106024,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106024,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106024,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SAN LUIS,0109035,Male,Adulto mayor,5-20 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,INDIANA,SAN LUIS,0109035,Female,Adulto mayor,5-20 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,INDIANA,SAN LUIS,0109035,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,INDIANA,SAN LUIS,0109035,Female,Adulto joven,5-20 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,INDIANA,SAN LUIS,0109035,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,INDIANA,SAN LUIS,0109035,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,INDIANA,SAN LUIS,0109035,Male,Adulto medio,5-20 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,INDIANA,SAN LUIS,0109035,Male,Adulto medio,5-20 años,Primaria,Sí,No,No,No,Proximate,Farmer,Farmer
+INDIANA,INDIANA,SAN LUIS,0109041,Male,Adulto mayor,5-20 años,Secundaria,No,No,No,No,Proximate,None,None
+INDIANA,INDIANA,SANTA TERESA,0106024,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106024,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+INDIANA,INDIANA,SANTA TERESA,0106035,Female,Adulto joven,> 20 años,Educación superior,No,No,No,No,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106035,Male,Adulto joven,< 5 años,Secundaria,No,No,No,No,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106035,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106034,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106034,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106034,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106034,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Moderate,None,None
+INDIANA,INDIANA,SANTA TERESA,0106034,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,None,None
+INDIANA,INDIANA,SANTA TERESA,0106034,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106034,Female,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+INDIANA,INDIANA,SANTA TERESA,0106024,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106056,Male,Adulto joven,> 20 años,Educación superior,No,No,No,No,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106056,Female,Adulto joven,5-20 años,Secundaria,No,No,No,No,Moderate,Housewife,Housewife
+INDIANA,INDIANA,SANTA TERESA,0106056,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102020,Male,Adulto medio,> 20 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102020,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Proximate,Housewife,Housewife
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102020,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102020,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102020,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102030,Female,Adulto medio,> 20 años,Secundaria,No,No,No,No,Proximate,Other,Other
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102030,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102030,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102030,Female,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102031,Male,Adulto medio,> 20 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102031,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102031,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102031,Female,Niño y adolescente,5-20 años,Primaria,Sí,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102031,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102031,Female,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102031,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102031,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102041,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102041,Female,Adulto mayor,> 20 años,Secundaria,Sí,Sí,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102043,Female,Adulto medio,< 5 años,Primaria,Sí,No,No,Sí,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102048,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,VILLA MARIA,0112035,Male,Adulto mayor,< 5 años,Primaria,Sí,Sí,No,No,Distant,None,None
+INDIANA,MANITI I ZONA,VILLA MARIA,0112035,Female,Adulto mayor,< 5 años,Primaria,No,No,No,No,Distant,None,None
+INDIANA,MANITI I ZONA,VILLA MARIA,0112042,Female,Adulto mayor,> 20 años,Primaria,No,No,No,Sí,Distant,Farmer,Farmer
+INDIANA,MANITI I ZONA,VILLA MARIA,0112042,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+INDIANA,MANITI I ZONA,VILLA MARIA,0112040,Male,Adulto joven,5-20 años,Secundaria,No,No,No,No,Distant,Farmer,Farmer
+INDIANA,MANITI I ZONA,VILLA MARIA,0112040,Female,Adulto joven,5-20 años,Secundaria,No,No,No,No,Distant,Farmer,Farmer
+INDIANA,MANITI I ZONA,VILLA MARIA,0112040,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+INDIANA,MANITI I ZONA,VILLA MARIA,0112040,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+INDIANA,INDIANA,SAN LUIS,0109036,Female,Adulto joven,> 20 años,Primaria,No,No,Sí,Sí,Proximate,Housewife,Housewife
+INDIANA,INDIANA,SAN LUIS,0109036,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Proximate,Fisherman,Fisherman
+INDIANA,INDIANA,SAN LUIS,0109036,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,INDIANA,SAN LUIS,0109036,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,INDIANA,SAN LUIS,0109036,Female,Niño y adolescente,< 5 años,Educación superior,No,No,No,No,Proximate,None,None
+INDIANA,INDIANA,NUEVO UCHIZA,0105001,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Extra Distant,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106040,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106040,Female,Adulto joven,> 20 años,Secundaria,No,No,No,No,Moderate,Housewife,Housewife
+INDIANA,INDIANA,SANTA TERESA,0106040,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106040,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+INDIANA,INDIANA,SANTA TERESA,0106040,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+INDIANA,INDIANA,SANTA TERESA,0106021,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Moderate,Housewife,Housewife
+INDIANA,INDIANA,SANTA TERESA,0106021,Male,Niño y adolescente,5-20 años,Primaria,No,No,Sí,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106021,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106021,Male,Niño y adolescente,< 5 años,Educación superior,No,No,No,No,Moderate,None,None
+INDIANA,INDIANA,SANTA TERESA,0106025,Male,Adulto medio,> 20 años,Educación superior,No,No,Sí,Sí,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106025,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Moderate,Services/Commerce,Trader
+INDIANA,INDIANA,SANTA TERESA,0106025,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Other,NA
+INDIANA,INDIANA,SANTA TERESA,0106025,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106025,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Moderate,Housewife,Housewife
+INDIANA,INDIANA,SANTA TERESA,0106025,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+INDIANA,INDIANA,SANTA TERESA,0106025,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+INDIANA,INDIANA,SANTA TERESA,0106025,Male,Adulto joven,> 20 años,Secundaria,No,No,Sí,No,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106036,Male,Adulto medio,> 20 años,Primaria,Sí,Sí,No,Sí,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106036,Female,Adulto joven,> 20 años,Secundaria,No,No,No,No,Moderate,Housewife,Housewife
+INDIANA,INDIANA,SANTA TERESA,0106036,Male,Adulto joven,< 5 años,Educación superior,No,No,No,No,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106036,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106036,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+INDIANA,INDIANA,SANTA TERESA,0106059,Female,Adulto medio,> 20 años,Primaria,No,No,No,Sí,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106059,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106059,Female,Niño y adolescente,< 5 años,Secundaria,No,No,Sí,No,Moderate,Housewife,Housewife
+INDIANA,INDIANA,SANTA TERESA,0106059,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106059,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102045,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102045,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Housewife,Housewife
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102045,Female,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102045,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102036,Male,Adulto medio,> 20 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102036,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102040,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Proximate,Fisherman,Fisherman
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102040,Female,Adulto medio,> 20 años,Primaria,No,Sí,No,No,Proximate,Housewife,Housewife
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102040,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102040,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102046,Female,Niño y adolescente,5-20 años,Secundaria,No,Sí,No,No,Proximate,Housewife,Housewife
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102038,Male,Adulto joven,< 5 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102038,Female,Adulto joven,> 20 años,Secundaria,No,Sí,No,Sí,Proximate,Housewife,Housewife
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102038,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102038,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102039,Male,Adulto mayor,> 20 años,Primaria,Sí,No,No,No,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102039,Female,Adulto mayor,> 20 años,Primaria,Sí,No,No,Sí,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102042,Male,Adulto medio,> 20 años,Secundaria,No,No,No,Sí,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102042,Female,Adulto medio,> 20 años,Primaria,No,Sí,No,No,Proximate,Housewife,Housewife
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102042,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102042,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Services/Commerce,Motorcycle taxi driver
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102042,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102044,Male,Adulto joven,< 5 años,Secundaria,No,Sí,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102044,Female,Adulto joven,> 20 años,Secundaria,No,No,No,No,Proximate,Housewife,Housewife
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102044,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102044,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102044,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,MANITI I ZONA,VILLA MARIA,0112030,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Distant,Other,Other
+INDIANA,MANITI I ZONA,VILLA MARIA,0112030,Female,Adulto joven,< 5 años,Secundaria,No,No,No,No,Distant,Housewife,Housewife
+INDIANA,MANITI I ZONA,VILLA MARIA,0112030,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+INDIANA,MANITI I ZONA,VILLA MARIA,0112019,Male,Adulto mayor,> 20 años,Secundaria,No,No,No,No,Distant,Other,Wood extractor
+INDIANA,MANITI I ZONA,VILLA MARIA,0112019,Male,Adulto medio,> 20 años,Educación superior,No,No,No,No,Distant,Other,Wood extractor
+INDIANA,MANITI I ZONA,VILLA MARIA,0112036,Male,Adulto medio,> 20 años,Primaria,No,Sí,No,No,Distant,Farmer,Farmer
+INDIANA,MANITI I ZONA,VILLA MARIA,0112036,Female,Adulto medio,> 20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+INDIANA,MANITI I ZONA,VILLA MARIA,0112038,Male,Adulto mayor,5-20 años,Secundaria,No,No,No,No,Distant,Farmer,Farmer
+INDIANA,MANITI I ZONA,VILLA MARIA,0112038,Male,Adulto joven,5-20 años,Secundaria,No,No,No,No,Distant,Farmer,Farmer
+INDIANA,MANITI I ZONA,VILLA MARIA,0112038,Male,Adulto medio,5-20 años,Primaria,No,No,No,No,Distant,None,None
+INDIANA,MANITI I ZONA,VILLA MARIA,0112046,Male,Adulto mayor,5-20 años,Primaria,No,Sí,No,No,Distant,Farmer,Farmer
+INDIANA,MANITI I ZONA,VILLA MARIA,0112046,Female,Adulto mayor,5-20 años,Primaria,No,No,No,No,Distant,Services/Commerce,Trader
+INDIANA,MANITI I ZONA,VILLA MARIA,0112034,Male,Adulto medio,5-20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102050,Male,Adulto medio,> 20 años,Secundaria,Sí,Sí,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102050,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102050,Female,Adulto medio,> 20 años,Secundaria,Sí,Sí,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102053,Female,Adulto medio,> 20 años,Primaria,No,No,No,Sí,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102053,Male,Adulto mayor,> 20 años,Primaria,No,Sí,No,Sí,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102053,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102053,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115021,Male,Adulto medio,< 5 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115021,Female,Adulto medio,< 5 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115021,Male,Adulto joven,< 5 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115021,Female,Niño y adolescente,< 5 años,Secundaria,No,No,No,No,Proximate,Housewife,Housewife
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115021,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115021,Female,Niño y adolescente,< 5 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115021,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115021,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115031,Male,Adulto medio,< 5 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115010,Female,Adulto medio,< 5 años,Primaria,No,No,No,Sí,Proximate,Housewife,Housewife
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115010,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115010,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115010,Male,Adulto medio,< 5 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115010,Male,Niño y adolescente,< 5 años,Secundaria,No,No,No,Sí,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115010,Male,Niño y adolescente,< 5 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115010,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115010,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117003,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117003,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117003,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117003,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117003,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117003,Female,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117003,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117011,Female,Adulto joven,> 20 años,Secundaria,No,No,No,Sí,Proximate,Housewife,Housewife
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117011,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117011,Female,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117011,Male,Adulto medio,5-20 años,Educación superior,No,No,No,No,Proximate,Other,Other
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117011,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117011,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117011,Male,Adulto joven,> 20 años,Secundaria,Sí,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117005,Male,Adulto medio,> 20 años,Educación superior,Sí,No,No,Sí,Proximate,Other,Other
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117025,Female,Adulto joven,5-20 años,Primaria,Sí,No,No,No,Proximate,Services/Commerce,Trader
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117025,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117025,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117025,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117025,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117025,Male,Adulto joven,> 20 años,Primaria,No,No,Sí,Sí,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117003,Male,Adulto medio,> 20 años,Secundaria,No,Sí,No,No,Proximate,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113004,Female,Adulto mayor,5-20 años,Secundaria,No,No,No,Sí,Extra Distant,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113004,Female,Adulto joven,5-20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113004,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,None,None
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113004,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113004,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113004,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113004,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113004,Male,Adulto medio,< 5 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113004,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113004,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113004,Male,Adulto joven,< 5 años,Secundaria,No,No,No,No,Extra Distant,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113006,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Extra Distant,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113012,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113012,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103011,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Moderate,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103011,Male,Adulto medio,5-20 años,Primaria,No,No,No,No,Moderate,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103011,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,None,None
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103011,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Student,Student
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103011,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103011,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103011,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,Sí,Moderate,Student,Student
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103011,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103011,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103011,Female,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103011,Male,Adulto medio,< 5 años,Secundaria,No,No,No,No,Moderate,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103011,Female,Adulto medio,> 20 años,Primaria,No,Sí,No,Sí,Moderate,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103011,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Housewife,Housewife
+INDIANA,YANAYACU BOMBONAJE,SAN PEDRO DE FALCON,0103011,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113013,Male,Adulto medio,> 20 años,Primaria,Sí,Sí,No,No,Extra Distant,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113004,Male,Adulto medio,> 20 años,Primaria,Sí,Sí,No,No,Extra Distant,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113007,Male,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,None,None
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113013,Female,Adulto joven,5-20 años,Secundaria,No,No,No,Sí,Extra Distant,Housewife,Housewife
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113013,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113013,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113013,Male,Adulto joven,5-20 años,Primaria,No,Sí,No,Sí,Extra Distant,Other,Other
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125034,Female,Adulto medio,> 20 años,Secundaria,No,No,No,Sí,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125037,Male,Adulto mayor,5-20 años,Secundaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125034,Male,Adulto medio,> 20 años,Secundaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125034,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125034,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125031,Male,Adulto mayor,5-20 años,Educación superior,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125031,Female,Adulto medio,> 20 años,Secundaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125026,Female,Adulto medio,> 20 años,Primaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125023,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125026,Male,Adulto mayor,> 20 años,Secundaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125027,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126003,Female,Adulto joven,< 5 años,Secundaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126003,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126005,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126007,Female,Adulto medio,> 20 años,Primaria,No,No,No,No,Distant,Services/Commerce,Motorcycle taxi driver
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126007,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126007,Female,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126007,Female,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126007,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126011,Female,Adulto mayor,> 20 años,Primaria,No,Sí,No,Sí,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126011,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126012,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126012,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126012,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126013,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126013,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126013,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126013,Female,Adulto joven,> 20 años,Secundaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126006,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126003,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126004,Male,Adulto medio,> 20 años,Secundaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126005,Male,Adulto mayor,< 5 años,Primaria,No,No,No,No,Distant,Fisherman,Fisherman
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126005,Male,Adulto medio,< 5 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,3 DE OCTUBRE,0131017,Male,Adulto joven,> 20 años,Primaria,Sí,No,No,Sí,Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,3 DE OCTUBRE,0131017,Female,Adulto joven,< 5 años,Secundaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,3 DE OCTUBRE,0131017,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,3 DE OCTUBRE,0131017,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132003,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132003,Male,Niño y adolescente,< 5 años,Secundaria,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132003,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132003,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132004,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132015,Female,Adulto medio,> 20 años,Primaria,No,No,Sí,Sí,Extra Distant,Services/Commerce,Trader
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132015,Female,Adulto joven,< 5 años,Secundaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132015,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132021,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132026,Female,Adulto mayor,> 20 años,Primaria,No,No,No,Sí,Extra Distant,Services/Commerce,Trader
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132027,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132012,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132012,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132005,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Extra Distant,Fisherman,Fisherman
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132005,Female,Adulto joven,> 20 años,Secundaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132005,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132005,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132005,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132005,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132003,Male,Adulto joven,> 20 años,Secundaria,No,Sí,No,Sí,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132003,Female,Adulto joven,> 20 años,Secundaria,No,No,Sí,No,Extra Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132012,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134002,Female,Adulto medio,> 20 años,Primaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134002,Female,Adulto medio,< 5 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134002,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134007,Female,Adulto joven,> 20 años,Secundaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134007,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134007,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134007,Male,Adulto joven,> 20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134030,Male,Adulto medio,> 20 años,Primaria,Sí,Sí,No,No,Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134030,Female,Adulto medio,> 20 años,Primaria,No,Sí,No,No,Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134030,Male,Adulto mayor,> 20 años,Secundaria,Sí,Sí,No,No,Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134030,Female,Adulto joven,5-20 años,Secundaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134030,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134030,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132009,Female,Adulto joven,< 5 años,Secundaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134024,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Distant,Other,Other
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134024,Female,Adulto medio,> 20 años,Secundaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134024,Male,Adulto mayor,> 20 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134024,Female,Adulto joven,> 20 años,Secundaria,No,No,No,No,Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134024,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134024,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134007,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Distant,Fisherman,Fisherman
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127002,Male,Adulto mayor,> 20 años,Primaria,No,Sí,Sí,Sí,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127002,Female,Adulto medio,> 20 años,Primaria,No,Sí,No,No,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127002,Female,Adulto joven,> 20 años,Educación superior,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127002,Female,Adulto joven,> 20 años,Primaria,Sí,No,No,Sí,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127002,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127002,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127002,Female,Niño y adolescente,5-20 años,Primaria,Sí,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127002,Male,Niño y adolescente,5-20 años,Primaria,Sí,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127007,Male,Adulto medio,> 20 años,Primaria,No,No,No,Sí,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127007,Male,Adulto joven,5-20 años,Secundaria,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127007,Female,Niño y adolescente,< 5 años,Secundaria,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127004,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127004,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127004,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120003,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120003,Female,Adulto medio,> 20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120003,Male,Niño y adolescente,5-20 años,Educación superior,No,No,No,Sí,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120003,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120003,Female,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120013,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120013,Female,Adulto joven,5-20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120013,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120013,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120013,Female,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120013,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,BELEN DE VILLA BELEN,ULLPA CAÑO,0138016,Female,Adulto joven,5-20 años,Primaria,No,No,No,No,Moderate,Services/Commerce,Trader
+BELEN,BELEN DE VILLA BELEN,ULLPA CAÑO,0138016,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Student,Student
+BELEN,BELEN DE VILLA BELEN,ULLPA CAÑO,0138016,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,BELEN DE VILLA BELEN,ULLPA CAÑO,0138016,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,BELEN DE VILLA BELEN,ULLPA CAÑO,0138016,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+INDIANA,INDIANA,SANTA TERESA,0106039,Female,Adulto medio,> 20 años,Primaria,No,Sí,No,Sí,Moderate,Housewife,Housewife
+INDIANA,MANITI I ZONA,VILLA MARIA,0112037,Male,Adulto joven,5-20 años,Primaria,No,No,No,No,Distant,Fisherman,Fisherman
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115022,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,INDIANA,NUEVO UCHIZA,0105011,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+INDIANA,INDIANA,NUEVO UCHIZA,0105010,Female,Adulto mayor,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+INDIANA,INDIANA,NUEVO UCHIZA,0105010,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,INDIANA,NUEVO UCHIZA,0105009,Male,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+INDIANA,INDIANA,NUEVO UCHIZA,0105009,Female,Adulto joven,< 5 años,Secundaria,No,No,No,No,Extra Distant,Housewife,Housewife
+INDIANA,INDIANA,NUEVO UCHIZA,0105016,Male,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+INDIANA,INDIANA,NUEVO UCHIZA,0105014,Male,Adulto joven,5-20 años,Secundaria,No,No,No,No,Extra Distant,None,None
+INDIANA,INDIANA,NUEVO UCHIZA,0105014,Female,Adulto joven,5-20 años,Primaria,No,No,No,Sí,Extra Distant,Housewife,Housewife
+INDIANA,INDIANA,NUEVO UCHIZA,0105014,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,INDIANA,NUEVO UCHIZA,0105014,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,INDIANA,NUEVO UCHIZA,0105014,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+INDIANA,INDIANA,NUEVO UCHIZA,0105010,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106039,Male,Adulto medio,5-20 años,Primaria,No,No,No,No,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106039,Male,Adulto mayor,> 20 años,Primaria,No,Sí,No,No,Moderate,None,None
+INDIANA,INDIANA,SANTA TERESA,0106039,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Moderate,None,None
+INDIANA,INDIANA,SANTA TERESA,0106039,Male,Niño y adolescente,NA,Primaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106039,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+INDIANA,INDIANA,SANTA TERESA,0106039,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+INDIANA,INDIANA,SANTA TERESA,0106038,Male,Adulto medio,< 5 años,Educación superior,No,No,No,No,Moderate,Fisherman,Fisherman
+INDIANA,INDIANA,SANTA TERESA,0106060,Female,Adulto mayor,> 20 años,Primaria,No,No,No,No,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106060,Female,Adulto mayor,> 20 años,Primaria,No,Sí,No,No,Moderate,Farmer,Farmer
+INDIANA,INDIANA,SANTA TERESA,0106060,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106060,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106060,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+INDIANA,INDIANA,SANTA TERESA,0106060,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102063,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102063,Female,Adulto mayor,> 20 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102064,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102064,Female,Adulto mayor,> 20 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102064,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102064,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Proximate,Fisherman,Fisherman
+INDIANA,MANITI I ZONA,VILLA MARIA,0112014,Male,Adulto medio,5-20 años,Primaria,No,No,No,No,Distant,Fisherman,Fisherman
+INDIANA,MANITI I ZONA,VILLA MARIA,0112015,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+INDIANA,MANITI I ZONA,VILLA MARIA,0112017,Male,Adulto joven,5-20 años,Secundaria,No,No,No,No,Distant,Other,Other
+INDIANA,MANITI I ZONA,VILLA MARIA,0112017,Female,Adulto joven,> 20 años,Secundaria,No,No,No,No,Distant,Housewife,Housewife
+INDIANA,MANITI I ZONA,VILLA MARIA,0112017,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Distant,None,None
+INDIANA,MANITI I ZONA,VILLA MARIA,0112017,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+INDIANA,MANITI I ZONA,VILLA MARIA,0112037,Female,Adulto joven,5-20 años,Primaria,No,No,No,Sí,Distant,Farmer,Farmer
+INDIANA,MANITI I ZONA,VILLA MARIA,0112037,Male,Adulto medio,< 5 años,Secundaria,No,No,No,No,Distant,Other,Other
+INDIANA,MANITI I ZONA,VILLA MARIA,0112037,Female,Niño y adolescente,< 5 años,Secundaria,No,No,No,No,Distant,Student,Student
+INDIANA,MANITI I ZONA,VILLA MARIA,0112037,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,Student,Student
+INDIANA,MANITI I ZONA,VILLA MARIA,0112037,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+INDIANA,MANITI I ZONA,VILLA MARIA,0112045,Female,Adulto joven,< 5 años,Primaria,No,No,No,No,Distant,Fisherman,Fisherman
+INDIANA,MANITI I ZONA,VILLA MARIA,0112045,Female,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Distant,Student,Student
+INDIANA,MANITI I ZONA,VILLA MARIA,0112045,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,Student,Student
+INDIANA,MANITI I ZONA,VILLA MARIA,0112045,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+INDIANA,MANITI I ZONA,VILLA MARIA,0112045,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Distant,Student,Student
+INDIANA,MANITI I ZONA,VILLA MARIA,0112039,Male,Adulto medio,5-20 años,Secundaria,No,No,No,No,Distant,Other,Other
+INDIANA,MANITI I ZONA,VILLA MARIA,0112039,Female,Adulto medio,5-20 años,Primaria,No,No,No,No,Distant,Housewife,Housewife
+INDIANA,MANITI I ZONA,VILLA MARIA,0112039,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+INDIANA,MANITI I ZONA,VILLA MARIA,0112039,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+INDIANA,MANITI I ZONA,VILLA MARIA,0112039,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102048,Female,Adulto medio,> 20 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102048,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,Sí,Proximate,Student,Student
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102055,Male,Adulto joven,< 5 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102055,Female,Adulto joven,< 5 años,Secundaria,No,No,No,No,Proximate,Housewife,Housewife
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102055,Female,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Proximate,Housewife,Housewife
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102055,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102055,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102055,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102055,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102055,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,MANITI I ZONA,MANATI ZONA 2,0102055,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115005,Female,Adulto medio,5-20 años,Secundaria,No,No,No,No,Proximate,Services/Commerce,Trader
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115005,Male,Adulto joven,5-20 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115005,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115005,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115005,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115005,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115026,Male,Adulto medio,< 5 años,Primaria,No,Sí,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115026,Female,Adulto medio,< 5 años,Primaria,No,Sí,No,Sí,Proximate,Housewife,Housewife
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115026,Female,Niño y adolescente,< 5 años,Secundaria,Sí,Sí,No,No,Proximate,Housewife,Housewife
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115026,Female,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115026,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115026,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115019,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115019,Female,Adulto mayor,> 20 años,Primaria,No,No,No,No,Proximate,Housewife,Housewife
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115020,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Proximate,Other,Wood extractor
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115020,Female,Adulto joven,5-20 años,Primaria,No,No,No,No,Proximate,Housewife,Housewife
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115020,Female,Adulto joven,5-20 años,Secundaria,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115020,Male,Adulto mayor,< 5 años,Primaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115020,Female,Niño y adolescente,5-20 años,Secundaria,No,No,Sí,Sí,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115020,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115020,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115020,Female,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115020,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115020,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,NUEVO PARAISO,0115022,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117002,Female,Adulto joven,5-20 años,Primaria,No,No,No,Sí,Proximate,Fisherman,Fisherman
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117002,Female,Niño y adolescente,5-20 años,Secundaria,No,No,Sí,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117002,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117002,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117014,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Proximate,Housewife,Housewife
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117014,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117014,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Proximate,None,None
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117014,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117017,Male,Adulto mayor,> 20 años,Sin escolaridad,No,Sí,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117017,Female,Adulto mayor,> 20 años,Sin escolaridad,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117017,Male,Adulto medio,> 20 años,Secundaria,No,Sí,No,Sí,Proximate,Services/Commerce,Day labourer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117017,Male,Adulto medio,> 20 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117018,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Proximate,Other,Other
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117018,Female,Adulto joven,< 5 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117018,Female,Niño y adolescente,< 5 años,Secundaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117018,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Proximate,Student,Student
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117014,Male,Adulto medio,> 20 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,SAN PEDRO DE MANATI,SAN PEDRO DE MANATI,0117002,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Proximate,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113003,Male,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Other,Other
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113003,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113003,Female,Adulto joven,< 5 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113003,Female,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113003,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113003,Female,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Extra Distant,Services/Commerce,Motorcycle taxi driver
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113008,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Extra Distant,Housewife,Housewife
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113008,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113008,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113008,Male,Adulto mayor,> 20 años,Secundaria,No,Sí,No,No,Extra Distant,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113008,Female,Adulto mayor,> 20 años,Primaria,No,Sí,No,No,Extra Distant,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113008,Male,Adulto joven,< 5 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113003,Male,Adulto joven,< 5 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+INDIANA,YANAYACU BOMBONAJE,YANAYACU TIMICURO,0113005,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123004,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Moderate,Other,Other
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123004,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Moderate,Housewife,Housewife
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123007,Female,Adulto joven,> 20 años,Secundaria,No,No,No,No,Moderate,Other,Other
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123007,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123007,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123007,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123013,Female,Adulto medio,> 20 años,Primaria,No,No,No,No,Moderate,Other,Other
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123013,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123016,Female,Adulto mayor,> 20 años,Primaria,No,No,No,No,Moderate,Other,Other
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123016,Male,Adulto mayor,> 20 años,Secundaria,No,No,No,No,Moderate,Farmer,Farmer
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123020,Male,Adulto medio,> 20 años,Secundaria,No,No,No,No,Moderate,Other,Other
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123020,Female,Adulto joven,5-20 años,Primaria,No,No,No,No,Moderate,Housewife,Housewife
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123020,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123020,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123020,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123020,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123035,Male,Adulto joven,> 20 años,Secundaria,No,Sí,No,No,Moderate,Other,Other
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123035,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Other,Other
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123035,Female,Adulto joven,5-20 años,Secundaria,No,No,No,No,Moderate,Housewife,Housewife
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123035,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123035,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123035,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123039,Female,Adulto medio,5-20 años,Primaria,No,No,No,No,Moderate,Services/Commerce,Motorcycle taxi driver
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123039,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Moderate,Housewife,Housewife
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123039,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,SAN ANDRES,0123039,Male,Niño y adolescente,NA,Sin escolaridad,No,No,No,No,Moderate,None,None
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119004,Female,Adulto medio,> 20 años,Primaria,Sí,No,No,Sí,Moderate,Other,Other
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119004,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,Sí,Moderate,Student,Student
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119006,Male,Adulto joven,< 5 años,Secundaria,Sí,No,No,No,Moderate,Other,Other
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119006,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,Sí,Moderate,Housewife,Housewife
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119006,Female,Adulto medio,5-20 años,Primaria,Sí,No,No,No,Moderate,Other,Other
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119006,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Moderate,None,None
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119009,Female,Adulto joven,< 5 años,Primaria,No,No,No,No,Moderate,Housewife,Housewife
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119009,Male,Adulto joven,> 20 años,Primaria,No,No,No,No,Moderate,Other,Other
+BELEN,6 DE OCTUBRE,8 DE DICIEMBRE,0119009,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,Sí,Moderate,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125030,Male,Adulto medio,> 20 años,Secundaria,No,No,No,No,Distant,Services/Commerce,Trader
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125025,Male,Adulto mayor,> 20 años,Primaria,No,Sí,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125025,Female,Adulto medio,> 20 años,Sin escolaridad,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125025,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125025,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125019,Male,Adulto medio,> 20 años,Primaria,No,No,No,Sí,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125019,Female,Adulto medio,> 20 años,Primaria,No,Sí,No,Sí,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125036,Male,Adulto mayor,> 20 años,Primaria,No,Sí,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125036,Female,Adulto mayor,> 20 años,Primaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125036,Female,NA,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125036,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125020,Male,Adulto mayor,< 5 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125020,Female,Adulto joven,< 5 años,Primaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125020,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125029,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125025,Male,Adulto joven,> 20 años,Secundaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125021,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125021,Female,Adulto mayor,> 20 años,Primaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126014,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126014,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126014,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126014,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125018,Female,Adulto joven,> 20 años,Secundaria,No,No,No,No,Distant,Other,Other
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125018,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,MUNICH RIO ITAYA,SAN JUAN DE MUNICH,0125018,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126014,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Housewife,Housewife
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126014,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,MUNICH RIO ITAYA,SANTA BARBARA,0126014,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132010,Female,Adulto joven,5-20 años,Secundaria,No,No,No,Sí,Extra Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132010,Female,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Extra Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132010,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132013,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132013,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132013,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132013,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132019,Male,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Other,Other
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132019,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132019,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132019,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,Services/Commerce,Motorcycle taxi driver
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132029,Male,Adulto medio,> 20 años,Primaria,No,No,No,Sí,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132029,Female,Adulto joven,5-20 años,Secundaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132029,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132011,Female,Adulto joven,5-20 años,Secundaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132011,Male,Adulto mayor,< 5 años,Primaria,No,No,No,Sí,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132011,Female,Niño y adolescente,< 5 años,Secundaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132011,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132028,Male,Adulto medio,> 20 años,Primaria,Sí,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134004,Female,Adulto joven,5-20 años,Primaria,Sí,No,No,No,Distant,Housewife,Housewife
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134004,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134004,Female,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134005,Male,Adulto mayor,5-20 años,Primaria,No,Sí,No,No,Distant,None,None
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134009,Male,Adulto mayor,> 20 años,Primaria,No,Sí,No,No,Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132013,Male,Adulto joven,< 5 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,LIMON,0132013,Male,Niño y adolescente,< 5 años,Primaria,No,No,No,Sí,Extra Distant,Student,Student
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134023,Male,Adulto medio,< 5 años,Primaria,No,No,No,No,Distant,Farmer,Farmer
+BELEN,SOLEDAD DE VILLA BELEN,SOLEDAD,0134004,Male,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127001,Male,Adulto joven,> 20 años,Primaria,No,No,No,Sí,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127001,Female,Adulto joven,> 20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127001,Female,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127001,Female,Niño y adolescente,5-20 años,Secundaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127001,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127005,Male,Adulto mayor,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127005,Female,Adulto mayor,> 20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127003,Male,Adulto medio,> 20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127003,Female,Adulto joven,< 5 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127003,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127003,Male,Niño y adolescente,5-20 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127003,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127003,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127015,Male,Adulto joven,< 5 años,Secundaria,No,No,No,No,Extra Distant,Fisherman,Fisherman
+BELEN,SAN ANTONIO RIO ITAYA,SANTA ELOISA,0127007,Female,Adulto medio,> 20 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120006,Female,Adulto medio,> 20 años,Primaria,No,No,No,Sí,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120006,Female,Adulto mayor,> 20 años,Sin escolaridad,No,Sí,No,No,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120006,Male,Niño y adolescente,5-20 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120006,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120006,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120006,Male,Adulto medio,> 20 años,Secundaria,No,No,No,Sí,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120006,Male,Adulto mayor,< 5 años,Primaria,No,Sí,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120010,Male,Adulto joven,5-20 años,Primaria,No,No,No,No,Extra Distant,Farmer,Farmer
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120010,Female,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Extra Distant,Housewife,Housewife
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120010,Female,Niño y adolescente,< 5 años,Primaria,No,No,No,No,Extra Distant,Student,Student
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120010,Male,Niño y adolescente,< 5 años,Sin escolaridad,No,No,No,No,Extra Distant,None,None
+BELEN,SAN ANTONIO RIO ITAYA,PEÑA BLANCA,0120004,Male,Adulto mayor,5-20 años,Educación superior,No,Sí,No,No,Extra Distant,Farmer,Farmer
+BELEN,BELEN DE VILLA BELEN,ULLPA CAÑO,0138017,Female,Adulto medio,> 20 años,Primaria,No,Sí,No,No,Moderate,Housewife,Housewife
+BELEN,BELEN DE VILLA BELEN,ULLPA CAÑO,0138017,Female,Niño y adolescente,5-20 años,Primaria,No,No,No,Sí,Moderate,Student,Student
