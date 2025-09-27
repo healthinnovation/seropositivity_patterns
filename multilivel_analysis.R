@@ -72,10 +72,10 @@ df_hot_oth <- full_multilevel %>%
 
 # Multilevel analysis -----------------------------------------------------
 
-hot_cold_empty <- glmer(
+hot_cold_empty <- glmer( #Modelo nulo (aca solo esta corriendo la variable de descenlase)
   hot_vs_cold ~ 1 + (1 | ffi_is_health_facility_name/ffi_is_community/ffi_h_code),
   data = df_hot_cold,
-  family = poisson(link = "log")
+  family = poisson(link = "log") #aqui cambiar familia a logistica o a binomial negativa
 )
 
 performance::icc(hot_cold_empty) # No estima
