@@ -54,7 +54,9 @@ ffi_hh_ind_seropos <- read_csv("./data/mid/ffi_hh_ind_seropos.csv") %>%
     TRUE ~ NA_character_
   ),
   sympt_osteomuscular = if_else(
-    ffi_is_symp_month_musclejoint == 1, "Sí", "No"
+    ffi_is_symp_month_fatigue == 1 |
+    ffi_is_symp_month_musclejoint == 1,
+    "Sí", "No"
     ),
   Schistosomiasis = if_else(
       SEA_pos == 1 | X229.E.NP_pos == 1,
@@ -69,7 +71,6 @@ ffi_hh_ind_seropos <- read_csv("./data/mid/ffi_hh_ind_seropos.csv") %>%
     ),
   sympt_constitucional = if_else(
       ffi_is_fever_month == 1 |
-      ffi_is_symp_month_fatigue == 1 |
       ffi_is_symp_month_chills == 1 |
       ffi_is_symp_month_heavysweat == 1 |
       ffi_is_symp_month_general == 1,
@@ -86,11 +87,12 @@ ffi_hh_ind_seropos <- read_csv("./data/mid/ffi_hh_ind_seropos.csv") %>%
   Zika_Pos = if_else(
     Zika.NS1_pos == 1, "Positivo", "Negativo"
     ),
-   malaria_status = if_else(
-       pv_exposure == "Positive" |
-         pf_exposure == "Positive",
-      "Positive", "Negative"
-    ), 
+  Vivax_Pos = if_else(
+    pv_exposure == 1, "Positivo", "Negativo"
+    ),
+   Falciparum_Pos = if_else(
+    pf_exposure == 1, "Positivo", "Negativo"
+    ),
    economic_activities = factor(ffi_is_main_econ_act,
                                  labels = c("None",
                                             "Day labourer",
@@ -120,8 +122,8 @@ ffi_hh_ind_seropos <- read_csv("./data/mid/ffi_hh_ind_seropos.csv") %>%
       EconomicActivities_new,
       levels = c("Fisherman", "Farmer", "Housewife", "Student",
                  "Services/Commerce", "Other", "None")
-    )
-  )
+    ))
+  
 ```
 
 Paso 2: Creacion de la tabla
@@ -148,8 +150,11 @@ individuals <- ffi_hh_ind_seropos %>%
     pf_exposure,
     distance_to_rh_hf_sampl,
     EconomicActivities_new,
-    economic_activities
-  ) 
+    economic_activities,
+    ffi_is_fever_month,
+    ffi_is_symp_month_chills,
+    ffi_is_symp_month_heavysweat,
+    ffi_is_symp_month_general) 
 
 tab1_df <- individuals %>% 
   select(-c(ffi_is_health_facility_name,
@@ -201,6 +206,10 @@ ffi_hh_ind_seropos %>%
     distance_to_rh_hf_sampl,
     ffi_is_trip_month,
     EconomicActivities_new,
+    ffi_is_fever_month,
+    ffi_is_symp_month_chills,
+    ffi_is_symp_month_heavysweat,
+    ffi_is_symp_month_general,
     Schistosomiasis
   ) %>%
   tbl_summary(
@@ -241,6 +250,10 @@ ffi_hh_ind_seropos %>%
     distance_to_rh_hf_sampl,
     ffi_is_trip_month,
     EconomicActivities_new,
+    ffi_is_fever_month,
+    ffi_is_symp_month_chills,
+    ffi_is_symp_month_heavysweat,
+    ffi_is_symp_month_general,
     Zika_Pos
   ) %>%
   tbl_summary(
@@ -281,6 +294,10 @@ ffi_hh_ind_seropos %>%
     distance_to_rh_hf_sampl,
     ffi_is_trip_month,
     EconomicActivities_new,
+    ffi_is_fever_month,
+    ffi_is_symp_month_chills,
+    ffi_is_symp_month_heavysweat,
+    ffi_is_symp_month_general,
     Chikungunya_Pos
   ) %>%
   tbl_summary(
@@ -307,10 +324,10 @@ ffi_hh_ind_seropos %>%
   modify_spanning_header(c("stat_1", "stat_2") ~ "**Chikungunya status**")
 
 
-#Tabla de Malaria
+#Tabla de Vivax
 ffi_hh_ind_seropos %>%
   select(
-    malaria_status,
+    pv_exposure,
     ffi_is_district,
     gender,
     age_oms,
@@ -322,10 +339,14 @@ ffi_hh_ind_seropos %>%
     sympt_neurologico,
     distance_to_rh_hf_sampl,
     ffi_is_trip_month,
+    ffi_is_fever_month,
+    ffi_is_symp_month_chills,
+    ffi_is_symp_month_heavysweat,
+    ffi_is_symp_month_general,
     EconomicActivities_new
   ) %>%
   tbl_summary(
-    by = malaria_status,
+    by = pv_exposure,
     missing = "ifany",
     label = list(
       ffi_is_district ~ "District",
@@ -345,6 +366,50 @@ ffi_hh_ind_seropos %>%
   add_p() %>%
   bold_labels() %>%
   modify_header(label = "**Variable**") %>%
-  modify_spanning_header(c("stat_1", "stat_2") ~ "**Malaria status**")
+  modify_spanning_header(c("stat_1", "stat_2") ~ "**Plasmodium Vivax**")
+
+#Tabla de Falciparum
+ffi_hh_ind_seropos %>%
+  select(
+    pf_exposure,
+    ffi_is_district,
+    gender,
+    age_oms,
+    time_resi_cat2,
+    education_summary,
+    sympt_constitucional,
+    sympt_osteomuscular,
+    sympt_gastrointestinal,
+    sympt_neurologico,
+    distance_to_rh_hf_sampl,
+    ffi_is_trip_month,
+    ffi_is_fever_month,
+    ffi_is_symp_month_chills,
+    ffi_is_symp_month_heavysweat,
+    ffi_is_symp_month_general,
+    EconomicActivities_new
+  ) %>%
+  tbl_summary(
+    by = pf_exposure,
+    missing = "ifany",
+    label = list(
+      ffi_is_district ~ "District",
+      gender ~ "Gender",
+      age_oms ~ "Age group",
+      time_resi_cat2 ~ "Residence time",
+      education_summary ~ "Education level",
+      sympt_constitucional ~ "Constitutional symptoms",
+      sympt_osteomuscular ~ "Osteomuscular symptoms",
+      sympt_gastrointestinal ~ "Gastrointestinal symptoms",
+      sympt_neurologico ~ "Neurological symptoms",
+      distance_to_rh_hf_sampl ~ "Distance to Health Facility (sample)",
+      ffi_is_trip_month ~ "Travel in last month"
+    )
+  ) %>%
+  add_overall() %>%
+  add_p() %>%
+  bold_labels() %>%
+  modify_header(label = "**Variable**") %>%
+  modify_spanning_header(c("stat_1", "stat_2") ~ "**Plasmodium Falciparum**")
 
 ```
