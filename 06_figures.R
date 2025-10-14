@@ -154,9 +154,18 @@ exposures <- ggplot() +
           color = "grey30",
           #linetype = 22,
           linewidth = 0.45) +
-  geom_sf(data = pts_3857,
-          aes(color = n_pathogens),
-          size = 4, alpha = 0.9) +
+  geom_sf(
+    data = pts_3857,
+    aes(color = n_pathogens),
+    size = 4.5,
+    alpha = 0.9
+  ) +
+  geom_sf(
+    data = pts_3857 %>% filter(n_pathogens == 0),
+    color = "red",
+    size = 4.5,
+    alpha = 0.9
+  ) +
   scale_color_gradientn(
     colours = c("red", RColorBrewer::brewer.pal(5, "Blues")),  # rojo para 0, azules de 1 a 5
     values = scales::rescale(c(0, 1, 5)),  # ancla 0 en rojo, luego gradiente de 1 a 5
@@ -213,8 +222,18 @@ zoom1 <- ggplot() +
   geom_sf(data = mask_zoom, fill = "white", colour = NA) +
   geom_sf(data = borde_in, fill = NA, colour = "grey40",
           linetype = "22", linewidth = 0.45) +
-  geom_sf(data = pts_in, aes(color = n_pathogens),
-          size = 3.5, alpha = 0.9) +
+  geom_sf(
+    data = pts_in,
+    aes(color = n_pathogens),
+    size = 4.5,
+    alpha = 0.9
+  ) +
+  geom_sf(
+    data = pts_in %>% filter(n_pathogens == 0),
+    color = "red",
+    size = 4.5,
+    alpha = 0.9
+  ) +
   geom_sf(data = st_boundary(circle_3857), colour = "black", linewidth = 0.4) +
   scale_color_gradientn(
     colours = c("red", RColorBrewer::brewer.pal(5, "Blues")),  # rojo para 0, azules de 1 a 5
@@ -264,8 +283,18 @@ zoom2 <- ggplot() +
   geom_sf(data = mask_zoom2, fill = "white", colour = NA) +
   geom_sf(data = borde_in2, fill = NA, colour = "grey40",
           linetype = "22", linewidth = 0.45) +
-  geom_sf(data = pts_in2, aes(color = n_pathogens),
-          size = 3.5, alpha = 0.9) +
+  geom_sf(
+    data = pts_in2,
+    aes(color = n_pathogens),
+    size = 4.5,
+    alpha = 0.9
+  ) +
+  geom_sf(
+    data = pts_in2 %>% filter(n_pathogens == 0),
+    color = "red",
+    size = 4.5,
+    alpha = 0.9
+  ) +
   geom_sf(data = st_boundary(circle_2), colour = "black", linewidth = 0.4) +
   scale_color_gradientn(
     colours = c("red", RColorBrewer::brewer.pal(5, "Blues")),  # rojo para 0, azules de 1 a 5
@@ -315,8 +344,18 @@ zoom3 <- ggplot() +
   geom_sf(data = mask_zoom3, fill = "white", colour = NA) +
   geom_sf(data = borde_in3, fill = NA, colour = "grey40",
           linetype = "22", linewidth = 0.45) +
-  geom_sf(data = pts_in3, aes(color = n_pathogens),
-          size = 3.5, alpha = 0.9) +
+  geom_sf(
+    data = pts_in3,
+    aes(color = n_pathogens),
+    size = 4.5,
+    alpha = 0.9
+  ) +
+  geom_sf(
+    data = pts_in3 %>% filter(n_pathogens == 0),
+    color = "red",
+    size = 4.5,
+    alpha = 0.9
+  ) +
   geom_sf(data = st_boundary(circle_3), colour = "black", linewidth = 0.4) +
   scale_color_gradientn(
     colours = c("red", RColorBrewer::brewer.pal(5, "Blues")),  # rojo para 0, azules de 1 a 5
@@ -367,8 +406,18 @@ zoom4 <- ggplot() +
   geom_sf(data = mask_zoom4, fill = "white", colour = NA) +
   geom_sf(data = borde_in4, fill = NA, colour = "grey40",
           linetype = "22", linewidth = 0.45) +
-  geom_sf(data = pts_in4, aes(color = n_pathogens),
-          size = 3.5, alpha = 0.9) +
+  geom_sf(
+    data = pts_in4,
+    aes(color = n_pathogens),
+    size = 4.5,
+    alpha = 0.9
+  ) +
+  geom_sf(
+    data = pts_in4 %>% filter(n_pathogens == 0),
+    color = "red",
+    size = 4.5,
+    alpha = 0.9
+  ) +
   geom_sf(data = st_boundary(circle_4), colour = "black", linewidth = 0.4) +
   scale_color_gradientn(
     colours = c("red", RColorBrewer::brewer.pal(5, "Blues")),  # rojo para 0, azules de 1 a 5
