@@ -7,8 +7,10 @@ sf_use_s2(use_s2 = F)
 
 # 1. Reading spatial data -------------------------------------------------
 districts <- read_csv(file = 'data/mid/ffi_hh_ind_seropos.csv') |> 
+  st_as_sf(coords = c("ffi_gps_long","ffi_gps_lat"),crs = 4326) |> 
+  select(ffi_is_code) |> 
   st_transform(crs = 32718) |> 
-  st_simplify(preserveTopology = TRUE, dTolerance = 500) |> 
+  st_buffer(dist = 10) |> 
   st_transform(crs = 4326)
 
 # 2. Spatial data to earth engine objects ---------------------------------
