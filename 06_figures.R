@@ -104,8 +104,6 @@ curve_df <- ffi2 %>%
 
 
 # Figure 1 -------------------------------------------------------------------------------------
-
-
 set_defaults(map_service = "carto",
              map_type = "light_no_labels")
 
@@ -762,18 +760,19 @@ ggsave("output/fig2_upset_plots.png",
 # Spatial Analysis --------------------------------------------------------
 
 
-# K = 1 ----------------------------------------------------------------------------------------
+# K = 4 ----------------------------------------------------------------------------------------
 # Neighbours and spatial weights 
 df_n1 <- df_spat %>% 
   mutate(
-    nb = st_knn(geometry, k = 1),
+    nb = st_knn(geometry, k = 4),
     wt = st_weights(nb)
   )
 
 
 # Spatial: Schistosomiasis
-local_m_schisto1 <- df_n1 %>% 
+local_m_schisto1 <- df_n1 %>%
   mutate(
+    prev_schisto = schistosomiasis/n_individuals,
     lm_schisto = local_moran(prev_schisto, nb, wt)
   ) %>% 
   unnest(lm_schisto)
@@ -844,6 +843,7 @@ map_schisto1
 # Spatial: P. falciparum
 local_m_falciparum1 <- df_n1 %>% 
   mutate(
+    prev_pfalciparum = Pfalciparum/n_individuals,
     lm_malaria = local_moran(prev_pfalciparum, nb, wt)
   ) %>% 
   unnest(lm_malaria)
@@ -906,6 +906,7 @@ map_falciparum1
 # Spatial: vivax
 local_m_vivax1 <- df_n1 %>% 
   mutate(
+    prev_pvivax = Pvivax/n_individuals,
     lm_vivax = local_moran(prev_pvivax, nb, wt)
   ) %>% 
   unnest(lm_vivax)
@@ -968,6 +969,7 @@ map_vivax1
 # Spatial: Zika
 local_m_zika1 <- df_n1 %>% 
   mutate(
+    prev_zika = zika/n_individuals,
     lm_zika = local_moran(prev_zika, nb, wt)
   ) %>% 
   unnest(lm_zika)
@@ -1031,6 +1033,7 @@ map_zika1
 # Spatial: Chik
 local_m_chik1 <- df_n1 %>% 
   mutate(
+    prev_chik = chik/n_individuals,
     lm_chik = local_moran(prev_chik, nb, wt)
   ) %>% 
   unnest(lm_chik)
@@ -1108,7 +1111,7 @@ map_five_join <- map_schisto1 + map_falciparum1 + map_vivax1 + map_chik1 + map_z
     )
   )
 
-ggsave("output/five_maps_spatial_k1.png",
+ggsave("output/five_maps_spatial_k5.png",
        map_five_join,
        dpi = 600,
        width = 15,
